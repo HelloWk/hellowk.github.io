@@ -74,7 +74,7 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_17.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_18.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_19.png">
-<meta property="og:updated_time" content="2016-02-19T16:48:02.000Z">
+<meta property="og:updated_time" content="2016-02-19T16:52:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树莓派制作一个魔镜2（界面开发）">
 <meta name="twitter:description" content="千呼万唤始出来！Greetings.
@@ -388,7 +388,7 @@ echo file_get_contents($url);
 <pre><code>sudo apt-get install vsftpd
 </code></pre><p>安装完成后启动 FTP 服务：</p>
 <pre><code>sudo service vsftpd start
-</code></pre><p>编辑vsftdp的配置文件</p>
+</code></pre><p>编辑 vsftdp 的配置文件</p>
 <pre><code>sudo vim /etc/vsftpd.conf
 </code></pre><p>这里我放一下我自己的配置：</p>
 <pre><code>配置文件： /etc/vsftpd.conf 这里删除了所有#号注释的内容
@@ -411,7 +411,7 @@ local_root=/var/www
 </code></pre><p>具体配置讲解看这个链接：<a href="http://os.51cto.com/art/201008/221842.htm" title="史上最详细的 vsftpd 配置文件讲解" target="_blank" rel="external">史上最详细的 vsftpd 配置文件讲解</a>。</p>
 <p>这里有一点需要注意的是，我的树莓派 Apache 服务器安装好后在 <code>/var/www/</code> 目录中还存在一个 <code>html</code> 的文件夹，而且默认的 <code>index.html</code> 也在这个 <code>html</code> 文件夹中，所以我也把文件放在了这个文件夹中。不过我想直接放在 <code>/var/www/</code> 目录应该是可以的，没有尝试，谁遇到了同样的情况可以自己尝试一下。</p>
 <p>这时就可以重启树莓派，然后就能看见页面成功的在魔镜上运行了。</p>
-<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_15.png" alt="下载 Magic Mirror 的源文件" title="下载 Magic Mirror 的源文件"></p>
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_15.png" alt="页面成功的在魔镜上运行" title="页面成功的在魔镜上运行"></p>
 <h1 id="具体配置"><a href="#具体配置" class="headerlink" title="具体配置"></a>具体配置</h1><p>能运行后当然还有许多工作要做，毕竟直接拿来的代码会水土不服，我需要对他进行汉化，调整天气设置和日历设置，还有订阅的问题（目前还不能成功显示）。</p>
 <p>Ps： 由于做完时间太久，可能有些步骤忘记了，如有问题可以在下方留言。</p>
 <h2 id="功能的开启与关闭"><a href="#功能的开启与关闭" class="headerlink" title="功能的开启与关闭"></a>功能的开启与关闭</h2><p>不得不说老外考虑的很周到，把所有功能作成了插件的形式，不想使用某个功能直接关闭就可以了。<br>在代码的 <code>js/main.js</code> 这个文件中，最下方会有一些以 <code>.init()</code> 结尾的语句：</p>

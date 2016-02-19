@@ -73,7 +73,7 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_8.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_9.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_10.png">
-<meta property="og:updated_time" content="2016-02-19T17:11:44.000Z">
+<meta property="og:updated_time" content="2016-02-19T17:27:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树莓派制作一个魔镜1（硬件制作和环境搭建）">
 <meta name="twitter:description" content="看到老外用树莓派制作了一面魔镜，自己正好也有一个树莓派，就也做了一个。">
@@ -406,7 +406,7 @@
 </code></pre><p>这样就能完全禁用所有屏保功能，及 Chromium 浏览器在开机后自动启动，开启全屏模式并导向本地主页。</p>
 <p>然后重启树莓派检查效果。树莓派启动还是挺慢的，但最终测试页还是在旋转了90度的画面上显示出来。</p>
 <h2 id="树莓派-Wifi-掉线问题"><a href="#树莓派-Wifi-掉线问题" class="headerlink" title="树莓派 Wifi 掉线问题"></a>树莓派 Wifi 掉线问题</h2><p>在使用过程中发现过一阵 SSH 和 FTP 就链接不上了，这怎么行？Wifi 断了这个镜子不就不能工作了。解决这个问题很简单，创建并编辑文件 <code>/etc/modprobe.d/8192cu.conf</code> 并且粘贴下列内容：</p>
-<pre><code>Disable power saving
+<pre><code>#Disable power saving
 options 8192cu rtw_power_mgnt=0 rtw_enusbss=1 rtw_ips_mode=1
 </code></pre><p>然后使用 <code>sudo reboot</code> 进行重启就可以了。</p>
 
@@ -510,7 +510,7 @@ options 8192cu rtw_power_mgnt=0 rtw_enusbss=1 rtw_ips_mode=1
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

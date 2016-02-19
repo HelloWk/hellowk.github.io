@@ -73,7 +73,7 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_8.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_9.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_10.png">
-<meta property="og:updated_time" content="2016-02-19T14:28:26.000Z">
+<meta property="og:updated_time" content="2016-02-19T17:11:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树莓派制作一个魔镜1（硬件制作和环境搭建）">
 <meta name="twitter:description" content="看到老外用树莓派制作了一面魔镜，自己正好也有一个树莓派，就也做了一个。">
@@ -405,6 +405,10 @@
 @chromium-browser --kiosk --incognito http://localhost
 </code></pre><p>这样就能完全禁用所有屏保功能，及 Chromium 浏览器在开机后自动启动，开启全屏模式并导向本地主页。</p>
 <p>然后重启树莓派检查效果。树莓派启动还是挺慢的，但最终测试页还是在旋转了90度的画面上显示出来。</p>
+<h2 id="树莓派-Wifi-掉线问题"><a href="#树莓派-Wifi-掉线问题" class="headerlink" title="树莓派 Wifi 掉线问题"></a>树莓派 Wifi 掉线问题</h2><p>在使用过程中发现过一阵 SSH 和 FTP 就链接不上了，这怎么行？Wifi 断了这个镜子不就不能工作了。解决这个问题很简单，创建并编辑文件 <code>/etc/modprobe.d/8192cu.conf</code> 并且粘贴下列内容：</p>
+<pre><code>Disable power saving
+options 8192cu rtw_power_mgnt=0 rtw_enusbss=1 rtw_ips_mode=1
+</code></pre><p>然后使用 <code>sudo reboot</code> 进行重启就可以了。</p>
 
       
     </div>
@@ -582,7 +586,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#做个智能的镜子"><span class="nav-number">1.</span> <span class="nav-text">做个智能的镜子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作材料"><span class="nav-number">2.</span> <span class="nav-text">制作材料</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于镜子"><span class="nav-number">2.1.</span> <span class="nav-text">关于镜子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示器"><span class="nav-number">2.2.</span> <span class="nav-text">显示器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外壳"><span class="nav-number">2.3.</span> <span class="nav-text">外壳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组装"><span class="nav-number">2.4.</span> <span class="nav-text">组装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装树莓派和软件调试"><span class="nav-number">3.</span> <span class="nav-text">安装树莓派和软件调试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装树莓派系统"><span class="nav-number">3.1.</span> <span class="nav-text">安装树莓派系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WIFI-链接"><span class="nav-number">3.2.</span> <span class="nav-text">WIFI 链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#屏幕设置"><span class="nav-number">3.3.</span> <span class="nav-text">屏幕设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络服务器"><span class="nav-number">3.4.</span> <span class="nav-text">网络服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#信息模式（kioskmode）"><span class="nav-number">3.5.</span> <span class="nav-text">信息模式（kioskmode）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#禁用屏幕保护和自动重启"><span class="nav-number">3.6.</span> <span class="nav-text">禁用屏幕保护和自动重启</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#做个智能的镜子"><span class="nav-number">1.</span> <span class="nav-text">做个智能的镜子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作材料"><span class="nav-number">2.</span> <span class="nav-text">制作材料</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于镜子"><span class="nav-number">2.1.</span> <span class="nav-text">关于镜子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示器"><span class="nav-number">2.2.</span> <span class="nav-text">显示器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外壳"><span class="nav-number">2.3.</span> <span class="nav-text">外壳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组装"><span class="nav-number">2.4.</span> <span class="nav-text">组装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装树莓派和软件调试"><span class="nav-number">3.</span> <span class="nav-text">安装树莓派和软件调试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装树莓派系统"><span class="nav-number">3.1.</span> <span class="nav-text">安装树莓派系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WIFI-链接"><span class="nav-number">3.2.</span> <span class="nav-text">WIFI 链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#屏幕设置"><span class="nav-number">3.3.</span> <span class="nav-text">屏幕设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络服务器"><span class="nav-number">3.4.</span> <span class="nav-text">网络服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#信息模式（kioskmode）"><span class="nav-number">3.5.</span> <span class="nav-text">信息模式（kioskmode）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#禁用屏幕保护和自动重启"><span class="nav-number">3.6.</span> <span class="nav-text">禁用屏幕保护和自动重启</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树莓派-Wifi-掉线问题"><span class="nav-number">3.7.</span> <span class="nav-text">树莓派 Wifi 掉线问题</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

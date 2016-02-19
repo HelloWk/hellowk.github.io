@@ -73,7 +73,7 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_8.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_9.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_10.png">
-<meta property="og:updated_time" content="2016-02-18T16:02:48.000Z">
+<meta property="og:updated_time" content="2016-02-19T14:28:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树莓派制作一个魔镜1（硬件制作和环境搭建）">
 <meta name="twitter:description" content="看到老外用树莓派制作了一面魔镜，自己正好也有一个树莓派，就也做了一个。">
@@ -348,9 +348,9 @@
 <p>效果么，当然是自己把自己坑了，效果太差了。</p>
 <p>上一张最终效果图：</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_3.png" alt="最终效果" title="最终效果"></p>
-<h2 id="显示器"><a href="#显示器" class="headerlink" title="显示器"></a>显示器</h2><p>显示器是这里最贵的配件了，老外们都是直接拆显示器的，但是咱们有万能的某个网站，淘到了一块14寸的40针LED接口的三星裸屏。</p>
+<h2 id="显示器"><a href="#显示器" class="headerlink" title="显示器"></a>显示器</h2><p>显示器是这里最贵的配件了，老外们都是直接拆显示器的，但是咱们有万能的某个网站，淘到了一块14寸的40针 LED 接口的三星裸屏。</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_4.png" alt="三星的裸屏" title="三星的裸屏"></p>
-<p>但是树莓派是 hdmi 输出，所以又淘到了这个东西：</p>
+<p>但是树莓派是 HDMI 输出，所以又淘到了这个东西：</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_5.png" alt="液晶驱动板" title="液晶驱动板"></p>
 <p>连接在一起：</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_6.png" alt="驱动液晶屏" title="驱动液晶屏"></p>
@@ -367,9 +367,9 @@
 <h2 id="组装"><a href="#组装" class="headerlink" title="组装"></a>组装</h2><p>忘了拍一下组装时候的照片，直接晒一下成品吧，只能说大大小小的螺丝弄起来也头大。</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_10.png" alt="组装完成" title="组装完成"></p>
 <p>到时候做完把四个角换成广告钉定在墙上就可以了（可以想到最终没有实施，效果不好而且太小，还有一个问题就是树莓派可以从驱动板取电，但是驱动板的电源跟笔记本电源差不多，完全没法上墙）。</p>
-<h1 id="安装树莓派和软件调试"><a href="#安装树莓派和软件调试" class="headerlink" title="安装树莓派和软件调试"></a>安装树莓派和软件调试</h1><h2 id="安装树莓派系统"><a href="#安装树莓派系统" class="headerlink" title="安装树莓派系统"></a>安装树莓派系统</h2><p>安装系统就不细说了，不会的看这里：<br><a href="http://www.cnblogs.com/abel/p/3441175.html" target="_blank" rel="external">系统安装和一些配置</a><br><a href="http://shumeipai.nxez.com/2014/05/18/raspberry-pi-under-mac-osx-to-install-raspbian-system.html" title="Mac OSX下给树莓派安装Raspbian系统" target="_blank" rel="external">Mac OSX下给树莓派安装Raspbian系统</a><br><a href="http://shumeipai.nxez.com/2013/10/04/configuring-raspberry-pi-support-chinese.html" target="_blank" rel="external">配置树莓派支持中文</a></p>
+<h1 id="安装树莓派和软件调试"><a href="#安装树莓派和软件调试" class="headerlink" title="安装树莓派和软件调试"></a>安装树莓派和软件调试</h1><h2 id="安装树莓派系统"><a href="#安装树莓派系统" class="headerlink" title="安装树莓派系统"></a>安装树莓派系统</h2><p>安装系统就不细说了，不会的看这里：<br><a href="http://www.cnblogs.com/abel/p/3441175.html" target="_blank" rel="external">系统安装和一些配置</a><br><a href="http://shumeipai.nxez.com/2014/05/18/raspberry-pi-under-mac-osx-to-install-raspbian-system.html" title="Mac OSX下给树莓派安装Raspbian系统" target="_blank" rel="external">Mac OSX 下给树莓派安装 Raspbian 系统</a><br><a href="http://shumeipai.nxez.com/2013/10/04/configuring-raspberry-pi-support-chinese.html" target="_blank" rel="external">配置树莓派支持中文</a></p>
 <p>拷贝一个映像档需要很长时间，拿杯咖啡，坐下，在等待中享受咖啡因的感觉。</p>
-<p>完成拷贝后，启动树莓派、登入，进入命令行的sudo raspi-config（<a href="http://shumeipai.nxez.com/2013/09/07/raspi-config-configuration-raspberry-pie.html" target="_blank" rel="external">使用raspi-config配置树莓派</a>）开始配置向导。在这个配置中，有几件重要事项需要配置：</p>
+<p>完成拷贝后，启动树莓派、登入，进入命令行的 <code>sudo raspi-config</code> （<a href="http://shumeipai.nxez.com/2013/09/07/raspi-config-configuration-raspberry-pie.html" target="_blank" rel="external">使用raspi-config 配置树莓派</a>）开始配置向导。在这个配置中，有几件重要事项需要配置：</p>
 <ul>
 <li>确保系统启动到桌面（取代命令行模式或调试模式）。</li>
 <li>调整时区，使魔镜显示正确时间。 </li>
@@ -377,33 +377,33 @@
 <p>如果你想做和这个一样的镜子，尽管尝试选择所有其他选项。只是记住，如果选砸了，就再泡杯咖啡重装系统吧。</p>
 <h2 id="WIFI-链接"><a href="#WIFI-链接" class="headerlink" title="WIFI 链接"></a>WIFI 链接</h2><p>不想在魔镜上加任何多余的连接线，就只能选择了以 Wifi 连接因特网。</p>
 <p>这部分正如老外所说，不同的接收器会有不同的问题，具体的，<a href="http://bit.ly/1no5v66" target="_blank" rel="external">看看这个神器的网站</a>。安装确实很花时间。</p>
-<p>如果你使用的 WIFI接收器是 EDUP 的 EP-N8508GS，那么可以直接看看<a href="http://blog.csdn.net/xukai871105/article/details/38170513" target="_blank" rel="external">这篇文章</a>。</p>
+<p>如果你使用的 WIFI 接收器是 EDUP 的 EP-N8508GS，那么可以直接看看<a href="http://blog.csdn.net/xukai871105/article/details/38170513" target="_blank" rel="external">这篇文章</a>。</p>
 <h2 id="屏幕设置"><a href="#屏幕设置" class="headerlink" title="屏幕设置"></a>屏幕设置</h2><p>如果你想让魔镜为纵向肖像模式，所以需要将屏幕顺时针旋转90度。</p>
-<p>树莓派的BIOS设置储存在系统启动分区中。在这分区中，有一个config.txt文件，载有所有设置。要旋转显示器，在这文件内加上以下一行代码：</p>
+<p>树莓派的BIOS设置储存在系统启动分区中。在这分区中，有一个 <code>config.txt</code> 文件，载有所有设置。要旋转显示器，在这文件内加上以下一行代码：</p>
 <pre><code>display_rotate=1
-</code></pre><p>要让显示器连接更加可靠，我就不解释为何加上下面允许HDMI线热插拔的代码了：</p>
+</code></pre><p>要让显示器连接更加可靠，我就不解释为何加上下面允许 HDMI 线热插拔的代码了：</p>
 <pre><code>hdmi_force_hotplug=1
 </code></pre><p>关于分辨率的设置，可以看下这篇文章：<br><a href="http://shumeipai.nxez.com/2015/11/23/raspberry-pi-configuration-file-config-txt-nstructions.html#more-2236" target="_blank" rel="external">树莓派配置文档 config.txt 说明</a></p>
-<h2 id="网络服务器"><a href="#网络服务器" class="headerlink" title="网络服务器"></a>网络服务器</h2><p>要维持界面（很简单的一个网页），需要在树莓派上Apache服务器。用老外的话就是：这在树莓派上是其中一个很常见的应用，安装过程简直行云流水。</p>
+<h2 id="网络服务器"><a href="#网络服务器" class="headerlink" title="网络服务器"></a>网络服务器</h2><p>要维持界面（很简单的一个网页），需要在树莓派上 Apache 服务器。用老外的话就是：这在树莓派上是其中一个很常见的应用，安装过程简直行云流水。</p>
 <p>安装之前要更新一下，确定用的是最新系统软件（重要，很多安装错误都可以通过更新解决）。</p>
 <pre><code>sudo apt-get update &amp;&amp; apt-get upgrade -y
-</code></pre><p>安装Apache：</p>
+</code></pre><p>安装 Apache：</p>
 <pre><code>sudo apt-get install apache2 apache2-doc apache2-utils
-</code></pre><p>加上PHP支持：</p>
+</code></pre><p>加上 PHP 支持：</p>
 <pre><code>sudo apt-get install libapache2-mod-php5 php5 php-pear php5-xcache
-</code></pre><p>重启之后，网页服务器就挂载上线运行了！在/var/www文件夹内放置了index.php文件，将浏览器首页指向树莓派的IP地址，发现成功了。</p>
-<h2 id="信息模式（kioskmode）"><a href="#信息模式（kioskmode）" class="headerlink" title="信息模式（kioskmode）"></a>信息模式（kioskmode）</h2><p>在信息模式（kioskmode）下用Chromium浏览器显示的网页。</p>
+</code></pre><p>重启之后，网页服务器就挂载上线运行了！在 <code>/var/www</code> 文件夹内放置了 <code>index.php</code> 文件，将浏览器首页指向树莓派的 IP 地址，发现成功了。</p>
+<h2 id="信息模式（kioskmode）"><a href="#信息模式（kioskmode）" class="headerlink" title="信息模式（kioskmode）"></a>信息模式（kioskmode）</h2><p>在信息模式（kioskmode）下用 Chromium 浏览器显示的网页。</p>
 <p>安装 Chromium 和屏蔽鼠标的软件</p>
 <pre><code>sudo apt-get install chromium x11-xserver-utils unclutter
-</code></pre><p>当然到这里出问题了，chromium 无法安装！！出了一堆问题，连夜翻‘墙去 Google 终于发现了解决办法：<a href="https://www.raspberrypi.org/forums/viewtopic.php?t=121195&amp;p=818455" target="_blank" rel="external">这里</a>。其实老外原文对这问题个有说明，只是国内翻译的文章没有更新，所以没有看到，其实看看原文就能发现人家都解决好了。</p>
+</code></pre><p>当然到这里出问题了，Chromium 无法安装！！出了一堆问题，连夜翻‘墙去 Google 终于发现了解决办法：<a href="https://www.raspberrypi.org/forums/viewtopic.php?t=121195&amp;p=818455" target="_blank" rel="external">这里</a>。其实老外原文对这问题个有说明，只是国内翻译的文章没有更新，所以没有看到，其实看看原文就能发现人家都解决好了。</p>
 <h2 id="禁用屏幕保护和自动重启"><a href="#禁用屏幕保护和自动重启" class="headerlink" title="禁用屏幕保护和自动重启"></a>禁用屏幕保护和自动重启</h2><p>然后需要一些额外设置，在信息模式下禁用屏幕保护和自动重启。<br>这部也卡住了很久，由于系统版本不同，所以有些设置也发生了变化，最后参考<a href="">这篇文章</a>，修改这个文件：</p>
 <pre><code>~/.config/lxsession/LXDE-pi/autostart
-</code></pre><p>在 @xscreensaver -no-splash 前面加上了#号。<br>还加入了以下代码：</p>
+</code></pre><p>在 <code>@xscreensaver -no-splash</code> 前面加上了 <code>#</code> 号。<br>还加入了以下代码：</p>
 <pre><code>@xset s off
 @xset -dpms
 @xset s noblank
 @chromium-browser --kiosk --incognito http://localhost
-</code></pre><p>这样就能完全禁用所有屏保功能，及Chromium浏览器在开机后自动启动，开启全屏模式并导向本地主页。</p>
+</code></pre><p>这样就能完全禁用所有屏保功能，及 Chromium 浏览器在开机后自动启动，开启全屏模式并导向本地主页。</p>
 <p>然后重启树莓派检查效果。树莓派启动还是挺慢的，但最终测试页还是在旋转了90度的画面上显示出来。</p>
 
       

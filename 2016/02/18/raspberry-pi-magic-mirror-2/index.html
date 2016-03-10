@@ -74,7 +74,7 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_17.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_18.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_19.png">
-<meta property="og:updated_time" content="2016-02-19T17:27:09.000Z">
+<meta property="og:updated_time" content="2016-03-10T04:26:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树莓派制作一个魔镜2（界面开发）">
 <meta name="twitter:description" content="千呼万唤始出来！Greetings.
@@ -425,7 +425,8 @@ news.init();
 </code></pre><p>想关闭哪个功能直接用 <code>//</code> 注释掉即可，重新开启只需去掉注释。例如我不想要calendar 的功能，就在 <code>calendar.init();</code> 前加上 <code>//</code> :</p>
 <pre><code>//calendar.init();
 </code></pre><h2 id="区域设置"><a href="#区域设置" class="headerlink" title="区域设置"></a>区域设置</h2><p>区域有关设置一个是前文提到的树莓派自身 <code>raspi-config</code> 中区域的设置，还有就是在代码的 <code>js/config.js</code> 这个文件中，在文件的第二行把 <code>lang</code> 的值改成 <code>cn</code>：</p>
-<pre><code>lang: &apos;cn&apos;,
+<p><strong>3.10.2016 update： <code>zh-cn</code></strong></p>
+<pre><code>lang: &apos;zh-cn&apos;,
 </code></pre><h2 id="设置天气"><a href="#设置天气" class="headerlink" title="设置天气"></a>设置天气</h2><p>首先我们需要到 <a href="openweathermap.org">Openweathermap</a> 去注册一个免费的账号，会得到一个 API key，然后我们把这个 key 写在 <code>js/config.js</code> 这个文件的 <code>weather: {}</code> 中,同时把参数 <code>q</code> 改成你自己的城市（提前在网页测试），<code>lang</code> 的值改成 <code>cn</code>：</p>
 <pre><code>weather: {
     // change weather params here:
@@ -458,7 +459,8 @@ feed: &apos;http://feeds2.feedburner.com/cnbeta_full&apos;
 }
 </code></pre><p>找不到订阅？看<a href="https://www.zhihu.com/question/19580096" title="你必读的 RSS 订阅源有哪些? - 调查类问题 - 知乎" target="_blank" rel="external">这里</a>。</p>
 <p>到这里基本的设置就完成了，接下来就是解决最后的问题——汉化。</p>
-<h1 id="汉化页面"><a href="#汉化页面" class="headerlink" title="汉化页面"></a>汉化页面</h1><p>改完区域后不知道是自己忘记了什么并没有完全汉化，还是一半中文一半英文的，索性直接修改代码汉化。</p>
+<h1 id="汉化页面"><a href="#汉化页面" class="headerlink" title="汉化页面"></a>汉化页面</h1><p><strong>3.10.2016 update：区域设置更新，无需做以下操作。</strong></p>
+<p>改完区域后不知道是自己忘记了什么并没有完全汉化，还是一半中文一半英文的，索性直接修改代码汉化。</p>
 <h2 id="时间汉化"><a href="#时间汉化" class="headerlink" title="时间汉化"></a>时间汉化</h2><p>作者使用 <code>moment.js</code> 这个库，同时也给我们汉化提供了方便，查阅了一下相关文档，只需调用 <code>.locale(&#39;zh-cn&#39;)</code> 就能格式化为中文。</p>
 <p>打开 <code>time/time.js</code>，这个就是用来控制显示时间日期的文件，找到 <code>var _now = moment();</code> 这一行，在下面一行加上 <code>_now.locale(&#39;zh-cn&#39;);</code> 即可。</p>
 <pre><code>var _now = moment();

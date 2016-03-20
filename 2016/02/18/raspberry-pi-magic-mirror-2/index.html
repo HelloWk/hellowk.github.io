@@ -74,7 +74,7 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_17.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_18.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_19.png">
-<meta property="og:updated_time" content="2016-03-10T04:26:39.000Z">
+<meta property="og:updated_time" content="2016-03-20T13:02:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树莓派制作一个魔镜2（界面开发）">
 <meta name="twitter:description" content="千呼万唤始出来！Greetings.
@@ -409,7 +409,8 @@ rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
 ssl_enable=NO
 local_root=/var/www
 </code></pre><p>具体配置讲解看这个链接：<a href="http://os.51cto.com/art/201008/221842.htm" title="史上最详细的 vsftpd 配置文件讲解" target="_blank" rel="external">史上最详细的 vsftpd 配置文件讲解</a>。</p>
-<p>这里有一点需要注意的是，我的树莓派 Apache 服务器安装好后在 <code>/var/www/</code> 目录中还存在一个 <code>html</code> 的文件夹，而且默认的 <code>index.html</code> 也在这个 <code>html</code> 文件夹中，所以我也把文件放在了这个文件夹中。不过我想直接放在 <code>/var/www/</code> 目录应该是可以的，没有尝试，谁遇到了同样的情况可以自己尝试一下。</p>
+<p>这里有一点需要注意的是，我的树莓派 Apache 服务器安装好后在 <code>/var/www/</code> 目录中还存在一个 <code>html</code> 的文件夹，而且默认的 <code>index.html</code> 也在这个 <code>html</code> 文件夹中，所以我也把文件放在了这个文件夹中。<del>不过我想直接放在 <code>/var/www/</code> 目录应该是可以的，没有尝试，谁遇到了同样的情况可以自己尝试一下。</del></p>
+<p><strong>3.10.2016 update：必须放入 <code>/var/www/</code> 中，直接放在 <code>/var/www/</code> 无法找到 <code>index.html</code>。</strong></p>
 <p>这时就可以重启树莓派，然后就能看见页面成功的在魔镜上运行了。</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_15.png" alt="页面成功的在魔镜上运行" title="页面成功的在魔镜上运行"></p>
 <h1 id="具体配置"><a href="#具体配置" class="headerlink" title="具体配置"></a>具体配置</h1><p>能运行后当然还有许多工作要做，毕竟直接拿来的代码会水土不服，我需要对他进行汉化，调整天气设置和日历设置，还有订阅的问题（目前还不能成功显示）。</p>
@@ -424,8 +425,8 @@ weather.init();
 news.init();
 </code></pre><p>想关闭哪个功能直接用 <code>//</code> 注释掉即可，重新开启只需去掉注释。例如我不想要calendar 的功能，就在 <code>calendar.init();</code> 前加上 <code>//</code> :</p>
 <pre><code>//calendar.init();
-</code></pre><h2 id="区域设置"><a href="#区域设置" class="headerlink" title="区域设置"></a>区域设置</h2><p>区域有关设置一个是前文提到的树莓派自身 <code>raspi-config</code> 中区域的设置，还有就是在代码的 <code>js/config.js</code> 这个文件中，在文件的第二行把 <code>lang</code> 的值改成 <code>cn</code>：</p>
-<p><strong>3.10.2016 update： <code>zh-cn</code></strong></p>
+</code></pre><h2 id="区域设置"><a href="#区域设置" class="headerlink" title="区域设置"></a>区域设置</h2><p>区域有关设置一个是前文提到的树莓派自身 <code>raspi-config</code> 中区域的设置，还有就是在代码的 <code>js/config.js</code> 这个文件中，<del>在文件的第二行把 <code>lang</code> 的值改成 <code>cn</code>：</del></p>
+<p><strong>3.10.2016 update：第二行 <code>lang</code> 的值改成 <code>zh-cn</code>: </strong></p>
 <pre><code>lang: &apos;zh-cn&apos;,
 </code></pre><h2 id="设置天气"><a href="#设置天气" class="headerlink" title="设置天气"></a>设置天气</h2><p>首先我们需要到 <a href="openweathermap.org">Openweathermap</a> 去注册一个免费的账号，会得到一个 API key，然后我们把这个 key 写在 <code>js/config.js</code> 这个文件的 <code>weather: {}</code> 中,同时把参数 <code>q</code> 改成你自己的城市（提前在网页测试），<code>lang</code> 的值改成 <code>cn</code>：</p>
 <pre><code>weather: {
@@ -459,7 +460,7 @@ feed: &apos;http://feeds2.feedburner.com/cnbeta_full&apos;
 }
 </code></pre><p>找不到订阅？看<a href="https://www.zhihu.com/question/19580096" title="你必读的 RSS 订阅源有哪些? - 调查类问题 - 知乎" target="_blank" rel="external">这里</a>。</p>
 <p>到这里基本的设置就完成了，接下来就是解决最后的问题——汉化。</p>
-<h1 id="汉化页面"><a href="#汉化页面" class="headerlink" title="汉化页面"></a>汉化页面</h1><p><strong>3.10.2016 update：区域设置更新，无需做以下操作。</strong></p>
+<h1 id="汉化页面"><a href="#汉化页面" class="headerlink" title="汉化页面"></a>汉化页面</h1><p><strong>3.10.2016 update：区域设置更新，无需做以下时间、日历和天气的步骤，直接看问候语汉化。</strong></p>
 <p>改完区域后不知道是自己忘记了什么并没有完全汉化，还是一半中文一半英文的，索性直接修改代码汉化。</p>
 <h2 id="时间汉化"><a href="#时间汉化" class="headerlink" title="时间汉化"></a>时间汉化</h2><p>作者使用 <code>moment.js</code> 这个库，同时也给我们汉化提供了方便，查阅了一下相关文档，只需调用 <code>.locale(&#39;zh-cn&#39;)</code> 就能格式化为中文。</p>
 <p>打开 <code>time/time.js</code>，这个就是用来控制显示时间日期的文件，找到 <code>var _now = moment();</code> 这一行，在下面一行加上 <code>_now.locale(&#39;zh-cn&#39;);</code> 即可。</p>
@@ -577,6 +578,7 @@ if (seconds &gt;= 0) {
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_19.png" alt="最终效果" title="最终效果"></p>
 <p>PS：由于对外框不是很满意，一过完年就淘了个差不多大的相框，打算安装到相框中再看看效果。相框还在路上，等到后再上传新的照片。</p>
 <h1 id="未来展望"><a href="#未来展望" class="headerlink" title="未来展望"></a>未来展望</h1><p>由于树莓派强大的 GPIO，设想把这块镜子放在进门的玄关处，一个是充当试衣镜，再一个添加触摸功能在屏幕上添加 Button 通过树莓派的 GPIO 控制屋内电灯和电器的，出门时即可快速关掉所有的灯和电器，进门时也可以进行开启热水器等操作。如果再加上手机远程控制，离智能家居的步伐就又进了一步。</p>
+<p>以上。</p>
 
       
     </div>
@@ -678,7 +680,7 @@ if (seconds &gt;= 0) {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -686,7 +688,7 @@ if (seconds &gt;= 0) {
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -695,7 +697,7 @@ if (seconds &gt;= 0) {
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

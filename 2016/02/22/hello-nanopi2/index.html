@@ -57,12 +57,14 @@
 
 
 
-<meta name="description" content="过完年弄了一个新玩具——NanoPi2，（介绍，对比）">
+<meta name="description" content="过完年弄了一个新玩具——NanoPi2，采用Cortex-A9架构的四核S5P4418处理器（主频1.4GHz），内存为1G DDR3，同时板上集成了802.11 b/g/n无线网卡及蓝牙4.0模块，可支持Android与Debian双系统，支持HDMI和LCD同步输出，并拥有丰富的扩展接口，兼容树莓派GPIO，PCB尺寸只有40*75mm。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个新玩具——NanoPi2">
 <meta property="og:url" content="http://hellowk.cc/2016/02/22/hello-nanopi2/index.html">
 <meta property="og:site_name" content="HelloWk">
-<meta property="og:description" content="过完年弄了一个新玩具——NanoPi2，（介绍，对比）">
+<meta property="og:description" content="过完年弄了一个新玩具——NanoPi2，采用Cortex-A9架构的四核S5P4418处理器（主频1.4GHz），内存为1G DDR3，同时板上集成了802.11 b/g/n无线网卡及蓝牙4.0模块，可支持Android与Debian双系统，支持HDMI和LCD同步输出，并拥有丰富的扩展接口，兼容树莓派GPIO，PCB尺寸只有40*75mm。">
+<meta property="og:image" content="http://wiki.friendlyarm.com/wiki/images/9/93/NanoPi_2-B03.png">
+<meta property="og:image" content="http://wiki.friendlyarm.com/wiki/images/7/73/NanoPi_2-B11.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_1.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_2.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_3.png">
@@ -92,10 +94,10 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_26.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_27.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_28.png">
-<meta property="og:updated_time" content="2016-03-10T03:58:50.000Z">
+<meta property="og:updated_time" content="2016-03-16T09:11:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个新玩具——NanoPi2">
-<meta name="twitter:description" content="过完年弄了一个新玩具——NanoPi2，（介绍，对比）">
+<meta name="twitter:description" content="过完年弄了一个新玩具——NanoPi2，采用Cortex-A9架构的四核S5P4418处理器（主频1.4GHz），内存为1G DDR3，同时板上集成了802.11 b/g/n无线网卡及蓝牙4.0模块，可支持Android与Debian双系统，支持HDMI和LCD同步输出，并拥有丰富的扩展接口，兼容树莓派GPIO，PCB尺寸只有40*75mm。">
 
 
 
@@ -355,9 +357,19 @@
       
 
       
-        <p>过完年弄了一个新玩具——NanoPi2，（介绍，对比）<br> <a id="more"></a></p>
-<p>。。。。。。</p>
-<h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h2 id="制作带系统的-SD-卡"><a href="#制作带系统的-SD-卡" class="headerlink" title="制作带系统的 SD 卡"></a>制作带系统的 SD 卡</h2><p>首先访问<a href="http://wiki.friendlyarm.com/wiki/nanopi2/download/" title="固件下载地址" target="_blank" rel="external">此处</a>下载需要的固件文件，我下载的是 <code>nanopi2-debian-sd4g-wifiap.img.zip</code> 这个 Debian 的系统固件（默认开启无线热点，可用 VNC 或 SSH 登录）。</p>
+        <p>过完年弄了一个新玩具——NanoPi2，采用Cortex-A9架构的四核S5P4418处理器（主频1.4GHz），内存为1G DDR3，同时板上集成了802.11 b/g/n无线网卡及蓝牙4.0模块，可支持Android与Debian双系统，支持HDMI和LCD同步输出，并拥有丰富的扩展接口，兼容树莓派GPIO，PCB尺寸只有40*75mm。<br> <a id="more"></a></p>
+<p>下面是对比图：</p>
+<p><img src="http://wiki.friendlyarm.com/wiki/images/9/93/NanoPi_2-B03.png" alt="尺寸对比" title="尺寸对比"><br><img src="http://wiki.friendlyarm.com/wiki/images/7/73/NanoPi_2-B11.png" alt="资源对比" title="资源对比"></p>
+<h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>NanoPi2 主板</li>
+<li>microSD卡/TF卡</li>
+<li>一个microUSB接口的外接电源，要求输出为5V/2A（可使用同规格的手机充电器）</li>
+<li>一台支持HDMI输入的显示器或者电视（或选购LCD配件）</li>
+<li>一套USB键盘鼠标，同时连接还需要USB HUB （或选购串口转接板，要PC上进行操作）</li>
+<li>一台 Linux 电脑，需要联网，建议使用Ubuntu 14.04 64位系统</li>
+</ul>
+<p>首先一个 NanoPi2 的主板是少不了了，然后是一个 TF 卡，用于安装操作系统，TF 卡要求 Class10 或以上的最少 8GB 的 SDHC卡。电源最后够 2A，否则可能会出现带不动的情况。显示器和鼠标看个人需求，如果使用的是默认开启无线热点的固件，可用 VNC 或 SSH 登录。Linux 电脑可以在现有系统上搭建一个虚拟机就好。</p>
+<h2 id="制作带系统的-SD-卡"><a href="#制作带系统的-SD-卡" class="headerlink" title="制作带系统的 SD 卡"></a>制作带系统的 SD 卡</h2><p>首先访问<a href="http://wiki.friendlyarm.com/wiki/nanopi2/download/" title="固件下载地址" target="_blank" rel="external">此处</a>下载需要的固件文件，我下载的是 <code>nanopi2-debian-sd4g-wifiap.img.zip</code> 这个 Debian 的系统固件（默认开启无线热点，可用 VNC 或 SSH 登录）。</p>
 <p>然后在 Windows 平台下，以管理员身份运行 <a href="http://www.softpedia.com/get/CD-DVD-Tools/Data-CD-DVD-Burning/Win32-Disk-Imager.shtml" title="Win32 Disk Imager Download" target="_blank" rel="external">Win32 Disk Imager</a> 这个工具，选择你的SD卡盘符，选择你要烧写的系统固件，点击 Write 按钮烧写即可。</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_1.png" alt="Win32 Disk Imager 烧写固件到 SD 卡" title="Win32 Disk Imager 烧写固件到 SD 卡"></p>
 <p> SD 卡制作完成后，把 SD 卡插入 NanoPi 2 的 BOOT 卡槽，上电启动，看到蓝灯和绿灯已经闪烁，就已经成功启动 NanoPi2 了。</p>
@@ -465,7 +477,33 @@ export GCC_COLORS=auto
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_27.png" alt="应用扩展" title="应用扩展"></p>
 <p>然后会扩展磁盘，稍等一会就好了：</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_28.png" alt="正在扩展磁盘" title="正在扩展磁盘"></p>
-<h2 id="安装-FTP-服务器"><a href="#安装-FTP-服务器" class="headerlink" title="安装 FTP 服务器"></a>安装 FTP 服务器</h2>
+<h2 id="安装-FTP-服务器"><a href="#安装-FTP-服务器" class="headerlink" title="安装 FTP 服务器"></a>安装 FTP 服务器</h2><p>FTP 的安装很简单：</p>
+<pre><code>sudo apt-get install vsftpd
+</code></pre><p>安装完成后启动 FTP 服务：</p>
+<pre><code>sudo service vsftpd start
+</code></pre><p>编辑 vsftdp 的配置文件</p>
+<pre><code>sudo vim /etc/vsftpd.conf
+</code></pre><p>这里我放一下我自己的配置：</p>
+<pre><code>配置文件： /etc/vsftpd.conf 这里删除了所有#号注释的内容
+-------------------------------------------------------
+listen=NO
+listen_ipv6=YES
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=000
+dirmessage_enable=YES
+use_localtime=YES
+connect_from_port_20=YES
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=vsftpd
+rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+ssl_enable=NO
+local_root=/var/www
+</code></pre><p>具体配置讲解看这个链接：<a href="http://os.51cto.com/art/201008/221842.htm" title="史上最详细的 vsftpd 配置文件讲解" target="_blank" rel="external">史上最详细的 vsftpd 配置文件讲解</a>。</p>
+<p>以上。</p>
+
       
     </div>
 
@@ -491,6 +529,10 @@ export GCC_COLORS=auto
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/13/make-a-diy-siri-controlled-wi-fi-light/" rel="prev" title="制作一个用 Siri 控制的 WiFi 灯">
+                制作一个用 Siri 控制的 WiFi 灯 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -562,7 +604,7 @@ export GCC_COLORS=auto
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -570,7 +612,7 @@ export GCC_COLORS=auto
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -579,7 +621,7 @@ export GCC_COLORS=auto
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

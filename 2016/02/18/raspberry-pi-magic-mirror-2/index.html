@@ -74,7 +74,7 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_17.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_18.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_19.png">
-<meta property="og:updated_time" content="2016-03-20T13:02:45.000Z">
+<meta property="og:updated_time" content="2016-03-31T01:19:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树莓派制作一个魔镜2（界面开发）">
 <meta name="twitter:description" content="千呼万唤始出来！Greetings.
@@ -410,7 +410,7 @@ ssl_enable=NO
 local_root=/var/www
 </code></pre><p>具体配置讲解看这个链接：<a href="http://os.51cto.com/art/201008/221842.htm" title="史上最详细的 vsftpd 配置文件讲解" target="_blank" rel="external">史上最详细的 vsftpd 配置文件讲解</a>。</p>
 <p>这里有一点需要注意的是，我的树莓派 Apache 服务器安装好后在 <code>/var/www/</code> 目录中还存在一个 <code>html</code> 的文件夹，而且默认的 <code>index.html</code> 也在这个 <code>html</code> 文件夹中，所以我也把文件放在了这个文件夹中。<del>不过我想直接放在 <code>/var/www/</code> 目录应该是可以的，没有尝试，谁遇到了同样的情况可以自己尝试一下。</del></p>
-<p><strong>3.10.2016 update：必须放入 <code>/var/www/</code> 中，直接放在 <code>/var/www/</code> 无法找到 <code>index.html</code>。</strong></p>
+<p><strong>3.10.2016 update：必须放入 <code>/var/www/html</code> 中，直接放在 <code>/var/www/</code> 无法找到 <code>index.html</code>。</strong></p>
 <p>这时就可以重启树莓派，然后就能看见页面成功的在魔镜上运行了。</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_15.png" alt="页面成功的在魔镜上运行" title="页面成功的在魔镜上运行"></p>
 <h1 id="具体配置"><a href="#具体配置" class="headerlink" title="具体配置"></a>具体配置</h1><p>能运行后当然还有许多工作要做，毕竟直接拿来的代码会水土不服，我需要对他进行汉化，调整天气设置和日历设置，还有订阅的问题（目前还不能成功显示）。</p>
@@ -428,7 +428,7 @@ news.init();
 </code></pre><h2 id="区域设置"><a href="#区域设置" class="headerlink" title="区域设置"></a>区域设置</h2><p>区域有关设置一个是前文提到的树莓派自身 <code>raspi-config</code> 中区域的设置，还有就是在代码的 <code>js/config.js</code> 这个文件中，<del>在文件的第二行把 <code>lang</code> 的值改成 <code>cn</code>：</del></p>
 <p><strong>3.10.2016 update：第二行 <code>lang</code> 的值改成 <code>zh-cn</code>: </strong></p>
 <pre><code>lang: &apos;zh-cn&apos;,
-</code></pre><h2 id="设置天气"><a href="#设置天气" class="headerlink" title="设置天气"></a>设置天气</h2><p>首先我们需要到 <a href="openweathermap.org">Openweathermap</a> 去注册一个免费的账号，会得到一个 API key，然后我们把这个 key 写在 <code>js/config.js</code> 这个文件的 <code>weather: {}</code> 中,同时把参数 <code>q</code> 改成你自己的城市（提前在网页测试），<code>lang</code> 的值改成 <code>cn</code>：</p>
+</code></pre><h2 id="设置天气"><a href="#设置天气" class="headerlink" title="设置天气"></a>设置天气</h2><p>首先我们需要到 <a href="openweathermap.org">Openweathermap</a> 去注册一个免费的账号，会得到一个 API key，然后我们把这个 key 写在 <code>js/config.js</code> 这个文件的 <code>weather: {}</code> 中,同时把参数 <code>q</code> 改成你自己的城市（提前在网页测试），<code>lang</code> 的值改成 <code>zh_cn</code>：</p>
 <pre><code>weather: {
     // change weather params here:
     // units: metric or imperial

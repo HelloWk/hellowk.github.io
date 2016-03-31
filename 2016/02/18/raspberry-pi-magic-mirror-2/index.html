@@ -74,7 +74,7 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_17.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_18.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_19.png">
-<meta property="og:updated_time" content="2016-03-31T01:19:53.000Z">
+<meta property="og:updated_time" content="2016-03-31T14:53:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树莓派制作一个魔镜2（界面开发）">
 <meta name="twitter:description" content="千呼万唤始出来！Greetings.
@@ -382,7 +382,7 @@ echo file_get_contents($url);
 <p>如果你是大神，大可以直接使用 <code>git clone</code> 直接克隆到 <code>/var/www/</code> 目录中，但我这里没有这么做，我还要做一些改动，所以使用 Git 更新文件对于我来说没有用了，过后还要把修改好的代码开源到自己的 Github 中，所以直接下载源文件到电脑。</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_13.png" alt="下载 Magic Mirror 的源文件" title="下载 Magic Mirror 的源文件"></p>
 <p>这里要感谢老外的无私贡献，否则我们也无法快速的制作我们自己的魔镜。</p>
-<h2 id="使用-FTP-传输文件"><a href="#使用-FTP-传输文件" class="headerlink" title="使用 FTP 传输文件"></a>使用 FTP 传输文件</h2><p>接下来就是把文件传入树莓派的 <code>/var/www/</code> 目录中，这里我在树莓派上搭建了 FTP 服务器用于传文件，等基本调试完毕后可以选择使用 Git 来管理文件，我为了方便调试就使用了 FTP，配合 Transmit（Mac 上的 FTP 软件，Windows 可以使用 FlashFXP）就可以很轻松的传输文件了。</p>
+<h2 id="使用-FTP-传输文件"><a href="#使用-FTP-传输文件" class="headerlink" title="使用 FTP 传输文件"></a>使用 FTP 传输文件</h2><p>接下来就是把文件传入树莓派的 <code>/var/www/html</code> 目录中，这里我在树莓派上搭建了 FTP 服务器用于传文件，等基本调试完毕后可以选择使用 Git 来管理文件，我为了方便调试就使用了 FTP，配合 Transmit（Mac 上的 FTP 软件，Windows 可以使用 FlashFXP）就可以很轻松的传输文件了。</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_14.png" alt="使用 Transmit 上传文件" title="使用 Transmit 上传文件"></p>
 <p>FTP 的安装很简单：</p>
 <pre><code>sudo apt-get install vsftpd
@@ -391,8 +391,8 @@ echo file_get_contents($url);
 </code></pre><p>编辑 vsftdp 的配置文件</p>
 <pre><code>sudo vim /etc/vsftpd.conf
 </code></pre><p>这里我放一下我自己的配置：</p>
-<pre><code>配置文件： /etc/vsftpd.conf 这里删除了所有#号注释的内容
--------------------------------------------------------
+<pre><code># 配置文件： /etc/vsftpd.conf 这里删除了所有#号注释的内容
+# -------------------------------------------------------
 listen=NO
 listen_ipv6=YES
 anonymous_enable=NO
@@ -407,7 +407,7 @@ pam_service_name=vsftpd
 rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
 rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
 ssl_enable=NO
-local_root=/var/www
+local_root=/var/www/html
 </code></pre><p>具体配置讲解看这个链接：<a href="http://os.51cto.com/art/201008/221842.htm" title="史上最详细的 vsftpd 配置文件讲解" target="_blank" rel="external">史上最详细的 vsftpd 配置文件讲解</a>。</p>
 <p>这里有一点需要注意的是，我的树莓派 Apache 服务器安装好后在 <code>/var/www/</code> 目录中还存在一个 <code>html</code> 的文件夹，而且默认的 <code>index.html</code> 也在这个 <code>html</code> 文件夹中，所以我也把文件放在了这个文件夹中。<del>不过我想直接放在 <code>/var/www/</code> 目录应该是可以的，没有尝试，谁遇到了同样的情况可以自己尝试一下。</del></p>
 <p><strong>3.10.2016 update：必须放入 <code>/var/www/html</code> 中，直接放在 <code>/var/www/</code> 无法找到 <code>index.html</code>。</strong></p>
@@ -460,99 +460,132 @@ feed: &apos;http://feeds2.feedburner.com/cnbeta_full&apos;
 }
 </code></pre><p>找不到订阅？看<a href="https://www.zhihu.com/question/19580096" title="你必读的 RSS 订阅源有哪些? - 调查类问题 - 知乎" target="_blank" rel="external">这里</a>。</p>
 <p>到这里基本的设置就完成了，接下来就是解决最后的问题——汉化。</p>
-<h1 id="汉化页面"><a href="#汉化页面" class="headerlink" title="汉化页面"></a>汉化页面</h1><p><strong>3.10.2016 update：区域设置更新，无需做以下时间、日历和天气的步骤，直接看问候语汉化。</strong></p>
-<p>改完区域后不知道是自己忘记了什么并没有完全汉化，还是一半中文一半英文的，索性直接修改代码汉化。</p>
-<h2 id="时间汉化"><a href="#时间汉化" class="headerlink" title="时间汉化"></a>时间汉化</h2><p>作者使用 <code>moment.js</code> 这个库，同时也给我们汉化提供了方便，查阅了一下相关文档，只需调用 <code>.locale(&#39;zh-cn&#39;)</code> 就能格式化为中文。</p>
-<p>打开 <code>time/time.js</code>，这个就是用来控制显示时间日期的文件，找到 <code>var _now = moment();</code> 这一行，在下面一行加上 <code>_now.locale(&#39;zh-cn&#39;);</code> 即可。</p>
-<pre><code>var _now = moment();
-_now.locale(&apos;zh-cn&apos;);
-</code></pre><h2 id="日历汉化"><a href="#日历汉化" class="headerlink" title="日历汉化"></a>日历汉化</h2><p>控制日历的文件是 <code>calendar/calendar.js</code>，该文件需要改的地方比较多，但也很好找，都是跟 <code>moment</code> 相关的。</p>
-<p>找到：</p>
-<pre><code>if (e.startDate == undefined){
-    //some old events in Gmail Calendar is &quot;start_date&quot;
-    //FIXME: problems with Gmail&apos;s TimeZone
-    var days = moment(e.DTSTART).diff(moment(), &apos;days&apos;);
-    var seconds = moment(e.DTSTART).diff(moment(), &apos;seconds&apos;);
-    var startDate = moment(e.DTSTART);
+<h1 id="汉化页面"><a href="#汉化页面" class="headerlink" title="汉化页面"></a>汉化页面</h1><p><code>js/config.js</code> 这个文件中，</p>
+<pre><code>lang: &apos;zh-cn&apos;,
+</code></pre><p>修改好后就已经是汉化好了，然后直接汉化问候语就好。。如果你没能汉化成功，这里还有手动修改文件汉化的方法。没看见？在浏览器右击，查看源代码。。。。。。。。</p>
+<pre style="display:none">
+
+################################################################################
+
+改完区域后不知道是自己忘记了什么并没有完全汉化，还是一半中文一半英文的，索性直接修改代码汉化。
+
+时间汉化
+作者使用 moment.js 这个库，同时也给我们汉化提供了方便，查阅了一下相关文档，只需调用 .locale('zh-cn') 就能格式化为中文。
+
+打开 time/time.js，这个就是用来控制显示时间日期的文件，找到 var _now = moment();  这一行，在下面一行加上 _now.locale('zh-cn'); 即可。
+
+var _now = moment();
+_now.locale('zh-cn');
+
+日历汉化
+控制日历的文件是 calendar/calendar.js，该文件需要改的地方比较多，但也很好找，都是跟 moment 相关的。
+
+找到：
+
+if (e.startDate == undefined){
+//some old events in Gmail Calendar is "start_date"
+//FIXME: problems with Gmail's TimeZone
+var days = moment(e.DTSTART).diff(moment(), 'days');
+var seconds = moment(e.DTSTART).diff(moment(), 'seconds');
+var startDate = moment(e.DTSTART);
 } else {
-    var days = moment(e.startDate).diff(moment(), &apos;days&apos;);
-    var seconds = moment(e.startDate).diff(moment(), &apos;seconds&apos;);
-    var startDate = moment(e.startDate);
+var days = moment(e.startDate).diff(moment(), 'days');
+var seconds = moment(e.startDate).diff(moment(), 'seconds');
+var startDate = moment(e.startDate);
 }
-</code></pre><p>改成：</p>
-<pre><code>if (e.startDate == undefined){
-    //some old events in Gmail Calendar is &quot;start_date&quot;
-    //FIXME: problems with Gmail&apos;s TimeZone
-    var days = moment(e.DTSTART).locale(&apos;zh-cn&apos;).diff(moment(), &apos;days&apos;);
-    var seconds = moment(e.DTSTART).locale(&apos;zh-cn&apos;).diff(moment(), &apos;seconds&apos;);
-    var startDate = moment(e.DTSTART).locale(&apos;zh-cn&apos;);
+
+改成：
+
+if (e.startDate == undefined){
+//some old events in Gmail Calendar is "start_date"
+//FIXME: problems with Gmail's TimeZone
+var days = moment(e.DTSTART).locale('zh-cn').diff(moment(), 'days');
+var seconds = moment(e.DTSTART).locale('zh-cn').diff(moment(), 'seconds');
+var startDate = moment(e.DTSTART).locale('zh-cn');
 } else { 
-    var days = moment(e.startDate).locale(&apos;zh-cn&apos;).diff(moment(), &apos;days&apos;);
-    var seconds = moment(e.startDate).locale(&apos;zh-cn&apos;).diff(moment(), &apos;seconds&apos;);
-    var startDate = moment(e.startDate).locale(&apos;zh-cn&apos;);
+var days = moment(e.startDate).locale('zh-cn').diff(moment(), 'days');
+var seconds = moment(e.startDate).locale('zh-cn').diff(moment(), 'seconds');
+var startDate = moment(e.startDate).locale('zh-cn');
 }
-</code></pre><p>紧接着一段：</p>
-<pre><code>//only add fututre events, days doesn&apos;t work, we need to check seconds
-if (seconds &gt;= 0) {
-    if (seconds &lt;= 60*60*5 || seconds &gt;= 60*60*24*2) {
-        var time_string = moment(startDate).fromNow();
-    }else {
-        var time_string = moment(startDate).calendar()
-    }
-    if (!e.RRULE) {
-        this.eventList.push({&apos;description&apos;:e.SUMMARY,&apos;seconds&apos;:seconds,&apos;days&apos;:time_string});
-    }
-    e.seconds = seconds;
-}
-</code></pre><p>改成：</p>
-<pre><code>//only add fututre events, days doesn&apos;t work, we need to check seconds
-if (seconds &gt;= 0) {
-    if (seconds &lt;= 60*60*5 || seconds &gt;= 60*60*24*2) {
-        var time_string = moment(startDate).locale(&apos;zh-cn&apos;).fromNow();
-    }else {
-        var time_string = moment(startDate).locale(&apos;zh-cn&apos;).calendar()
-}
-    if (!e.RRULE) {
-         this.eventList.push({&apos;description&apos;:e.SUMMARY,&apos;seconds&apos;:seconds,&apos;days&apos;:time_string});
-    }
-    e.seconds = seconds;
-}
-</code></pre><p>再往下：</p>
-<pre><code>for (date in dates) {
-    var dt = new Date(dates[date]);
-    var days = moment(dt).diff(moment(), &apos;days&apos;);
-    var seconds = moment(dt).diff(moment(), &apos;seconds&apos;);
-    var startDate = moment(dt);
 
-    if (seconds &gt;= 0) {
-        if (seconds &lt;= 60*60*5 || seconds &gt;= 60*60*24*2) {
-            var time_string = moment(dt).fromNow();
-        } else {
-            var time_string = moment(dt).calendar()
-        }
-        this.eventList.push({&apos;description&apos;:e.SUMMARY,&apos;seconds&apos;:seconds,&apos;days&apos;:time_string});
-    }
-}
-</code></pre><p>改成：</p>
-<pre><code>for (date in dates) {
-    var dt = new Date(dates[date]);
-    var days = moment(dt).locale(&apos;zh-cn&apos;).diff(moment(), &apos;days&apos;);
-    var seconds = moment(dt).locale(&apos;zh-cn&apos;).diff(moment(), &apos;seconds&apos;);
-    var startDate = moment(dt).locale(&apos;zh-cn&apos;);
+紧接着一段：
 
-    if (seconds &gt;= 0) {
-        if (seconds &lt;= 60*60*5 || seconds &gt;= 60*60*24*2) {
-            var time_string = moment(dt).locale(&apos;zh-cn&apos;).fromNow();
-        } else {
-            var time_string = moment(dt).locale(&apos;zh-cn&apos;).calendar()
-        }
-        this.eventList.push({&apos;description&apos;:e.SUMMARY,&apos;seconds&apos;:seconds,&apos;days&apos;:time_string});
-    }
+//only add fututre events, days doesn't work, we need to check seconds
+if (seconds >= 0) {
+if (seconds <= 60*60*5="" ||="" seconds="">= 60*60*24*2) {
+var time_string = moment(startDate).fromNow();
+}else {
+var time_string = moment(startDate).calendar()
 }
-</code></pre><p>虽然改动比较多，但是都是比较好找的地方，配合搜索 <code>moment</code> 关键字添加 <code>.locale(&#39;zh-cn&#39;)</code>，还是很容易的，只是需要点耐心花点时间罢了。</p>
-<h2 id="天气汉化"><a href="#天气汉化" class="headerlink" title="天气汉化"></a>天气汉化</h2><p>控制天气的文件是 <code>weather/weather.js</code>，只有一处需要修改，找到<code>_forecastHtml += &#39;&lt;td class=&quot;day&quot;&gt;&#39; ...;</code> 这行代码加上 <code>.locale(&#39;zh-cn&#39;)</code> 即可。</p>
-<pre><code>_forecastHtml += &apos;&lt;td class=&quot;day&quot;&gt;&apos; + moment(_forecast.dt, &apos;X&apos;).locale(&apos;zh-cn&apos;).format(&apos;ddd&apos;) + &apos;&lt;/td&gt;&apos;;
-</code></pre><h2 id="问候语汉化"><a href="#问候语汉化" class="headerlink" title="问候语汉化"></a>问候语汉化</h2><p>找到 <code>js/config.js</code> 这个文件中的 <code>complimentscn: {}</code> ，把里面的英文问候语改成你自己喜欢的就可以了。如果你喜欢，还可以改成比较个性的语句，比如夸一下自己的女朋友，或者调侃一下自己很帅。 </p>
+if (!e.RRULE) {
+this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+e.seconds = seconds;
+}
+
+改成：
+
+//only add fututre events, days doesn't work, we need to check seconds
+if (seconds >= 0) {
+if (seconds <= 60*60*5="" ||="" seconds="">= 60*60*24*2) {
+ var time_string = moment(startDate).locale('zh-cn').fromNow();
+ }else {
+var time_string = moment(startDate).locale('zh-cn').calendar()
+}
+if (!e.RRULE) {
+ this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+e.seconds = seconds;
+}
+
+再往下：
+
+for (date in dates) {
+var dt = new Date(dates[date]);
+var days = moment(dt).diff(moment(), 'days');
+var seconds = moment(dt).diff(moment(), 'seconds');
+var startDate = moment(dt);
+
+if (seconds >= 0) {
+if (seconds <= 60*60*5="" ||="" seconds="">= 60*60*24*2) {
+var time_string = moment(dt).fromNow();
+} else {
+var time_string = moment(dt).calendar()
+}
+this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+}
+
+改成：
+
+for (date in dates) {
+var dt = new Date(dates[date]);
+var days = moment(dt).locale('zh-cn').diff(moment(), 'days');
+var seconds = moment(dt).locale('zh-cn').diff(moment(), 'seconds');
+var startDate = moment(dt).locale('zh-cn');
+
+if (seconds >= 0) {
+if (seconds <= 60*60*5="" ||="" seconds="">= 60*60*24*2) {
+var time_string = moment(dt).locale('zh-cn').fromNow();
+} else {
+var time_string = moment(dt).locale('zh-cn').calendar()
+}
+this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+}
+
+虽然改动比较多，但是都是比较好找的地方，配合搜索 moment 关键字添加 .locale('zh-cn')，还是很容易的，只是需要点耐心花点时间罢了。
+
+天气汉化
+控制天气的文件是 weather/weather.js，只有一处需要修改，找到_forecastHtml += '<td class="day">' ...; 这行代码加上 .locale('zh-cn') 即可。
+
+_forecastHtml += '</td><td class="day">' + moment(_forecast.dt, 'X').locale('zh-cn').format('ddd') + '</td>';
+
+
+################################################################################
+</=></=></=></=></pre>
+
+<h2 id="问候语汉化"><a href="#问候语汉化" class="headerlink" title="问候语汉化"></a>问候语汉化</h2><p>找到 <code>js/config.js</code> 这个文件中的 <code>complimentscn: {}</code> ，把里面的英文问候语改成你自己喜欢的就可以了。如果你喜欢，还可以改成比较个性的语句，比如夸一下自己的女朋友，或者调侃一下自己很帅。 </p>
 <pre><code>complimentscn: {
         interval: 30000,
         fadeInterval: 4000,
@@ -756,7 +789,7 @@ if (seconds &gt;= 0) {
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#看看老外都做了什么"><span class="nav-number">1.</span> <span class="nav-text">看看老外都做了什么</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用开源库"><span class="nav-number">1.1.</span> <span class="nav-text">使用开源库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计"><span class="nav-number">1.2.</span> <span class="nav-text">设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API-设计"><span class="nav-number">1.3.</span> <span class="nav-text">API 设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Openweathermap-org"><span class="nav-number">1.3.1.</span> <span class="nav-text">Openweathermap.org</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iCal-Calendar"><span class="nav-number">1.3.2.</span> <span class="nav-text">iCal Calendar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新闻订阅"><span class="nav-number">1.3.3.</span> <span class="nav-text">新闻订阅</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">1.4.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#把页面放入魔镜"><span class="nav-number">2.</span> <span class="nav-text">把页面放入魔镜</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-FTP-传输文件"><span class="nav-number">2.1.</span> <span class="nav-text">使用 FTP 传输文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#具体配置"><span class="nav-number">3.</span> <span class="nav-text">具体配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#功能的开启与关闭"><span class="nav-number">3.1.</span> <span class="nav-text">功能的开启与关闭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区域设置"><span class="nav-number">3.2.</span> <span class="nav-text">区域设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置天气"><span class="nav-number">3.3.</span> <span class="nav-text">设置天气</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日历设置"><span class="nav-number">3.4.</span> <span class="nav-text">日历设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新闻订阅-1"><span class="nav-number">3.5.</span> <span class="nav-text">新闻订阅</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#汉化页面"><span class="nav-number">4.</span> <span class="nav-text">汉化页面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#时间汉化"><span class="nav-number">4.1.</span> <span class="nav-text">时间汉化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日历汉化"><span class="nav-number">4.2.</span> <span class="nav-text">日历汉化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#天气汉化"><span class="nav-number">4.3.</span> <span class="nav-text">天气汉化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问候语汉化"><span class="nav-number">4.4.</span> <span class="nav-text">问候语汉化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新闻订阅-2"><span class="nav-number">4.5.</span> <span class="nav-text">新闻订阅</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最终成果"><span class="nav-number">5.</span> <span class="nav-text">最终成果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#未来展望"><span class="nav-number">6.</span> <span class="nav-text">未来展望</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#看看老外都做了什么"><span class="nav-number">1.</span> <span class="nav-text">看看老外都做了什么</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用开源库"><span class="nav-number">1.1.</span> <span class="nav-text">使用开源库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计"><span class="nav-number">1.2.</span> <span class="nav-text">设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API-设计"><span class="nav-number">1.3.</span> <span class="nav-text">API 设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Openweathermap-org"><span class="nav-number">1.3.1.</span> <span class="nav-text">Openweathermap.org</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iCal-Calendar"><span class="nav-number">1.3.2.</span> <span class="nav-text">iCal Calendar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新闻订阅"><span class="nav-number">1.3.3.</span> <span class="nav-text">新闻订阅</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">1.4.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#把页面放入魔镜"><span class="nav-number">2.</span> <span class="nav-text">把页面放入魔镜</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-FTP-传输文件"><span class="nav-number">2.1.</span> <span class="nav-text">使用 FTP 传输文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#具体配置"><span class="nav-number">3.</span> <span class="nav-text">具体配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#功能的开启与关闭"><span class="nav-number">3.1.</span> <span class="nav-text">功能的开启与关闭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区域设置"><span class="nav-number">3.2.</span> <span class="nav-text">区域设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置天气"><span class="nav-number">3.3.</span> <span class="nav-text">设置天气</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日历设置"><span class="nav-number">3.4.</span> <span class="nav-text">日历设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新闻订阅-1"><span class="nav-number">3.5.</span> <span class="nav-text">新闻订阅</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#汉化页面"><span class="nav-number">4.</span> <span class="nav-text">汉化页面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问候语汉化"><span class="nav-number">4.1.</span> <span class="nav-text">问候语汉化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新闻订阅-2"><span class="nav-number">4.2.</span> <span class="nav-text">新闻订阅</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最终成果"><span class="nav-number">5.</span> <span class="nav-text">最终成果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#未来展望"><span class="nav-number">6.</span> <span class="nav-text">未来展望</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

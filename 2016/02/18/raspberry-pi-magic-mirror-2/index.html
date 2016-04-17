@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_17.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_18.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_19.png">
-<meta property="og:updated_time" content="2016-03-31T14:53:35.000Z">
+<meta property="og:updated_time" content="2016-04-17T10:40:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树莓派制作一个魔镜2（界面开发）">
 <meta name="twitter:description" content="千呼万唤始出来！Greetings.
@@ -373,7 +373,7 @@
 <h2 id="使用开源库"><a href="#使用开源库" class="headerlink" title="使用开源库"></a>使用开源库</h2><blockquote>
 <p>In addition to some self written code, I use a few opensource libraries to speed things up:<br><strong><a href="http://jquery.com/" target="_blank" rel="external">Jquery</a></strong><br>As almost any site, Magic Mirror uses Jquery to ease the DOM manipulation. Perfect for lazy people like me.<br><strong><a href="http://momentjs.com/" target="_blank" rel="external">Moment.js</a></strong><br>This will help me to do some easy timestamp manipulation. A huge timesaver when working with dates and times.<br><strong><a href="https://github.com/AIRSHP/Feed-To-JSON" target="_blank" rel="external">FeedToJson</a></strong><br>A convinient way to convert RSS feeds into javascript usable JSON data.<br><strong><a href="https://github.com/thybag/JavaScript-Ical-Parser" target="_blank" rel="external">iCal Parser</a></strong><br>Does some conversion of iCal data to JSON. Unfortunately this Library isn’t very polished, so it needed some additional work.<br>Above libraries, combined with my own HTML and Javascript is enough to make the Mirror do the Magic.</p>
 </blockquote>
-<p>老外在自己写的代码基础上，用了一些开源库文件来优化它的运行速度：魔镜使用 Jquery 来简化 DOM 操作方式。使用 Moment 减少在时间安排的操作，尤其是在争分夺秒时更节省不少时间。使用 FeedToJson 将 RSS 订阅用 JSON 数据转成 Javascript。iCal Parser 将 iCal 数据转化为 JSON，可惜这个库文件并不完美，需要一些额外的优化。<br>以上这些库文件，加上自己的 HTML 和 Javascript 足够使镜子成精了。</p>
+<p>老外在自己写的代码基础上，用了一些开源库文件来优化它的运行速度：魔镜使用 Jquery 来简化 DOM 操作方式。使用 Moment 减少在时间安排的操作，尤其是在争分夺秒时更节省不少时间。使用 FeedToJson 将 RSS 订阅用Javascript 转成 JSON 数据。iCal Parser 将 iCal 数据转化为 JSON，可惜这个库文件并不完美，需要一些额外的优化。<br>以上这些库文件，加上自己的 HTML 和 Javascript 足够使镜子成精了。</p>
 <h2 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h2><blockquote>
 <p>Of course, my Magic Mirror needs a shiny design. And since I’m a hardcore Apple Fanboy, this design should fit in <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html" target="_blank" rel="external">Apple’s Design Guidelines</a>:</p>
 <blockquote>
@@ -406,6 +406,7 @@ echo file_get_contents($url);
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>其他内容，例如当前日期与实践，还有问候语都只是一些简单的 Javascript 语句。</p>
 <h1 id="把页面放入魔镜"><a href="#把页面放入魔镜" class="headerlink" title="把页面放入魔镜"></a>把页面放入魔镜</h1><p>以上那么多都是把老外的原话拿来修修改改，现在终于到了自己的 Show Time！把页面放入魔镜。</p>
 <p>老外把代码直接开源，放在了 Github 上，地址在 <a href="https://github.com/MichMich/MagicMirror" target="_blank" rel="external">这里</a>。</p>
+<p><strong>Update：我自己的源代码：<a href="https://github.com/HelloWk/MagicMirror" target="_blank" rel="external">HelloWk/MagicMirror</a>，内容没有变，在原基础上添加了中文字体的支持，树莓派在英文环境也可以使用中文了。</strong></p>
 <p>如果你是大神，大可以直接使用 <code>git clone</code> 直接克隆到 <code>/var/www/</code> 目录中，但我这里没有这么做，我还要做一些改动，所以使用 Git 更新文件对于我来说没有用了，过后还要把修改好的代码开源到自己的 Github 中，所以直接下载源文件到电脑。</p>
 <p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_13.png" alt="下载 Magic Mirror 的源文件" title="下载 Magic Mirror 的源文件"></p>
 <p>这里要感谢老外的无私贡献，否则我们也无法快速的制作我们自己的魔镜。</p>

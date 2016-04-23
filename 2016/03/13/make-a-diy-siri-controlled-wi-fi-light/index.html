@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/siricontrolledwifilight/siri_controlled_wifi_light_4.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/siricontrolledwifilight/siri_controlled_wifi_light_5.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/siricontrolledwifilight/siri_controlled_wifi_light_6.png">
-<meta property="og:updated_time" content="2016-03-20T13:05:55.000Z">
+<meta property="og:updated_time" content="2016-04-23T13:51:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="制作一个用 Siri 控制的 WiFi 灯">
 <meta name="twitter:description" content="偶然间在 make use of 发现一篇文章 How to Make a DIY Siri-Controlled Wi-Fi Light，使用 Siri 控制一个可以连接 WiFi 的灯，哦。。。。不对，等会，，，什么东西控制？？
@@ -442,7 +442,14 @@ make
 </code></pre><p>复制配置文件和建立一个 <code>Service User ID</code> 。</p>
 <pre><code>sudo cp mosquitto.conf /etc/mosquitto
 sudo useradd -r -m -d /var/lib/mosquitto -s /usr/sbin/nologin -g nogroup mosquitto
-</code></pre><p>启动服务：</p>
+</code></pre><p><strong> 3.10.2016 Update：编辑配置文件</strong><br>编辑 conf 文件：</p>
+<pre><code>sudo vim /etc/mosquitto/mosquitto.conf
+</code></pre><p>然后在最下面写入：</p>
+<pre><code>port 1883
+listener 9001
+protocol websockets
+</code></pre><p>这个配置是使用 ‘9001’ 作为 websockets 的监听端口，这样通过 web 的链接就走 ‘9001’ 这个端口，而 client 通过 ’1883‘ 这个端口来通信，这也是默认 client 的端口。</p>
+<p>启动服务：</p>
 <pre><code>sudo /usr/local/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
 </code></pre><h3 id="开机自启动"><a href="#开机自启动" class="headerlink" title="开机自启动"></a>开机自启动</h3><p>如果你重启一下会发现 mosquitto 服务没有开机运行，每次手动运行会很麻烦，所以我们创建一个启动服务让他开机运行。</p>
 <p>新建一个启动服务文件：</p>

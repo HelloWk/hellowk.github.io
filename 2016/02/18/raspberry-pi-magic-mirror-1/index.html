@@ -100,7 +100,7 @@
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_8.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_9.png">
 <meta property="og:image" content="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_10.png">
-<meta property="og:updated_time" content="2016-04-17T11:30:23.000Z">
+<meta property="og:updated_time" content="2016-06-28T05:29:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树莓派制作一个魔镜1（硬件制作和环境搭建）">
 <meta name="twitter:description" content="看到老外用树莓派制作了一面魔镜，自己正好也有一个树莓派，就也做了一个。
@@ -404,14 +404,14 @@
 </code></pre><p>当然到这里出问题了，Chromium 无法安装！！出了一堆问题，连夜翻‘墙去 Google 终于发现了解决办法：<a href="https://www.raspberrypi.org/forums/viewtopic.php?t=121195&amp;p=818455" target="_blank" rel="external">这里</a>。其实老外原文对这问题个有说明，只是国内翻译的文章没有更新，所以没有看到，其实看看原文就能发现人家都解决好了。</p>
 <p><strong>注意，注意，注意！！！</strong>不能使用上面那个命令，90% 的人会出问题，可能只有那些幸运儿会成功。不要问我数据怎么来的，猜的！！！前面偷懒只是给了链接，妹子看到糊涂了，没能成功安装，所以这里详细写下，使用下面的方法安装：</p>
 <p>首先，在这里下载最新的chromium:<br><a href="http://ports.ubuntu.com/pool/universe/c/chromium-browser/" target="_blank" rel="external">http://ports.ubuntu.com/pool/universe/c/chromium-browser/</a><br>这么多文件怎么下？无妨，找类似于下面的这三个文件，然后都下载下来：</p>
-<pre><code>chromium-codecs-ffmpeg-extra_49.0.2623.108-0ubuntu1.1233_armhf.deb
-chromium-browser-l10n_49.0.2623.108-0ubuntu1.1233_all.deb
-chromium-browser_49.0.2623.108-0ubuntu1.1233_armhf.deb
+<pre><code>chromium-codecs-ffmpeg-extra_50.0.2661.102-0ubuntu0.16.04.1.1237_armhf.deb
+chromium-browser-l10n_50.0.2661.102-0ubuntu0.16.04.1.1237_all.deb
+chromium-browser_50.0.2661.102-0ubuntu0.16.04.1.1237_armhf.deb
 </code></pre><p>这三个文件应该只是中间的版本号不同，其他的是一样的。</p>
 <p>然后把这三个文件传入你的树莓派中，比如 <code>~/source_code/chromium</code>，进入这个文件夹，然后运行下面两条命令，恩，换成你自己下载的那个版本的：</p>
-<pre><code>sudo dpkg -i chromium-codecs-ffmpeg-extra_49.0.2623.108-0ubuntu1.1233_armhf.deb
+<pre><code>sudo dpkg -i chromium-codecs-ffmpeg-extra_50.0.2661.102-0ubuntu0.16.04.1.1237_armhf.deb
 
-sudo dpkg -i chromium-browser-l10n_49.0.2623.108-0ubuntu1.1233_all.deb chromium-browser_49.0.2623.108-0ubuntu1.1233_armhf.deb
+sudo dpkg -i chromium-browser-l10n_50.0.2661.102-0ubuntu0.16.04.1.1237_all.deb chromium-browser_50.0.2661.102-0ubuntu0.16.04.1.1237_armhf.deb
 </code></pre><p>这样 chromium 就安装好了。然后安装屏蔽鼠标的软件：</p>
 <pre><code>sudo apt-get install x11-xserver-utils unclutter
 </code></pre><h2 id="禁用屏幕保护和自动重启"><a href="#禁用屏幕保护和自动重启" class="headerlink" title="禁用屏幕保护和自动重启"></a>禁用屏幕保护和自动重启</h2><p>然后需要一些额外设置，在信息模式下禁用屏幕保护和自动重启。<br>这部也卡住了很久，由于系统版本不同，所以有些设置也发生了变化，最后参考<a href="">这篇文章</a>，修改这个文件：</p>

@@ -1,0 +1,193 @@
+body {
+  font-family: PingFangSC-Regular, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: PingFangSC-Semibold, 'Open Sans', 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.font-Big {
+  font-family: 'Montserrat', sans-serif !important;
+}
+tr {
+  border-bottom: 1px #eee solid;
+}
+th,
+td {
+  padding-right: 3em;
+}
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5,
+blockquote h6 {
+  margin-bottom: 0;
+}
+.color-black {
+  color: #292929 !important;
+}
+.color-gray {
+  color: #999 !important;
+}
+.thin {
+  font-family: PingFangSC-Ultralight, sans-serif;
+}
+.b800 {
+  font-family: PingFangSC-Semibold, sans-serif;
+  font-weight: 800 !important;
+}
+.P-Medium {
+  font-family: PingFangSC-Medium, sans-serif;
+  font-weight: 400 !important;
+}
+.P-Light {
+  font-family: PingFangSC-Light, sans-serif;
+  font-weight: 300 !important;
+}
+.cir {
+  border-radius: 50%;
+}
+.overlay2:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  opacity: 1;
+  z-index: 2;
+}
+.overlay2 p,
+.overlay2 h1,
+.overlay2 h5,
+.overlay2 span {
+  color: #333 !important;
+}
+.typing-cursor {
+  margin-top: 0 !important;
+  padding: 0 !important;
+  margin-top: -2px;
+}
+.top-bar,
+.tab-bar {
+  height: 54px;
+}
+.tab-bar {
+  box-shadow: 0px 1px 2px #CCCCCC;
+  height: 54px;
+}
+.top-bar-section li:not(.has-form) a:not(.button){
+  padding: 20px 0 0px 0;
+}
+.top-bar .row,
+.row {
+  max-width: 1200px;
+}
+.article-wrap {
+  max-width: 850px;
+}
+#archives-page-wrap {
+  max-width: 850px;
+}
+.page-bottom {
+  margin-bottom: 0px;
+}
+.page-bottom .copyright {
+  padding-bottom: 21px;
+}
+#main-content .markdown-body .article {
+  border-bottom: none;
+}
+.sidebar {
+    box-shadow: null;
+    background-color: #FFFFFF;
+}
+.side-item .side-header{ 
+/*  border-top: solid 1px #FFFFFF;*/
+}
+#site-categories .cat-list a:hover{
+  color:#B9E1E9;
+  border-color:#EAF6F8;
+  background:rgba(238, 248, 249,0.1);
+}
+#site-categories .posts-list li{
+  border-bottom: 0px solid #FFFFFF; 
+}
+#main-content .markdown-body p{
+  font-size: 14px;
+}
+#main-content .archives-wrap h1{ 
+  font-size: 14px;
+}
+#main-content .archives-wrap .article{
+  padding: 10px 0px;
+}
+#main-content .article-content ul li { 
+  font-size: 14px;
+}
+.markdown-body,
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6,
+.markdown-body pre,
+.top-bar-section li:not(.has-form) a:not(.button),
+#main-content .markdown-body .article .read-more,
+.side-item .side-header h,
+#site-info h1,
+#site-categories .cat-list a,
+#main-content .markdown-body .article .read-more,
+#archives-page-wrap .archives-wrap>h1 {
+  font-family: ".PingFang SC", "PingFang SC", "Neue Haas Grotesk Text Pro", "Microsoft YaHei", "Helvetica Neue", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "Hiragino Sans GB", sans-serif;
+}
+.markdown-body h1,
+.markdown-body h2{
+  padding-top: 20px;
+}
+.markdown-body h3,
+.markdown-body h4{
+  padding-top: 15px; 
+}
+#main-content .markdown-body .article .read-more a{
+  color: #BABABA; 
+}
+#main-content .markdown-body .article .posted-in{ 
+  font-style: normal; 
+}
+.markdown-body a {
+  color: #5CC9F5;
+}
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  color: #B9E1E9;
+}
+.markdown-body li {
+  font-size: 14px;
+/*  list-style-type: disc;*/
+}
+#sidebar { 
+  margin-top: 50px;
+}
+.bigtitle {
+  height: 240px;
+  background-color: #F8F8F8;
+  display: flex;
+  align-items: center;
+}
+.bigtitle .read-more a{
+  color: #B9E1E9; 
+}
+.h-center {
+  text-align: center;
+}
+.h-right {
+  text-align: right;
+}

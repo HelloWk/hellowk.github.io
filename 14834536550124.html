@@ -1,0 +1,655 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+     一个新玩具——NanoPi2 - WILL KEEP ... 
+  </title>
+   
+  <link href="atom.xml" rel="alternate" title="WILL KEEP ..." type="application/atom+xml">
+  <link rel="stylesheet" href="asset/css/bootstrap.css">
+  <link href="asset/css/themify-icons.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" href="asset/css/foundation.min.css" />
+  <link rel="stylesheet" href="asset/css/docs.css" />
+  <script src="asset/js/vendor/modernizr.js"></script>
+  <script src="asset/js/vendor/jquery.js"></script>
+  <script src="asset/js/parallax/parallax.min.js"></script>
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <script src="asset/js/typing.min.js"></script>
+  <script src="asset/js/scripts.js"></script>
+  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="asset/css/theme.css">
+  <link rel="stylesheet" href="asset/css/custom.css">
+  <link rel="stylesheet" href="asset/css/typing.css">
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <script type="text/javascript">
+    function before_search() {
+      var searchVal = 'site:hellowk.cc ' + document.getElementById('search_input').value;
+      document.getElementById('search_q').value = searchVal;
+      return true;
+    }
+  </script>
+</head>
+
+<body class="antialiased hide-extras">
+  <div class="marketing off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+      <nav class="top-bar docs-bar hide-for-small" data-topbar>
+        <div class="top-bar-section">
+          <div class="row">
+            <div style="position: relative;width:100%;">
+              <div style="position: absolute; width:100%;">
+                <ul class="left">
+                  <img src="asset/img/logo.png" style="height: 40px;">
+                </ul>
+                <ul id="main-menu" class="right">
+                  
+                  <li id=""><a target="_self" href="index.html">Home</a></li>
+                  
+                  <li id=""><a target="_self" href="archives.html">Archives</a></li>
+                  
+                  <li id=""><a target="_self" href="about.html">About</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="tab-bar show-for-small">
+        <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+          <span> &nbsp; WILL KEEP ...</span>
+        </a>
+      </nav>
+
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="archives.html">Archives</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><label>Categories</label></li>
+
+          
+          <li><a href="raspberry-pi.html">RASPBERRY PI</a></li>
+          
+          <li><a href="NANO%20PI.html">NANO PI</a></li>
+          
+          <li><a href="HOME%20AUTOMATION.html">HOME AUTOMATION</a></li>
+          
+
+        </ul>
+      </aside>
+      <a class="exit-off-canvas" href="#"></a>
+      <div id="main-content" role="main" class="scroll-container"> <script type="text/javascript">
+  $(function() {
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="bigtitle">
+  <div class="row">
+    <div class="col-sm-12 mb0">
+        <h2 class="uppercase mb8">一个新玩具——NanoPi2</h2>
+        <div class="read-more clearfix">
+
+          <ul class="post-meta">
+            <li>
+              <i class="ti-calendar"></i>
+              <span class="date">2/22/2016 20:0 下午</span>
+            </li>
+            <li>
+              
+              <i class="ti-tag"></i>
+              <span>posted in&nbsp;</span>  
+              <span class="posted-in"><a href='NANO%20PI.html'>NANO PI</a></span> 
+            </li>
+            <li>
+              <span class="comments">
+             
+             
+           </span>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-8 medium-8 columns">
+    <div class="markdown-body article-wrap">
+      <div class="article">
+        
+      </div>
+      <!-- article -->
+
+      <div class="article-content">
+        <hr/>
+
+<p>过完年弄了一个新玩具——NanoPi2，采用Cortex-A9架构的四核S5P4418处理器（主频1.4GHz），内存为1G DDR3，同时板上集成了802.11 b/g/n无线网卡及蓝牙4.0模块，可支持Android与Debian双系统，支持HDMI和LCD同步输出，并拥有丰富的扩展接口，兼容树莓派GPIO，PCB尺寸只有40*75mm。</p>
+
+<span id="more"></span><!-- more -->
+
+<p>下面是对比图：</p>
+
+<p><img src="http://wiki.friendlyarm.com/wiki/images/9/93/NanoPi_2-B03.png" alt="尺寸对比"/>
+<img src="http://wiki.friendlyarm.com/wiki/images/7/73/NanoPi_2-B11.png" alt="资源对比"/></p>
+
+<h2 id="toc_0">入门</h2>
+
+<h3 id="toc_1">准备工作</h3>
+
+<ul>
+<li>NanoPi2 主板</li>
+<li>microSD卡/TF卡</li>
+<li>一个microUSB接口的外接电源，要求输出为5V/2A（可使用同规格的手机充电器）</li>
+<li>一台支持HDMI输入的显示器或者电视（或选购LCD配件）</li>
+<li>一套USB键盘鼠标，同时连接还需要USB HUB （或选购串口转接板，要PC上进行操作）</li>
+<li>一台 Linux 电脑，需要联网，建议使用Ubuntu 14.04 64位系统</li>
+</ul>
+
+<p>首先一个 NanoPi2 的主板是少不了了，然后是一个 TF 卡，用于安装操作系统，TF 卡要求 Class10 或以上的最少 8GB 的 SDHC卡。电源最后够 2A，否则可能会出现带不动的情况。显示器和鼠标看个人需求，如果使用的是默认开启无线热点的固件，可用 VNC 或 SSH 登录。Linux 电脑可以在现有系统上搭建一个虚拟机就好。</p>
+
+<h3 id="toc_2">制作带系统的 SD 卡</h3>
+
+<p>首先访问<a href="http://wiki.friendlyarm.com/wiki/nanopi2/download/">此处</a>下载需要的固件文件，我下载的是 <code>nanopi2-debian-sd4g-wifiap.img.zip</code> 这个 Debian 的系统固件（默认开启无线热点，可用 VNC 或 SSH 登录）。</p>
+
+<p>然后在 Windows 平台下，以管理员身份运行 <a href="http://www.softpedia.com/get/CD-DVD-Tools/Data-CD-DVD-Burning/Win32-Disk-Imager.shtml">Win32 Disk Imager</a> 这个工具，选择你的SD卡盘符，选择你要烧写的系统固件，点击 Write 按钮烧写即可。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_1.png" alt="Win32 Disk Imager 烧写固件到 SD 卡"/></p>
+
+<p>SD 卡制作完成后，把 SD 卡插入 NanoPi 2 的 BOOT 卡槽，上电启动，看到蓝灯和绿灯已经闪烁，就已经成功启动 NanoPi2 了。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_2.png" alt="成功启动 NanoPi2"/></p>
+
+<h3 id="toc_3">关于LCD/HDMI分辨率</h3>
+
+<p><a href="http://wiki.friendlyarm.com/wiki/index.php/NanoPi_2/zh">Wiki</a> 上提到系统启动时 uboot 会自动识别 LCD，成功则会设置为该 LCD 的显示分辨率，失败则缺省会设置为 HDMI 720P 模式。由于我不需要使用屏幕（打算以后做智能控制，主要使用 GPIO），所以这里不必理会。</p>
+
+<h3 id="toc_4">通过 ssh 登录 Debian</h3>
+
+<p>我是祼板运行系统（既没有连接LCD也没有连接HDMI），并且烧写了带 <code>-wifiap.img</code> 后辍的固件，然后我可以使用手机，或者有无线网卡的电脑连接到 NanoPi2 开放的 <code>nanopi2-wifiap</code> 无线热点（默认密码是 123456789)，连接成功后，通过 <code>ssh root@192.168.8.1</code> 在终端上登录，默认的 <code>root</code> 用户密码是 <code>fa</code>。</p>
+
+<p>这里使用手机连接 NanoPi2 的无线热点：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_3.png" alt="连接 NanoPi2 的无线热点"/></p>
+
+<p>使用 Prompt 这个软件通过 ssh 登录到系统：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_4.png" alt="通过 ssh root@192.168.8.1 在终端上登录，默认的 root 用户密码是 fa"/></p>
+
+<p>登录成功：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_5.png" alt="成功登录 ssh"/></p>
+
+<h3 id="toc_5">关闭无线热点并连接无线网络</h3>
+
+<p>我们先把要连接的无线路由器配置好，使用 ssh 连接 NanoPi2 以后，输入 <code>ifconfig -a</code> 命令查询一下 WiFi 的网络接口，<code>wlan</code> 开头的就是 WiFi:</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_6.png" alt="查询 WiFi 的网络接口"/></p>
+
+<p>默认情况下是 <code>wlan0</code>：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_7.png" alt="查询到的 WiFi 的网络 wlan0"/></p>
+
+<p>然后需要在 <code>/etc/network/interfaces.d/</code> 目录下新建一个与网络接口同名的配置文件，用 vim 命令新建 <code>wlan0</code> 文件：</p>
+
+<pre><code class="language-no-highlight">vim /etc/network/interfaces.d/wlan0
+</code></pre>
+
+<p>添加如下内容（如果打开有内容直接替换），其中，<code>YourWiFiESSID</code> 和 <code>YourWiFiPassword</code> 请替换成你要连接的无线名称和密码：</p>
+
+<pre><code class="language-profile">auto wlan0
+iface wlan0 inet dhcp
+wpa-driver nl80211
+wpa-ssid YourWiFiESSID
+wpa-ap-scan 1
+wpa-psk YourWiFiPassword
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_8.png" alt="编辑 wlan0 文件"/></p>
+
+<p>最后一步，使用以下命令退出无线热点模式，命令执行后会重启设备，重启后，会根据上面的配置，自动连接 Wifi：</p>
+
+<pre><code class="language-no-highlight">turn-wifi-into-apmode no
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_9.png" alt="退出无线热点模式"/></p>
+
+<p>等重新启动后我们就可以在路由器的后台发现 NanoPi2 已经成功连接到 Wifi 上了，我这里的设备名称为 <code>FRIENDLYARM</code>：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_10.png" alt="成功连接到 Wifi"/></p>
+
+<p>这里我们记下 NanoPi2 的 IP 地址，打开电脑（这里我用的是苹果电脑）的终端，使用 <code>ssh</code> 和刚才得到的 IP 地址登录系统，这里用的是 <code>fa</code> 用户登录，使用 <code>ls</code> 查看目录，登录成功：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_11.png" alt="在电脑上通过 ssh 登录系统"/></p>
+
+<p>为了保证 <code>ssh</code> 的流畅，我们关闭 Wifi 的省电模式，使用 <code>su</code> 命令回车并输入 <code>root</code> 用户的密码获取 <code>root</code> 权限，然后使用命令 <code>iwconfig wlan0 power off</code> 关闭 Wifi 的省电模式，然后使用 <code>exit</code> 退出 <code>root</code>。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_12.png" alt="关闭 Wifi 的省电模式"/></p>
+
+<h3 id="toc_6">需改用户密码</h3>
+
+<p>直接使用命令 <code>passwd</code> + 用户名，修改的就是相应用户名的密码。
+例如我要修改 <code>root</code> 用户的密码，输入命令 <code>passwd root</code> 回车后连续输入两次密码就修改成功了。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_13.png" alt="修改用户的密码"/></p>
+
+<h3 id="toc_7">安装Debian软件包</h3>
+
+<p>官方提供的是标准的 Debian jessie 系统，你可以使用 <code>apt-get</code> 等命令来安装软件包，如果板子是首次运行，需要先用以下命令更新软件包列表：</p>
+
+<pre><code class="language-no-highlight">apt-get update
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_14.png" alt="更新软件包列表"/></p>
+
+<p>然后就可以安装软件包了，例如要安装ftp服务器，使用以下命令：</p>
+
+<pre><code class="language-no-highlight">apt-get install vsftpd
+</code></pre>
+
+<h2 id="toc_8">PC 机环境搭建</h2>
+
+<p>玩开源硬件做一定的深入后，需要做的是在 PC 机下搭建一个 Linux 环境，比如扩展文件系统大小啊，交叉编译啊什么的。</p>
+
+<h3 id="toc_9">搭建 Ubuntu</h3>
+
+<p>我这里使用的是 Parallels Desktop 安装的 Ubuntu，省事，方便，一键自动下载安装，然后就可以用了。</p>
+
+<p>具体安装这里就不说了，每个人用的虚拟机不同，还有喜欢 VMware 的，而且安装方法网上一搜一大堆，这里就不说了。</p>
+
+<h3 id="toc_10">建立交叉编译环境</h3>
+
+<p>头一次接触交叉编译环境，我就在这里犯了个错误，没有详细了解什么事交叉编译环境，还以为是建立在 NanoPi 上的，就一股脑去安装，结果不能用去问客服，技术公休不上班，自己只能看帖子，才了解到这个是要装在 PC 机上编译 ARM 架构的程序所建立的环境，嵌入式开发板最大的问题就是内存小，运行速度慢，而 PC 机可以弥补这个缺点，但是，我们用的 PC 机是 x64 或 x86 架构的，编译出来的二进制文件在 ARM 上是执行不了的，这时候就需要安装交叉编译环境，好在 x64 或 x86 架构的机器上编译出 ARM 上能执行的二进制文件。</p>
+
+<p>关于如何安装交叉编译环境，<a href="http://wiki.friendlyarm.com/wiki/index.php/NanoPi_2/zh#.E5.AE.89.E8.A3.85.E4.BA.A4.E5.8F.89.E7.BC.96.E8.AF.91.E5.99.A8">官方 Wiki</a>写的很清楚，首先下载并解压编译器:</p>
+
+<pre><code class="language-no-highlight">git clone https://github.com/friendlyarm/prebuilts.git
+sudo mkdir -p /opt/FriendlyARM/toolchain
+sudo tar xf prebuilts/gcc-x64/arm-cortexa9-linux-gnueabihf-4.9.3.tar.xz -C /opt/FriendlyARM/toolchain/
+</code></pre>
+
+<p>然后将编译器的路径加入到 <code>PATH</code> 中，用vim编辑 <code> ~/.bashrc</code>，在末尾加入以下内容：</p>
+
+<pre><code class="language-profile">export PATH=/opt/FriendlyARM/toolchain/4.9.3/bin:$PATH
+export GCC_COLORS=auto
+</code></pre>
+
+<p>执行一下 <code>~/.bashrc</code> 脚本让设置立即在当前 <code>shell</code> 窗口中生效，注意 <code>.</code> 后面有个空格：</p>
+
+<pre><code class="language-no-highlight">. ~/.bashrc
+</code></pre>
+
+<p>注意这个编译器是 64 位的，不能在 32 位的 Linux 系统上运行，安装完成后，你可以快速的验证是否安装成功：</p>
+
+<pre><code class="language-no-highlight">arm-linux-gcc -v
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_101.png" alt="验证安装"/></p>
+
+<h2 id="toc_11">NanoPi 环境搭建</h2>
+
+<p>NanoPi 上开发环境的搭建，一个是添加环境变量，让你在非 <code>root</code> 下也能执行各种指令，包括 <code>sudo</code> 指令。</p>
+
+<p>然后设置 <code>sudo</code> 不需要再输入密码。</p>
+
+<p>再一个是文件系统的扩展，NanoPi SD 卡烧入系统后，你会发现只用了 2G 多，剩下的没有使用，把剩下的卡扩展出来增加存储空间。</p>
+
+<p>最后是安装 FTP 服务器，使 NanoPi 和电脑之间文件传输更方便。</p>
+
+<h3 id="toc_12">添加环境变量</h3>
+
+<p>拿到 NanoPi 烧入系统上电后会发现在普通用户下一些常用的命令无法执行，有些可能<code>sudo</code> 这个指令也不能执行，只有在 <code>root</code> 权限下才能执行，这也是我前面没有使用 <code>sudo</code> 的原因（我这里是可以使用 sudo 的，但是为了多数情况考虑没有使用）。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_15.png" alt="常用命令无法执行"/></p>
+
+<p>首先使用 <code>su</code> 进入 <code>root</code> 权限，执行：</p>
+
+<pre><code class="language-no-highlight">echo $PATH
+</code></pre>
+
+<p>查看一下 <code>root</code> 用户的环境变量:</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_16.png" alt="查看 root 的环境变量"/></p>
+
+<p>每一个 <code>:</code> 之后是一个执行路径，把这些都记记下来，然后回到 <code>fa</code> 用户下，再次使用 <code>echo $PATH</code> 查看一下 <code>fa</code> 用户的环境变量：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_17.png" alt="查看 fa 的环境变量"/></p>
+
+<p>与刚才 <code>root</code> 用户的环境变量作对比，找出 <code>fa</code> 用户没有的变量：</p>
+
+<pre><code class="language-profile">/usr/local/sbin:/usr/sbin:/sbin
+</code></pre>
+
+<p>然后使用 <code>vim</code> 编辑 <code>fa</code> 用户的 <code>.bashrc</code> 文件：</p>
+
+<pre><code class="language-profile">vim ~/.bashrc
+</code></pre>
+
+<p>在文件最后一行加上你少的路径：</p>
+
+<pre><code class="language-profile">export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_18.png" alt="添加缺少路径"/></p>
+
+<p>保存退出。</p>
+
+<p>执行一下 <code>~/.bashrc</code> 脚本让设置立即在当前 <code>shell</code> 窗口中生效，注意 <code>.</code> 后面有个空格：</p>
+
+<pre><code class="language-no-highlight">. ~/.bashrc
+</code></pre>
+
+<p>使用 <code>ifconfig</code> 测试一下，配置成功：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_19.png" alt="环境变量配置成功"/></p>
+
+<h3 id="toc_13">设置 sudo 不需要再输入密码</h3>
+
+<p>使用 <code>su</code> 切换到 <code>root</code> 权限（这里有人说需要使用 <code>su -</code>， 说这和 <code>su</code> 是不同的，在用命令 <code>su</code> 的时候只是切换到 <code>root</code> ，但没有把 <code>root</code> 的环境变量传过去，还是当前用乎的环境变量，用 <code>su -</code> 命令将环境变量也一起带过去，就象和 <code>root</code> 登录一样），编辑 /etc/sudoers 这个文件：</p>
+
+<pre><code class="language-no-highlight">vim /etc/sudoers
+</code></pre>
+
+<p>找到这一行：</p>
+
+<pre><code class="language-profile">root    ALL=(ALL:ALL) ALL
+</code></pre>
+
+<p>把下面以要修改的用户名开头的那行改成（如果没有在下面添加）：</p>
+
+<pre><code class="language-profile">fa      ALL=(ALL:ALL) NOPASSWD: ALL
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_20.png" alt="编辑 /etc/sudoers"/></p>
+
+<p>因为这个文件是只读文件，所以使用 <code>w!</code> 强制保存，再使用 <code>q</code> 退出。</p>
+
+<p>退出 <code>root</code> 权限，<code>sudo</code> 就不在需要输入密码了。</p>
+
+<h3 id="toc_14">扩展文件系统</h3>
+
+<p>扩展可以使用<a href="http://wiki.friendlyarm.com/wiki/index.php/NanoPi_2/zh#NanoPi_2_.E6.89.A9.E5.B1.95TF.E5.8D.A1.E5.88.86.E5.8C.BA" title="NanoPi 2 扩展TF卡分区">官方 Wiki</a>给的方式使用命令行扩展，这里我在 Ubuntu 上使用 GParted Partition Editor 这个软件扩展，很方便，减少了出错的可能性。
+软件在 Ubuntu 的应用市场就有，一件安装。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_21.png" alt="Ubuntu 应用市场的 GParted Partition Editor"/></p>
+
+<p>把 SD 卡连到 Ubuntu 上，打开软件，在右上角选择 SD 卡（一般多为 <code>/dev/sdb</code>），上边那个是我虚拟机的硬盘，搞错了那就 XXOO 了再装一次虚拟机吧，所以千万不要选错。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_22.png" alt="选择 SD 卡"/></p>
+
+<p>选择后我们可以看到 <code>Label</code> 那里标有 <code>rootfs</code> 的就是我们要扩展的分区，而且会发现有很大一部分空间没有使用，接下来我们就把这部分扩展到 <code>rootfs</code>。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_23.png" alt="未利用空间"/></p>
+
+<p>右击 <code>rootfs</code> 这个分区选择 <code>Unmount</code> 卸载这个分区:</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_24.png" alt="卸载分区"/></p>
+
+<p>再次右击 <code>rootfs</code> 这个分区选择 <code>Resize/Move</code>:</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_25.png" alt="选择扩展"/></p>
+
+<p>把表示使用空间的这个条拉到头，点resize就可以了：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_26.png" alt="扩展空间"/></p>
+
+<p>最后点最上边的对号应用扩展：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_27.png" alt="应用扩展"/></p>
+
+<p>然后会扩展磁盘，稍等一会就好了：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_28.png" alt="正在扩展磁盘"/></p>
+
+<h3 id="toc_15">安装 FTP 服务器</h3>
+
+<p>FTP 的安装很简单：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install vsftpd
+</code></pre>
+
+<p>安装完成后启动 FTP 服务：</p>
+
+<pre><code class="language-no-highlight">sudo service vsftpd start
+</code></pre>
+
+<p>编辑 vsftdp 的配置文件</p>
+
+<pre><code class="language-no-highlight">sudo vim /etc/vsftpd.conf
+</code></pre>
+
+<p>这里我放一下我自己的配置：</p>
+
+<pre><code class="language-profile">配置文件： /etc/vsftpd.conf 这里删除了所有#号注释的内容
+-------------------------------------------------------
+listen=NO
+listen_ipv6=YES
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=000
+dirmessage_enable=YES
+use_localtime=YES
+connect_from_port_20=YES
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=vsftpd
+rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+ssl_enable=NO
+local_root=/var/www
+</code></pre>
+
+<p>具体配置讲解看这个链接：<a href="http://os.51cto.com/art/201008/221842.htm" title="史上最详细的 vsftpd 配置文件讲解">史上最详细的 vsftpd 配置文件讲解</a>。</p>
+
+<p>以上。</p>
+
+
+
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+          <p class="text-left" style="padding:15px 0px;">
+            
+            <a href="14834570756285.html" title="Previous Post: 制作一个用 Siri 控制的 WiFi 灯">&laquo; 制作一个用 Siri 控制的 WiFi 灯</a> 
+          </p>
+        </div>
+        <div class="large-6 columns">
+          <p class="text-right" style="padding:15px 0px;">
+            
+            <a href="14834518879850.html" title="Next Post: 使用树莓派制作一个魔镜3（更加高级的功能）">使用树莓派制作一个魔镜3（更加高级的功能） &raquo;</a> 
+          </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+            
+        </div>
+      </div>
+    </div>
+    <!-- article-wrap -->
+  </div>
+  <!-- large 8 --> <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      <div id="site-info" class="site-info">
+        
+        <!--        <h1>WILL KEEP ...</h1>-->
+<!--
+        <h6 class="h-center">在平坦的路面上曲折前行</h2>
+        <div class="site-des"></div>
+        <div class="social">
+           
+           
+           
+          
+           
+           
+           
+          
+          <a target="_blank" class="weibo" href="http://weibo.com/wkaiai" title="weibo">Weibo</a>
+           
+           
+          
+          <a target="_blank" class="github" target="_blank" href="https://github.com/HelloWk" title="GitHub">GitHub</a>
+           
+          
+          <a target="_blank" class="email" href="mailto:katalynn00@gmail.com" title="Email">Email</a>
+          
+          <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+-->
+          	</div>
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="raspberry-pi.html"><strong>RASPBERRY PI</strong></a>
+        
+            <a href="NANO%20PI.html"><strong>NANO PI</strong></a>
+        
+            <a href="HOME%20AUTOMATION.html"><strong>HOME AUTOMATION</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="14834592005558.html">新年新气象，博客更换全新 UI 啦</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14834588749279.html">iOS 10 Home App 简单体验</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14834570756285.html">制作一个用 Siri 控制的 WiFi 灯</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14834536550124.html">一个新玩具——NanoPi2</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14834518879850.html">使用树莓派制作一个魔镜3（更加高级的功能）</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+              
+<!--
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>DOC</h2>
+                </div>
+                <div class="side-content">
+                
+                </div>
+              </div>
+-->
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row --> <div class="page-bottom clearfix footer-1 bg-dark">
+  <div class="row">
+
+    <div id="site-info" class="site-info">
+      <h6 class="h-center">在平坦的路面上曲折前行</h6>
+      <div class="social">
+         
+         
+         
+        
+         
+         
+         
+        
+        <a target="_blank" class="weibo" href="http://weibo.com/wkaiai" title="weibo">Weibo</a>
+         
+         
+        
+        <a target="_blank" class="github" target="_blank" href="https://github.com/HelloWk" title="GitHub">GitHub</a>
+         
+        
+        <a target="_blank" class="email" href="mailto:katalynn00@gmail.com" title="Email">Email</a>
+        
+        <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+      </div>
+    </div>
+    
+    <p class="copyright">
+      Copyright &copy; 2017 - <a target="_blank" href="about.html">ChenhsinWong</a><br>
+    </p>
+  </div>
+  <a class="btn btn-sm fade-half back-to-top inner-link hidden-xs" href="#top">Top</a>
+</div>
+</section>
+</div>
+</div>
+
+ 
+
+<script src="asset/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+
+  function fixSidebarHeight() {
+    var w1 = $('.markdown-body').height();
+    var w2 = $('#sidebar').height();
+    if (w1 > w2) {
+      $('#sidebar').height(w1);
+    };
+  }
+  $(function() {
+    fixSidebarHeight();
+  })
+  $(window).load(function() {
+    fixSidebarHeight();
+  });
+</script>
+
+<script src="asset/chart/all-min.js"></script><script type="text/javascript">$(function(){    var mwebii=0;    var mwebChartEleId = 'mweb-chart-ele-';    $('pre>code').each(function(){        mwebii++;        var eleiid = mwebChartEleId+mwebii;        if($(this).hasClass('language-sequence')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = Diagram.parse($(this).text());            diagram.drawSVG(eleiid,{theme: 'simple'});        }else if($(this).hasClass('language-flow')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = flowchart.parse($(this).text());            diagram.drawSVG(eleiid);        }    });});</script> <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script> 
+
+</body>
+
+</html>

@@ -1,0 +1,1947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[WILL KEEP ...]]></title>
+  <link href="hellowk.cc/atom.xml" rel="self"/>
+  <link href="hellowk.cc/"/>
+  <updated>2017-01-04T20:49:13+08:00</updated>
+  <id>hellowk.cc/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[新年新气象，博客更换全新 UI 啦]]></title>
+    <link href="hellowk.cc/14834592005558.html"/>
+    <updated>2017-01-04T00:00:00+08:00</updated>
+    <id>hellowk.cc/14834592005558.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-01-04-2017.png" alt="2017"/></p>
+
+<p>新一年到了，我的对博客也进行了一次小升级：</p>
+
+<ul>
+<li>更换了 Markdown 编辑器 MWeb，非常好用，购买了正版序列号，为独立开发者做支持。自我感觉比使用还u。。＋ Hexo 的组合方式更方便，MWeb 的 Markdown 格式更符合官方规定，而且自带生成静态页，直接 push 到GitHub就好。</li>
+<li>重新绘制了 UI，目前虽然还有点小毛病，但已可以使用，新版 UI 使用了白色作为主题风格，更清新、简洁。</li>
+<li>由于格式的不同，旧文章需要修改才能再新版显示；目前已经全部修改完成，但难免会有部分显示错误，后期陆续更新。</li>
+</ul>
+
+<p>新的一年开始了，我也会陆续更新有关家居自动化的文章，预计今年会加大更新的度，和大家一起改造家中设备，研究家居自动化控制。</p>
+
+<p>目前还有更换博客名称的想法，还没有想好叫什么，想好后会更新一次 UI，同时域名也会更换，老域名会链接到新域名上，新老域名均可访问（预计持续一年），然后逐步淘汰就域名的使用，全面启用新域名。</p>
+
+<p>最后，祝大家新年快乐！</p>
+
+<p>以上。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOS 10 Home App 简单体验]]></title>
+    <link href="hellowk.cc/14834588749279.html"/>
+    <updated>2016-06-20T20:00:00+08:00</updated>
+    <id>hellowk.cc/14834588749279.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>WWDC 开发者大会结束了，不甘寂寞的宝宝第一时间升级了 iOS 10 的开发者测试版体验一下苹果新推出的应用——Home，内容不多，简单说下使用体验。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/ios10homeappexperience/home1.png" alt=""/></p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">界面</h2>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/ios10homeappexperience/home2.png" alt=""/></p>
+
+<p>Home App 的界面没有太多花哨的地方，如果你看过我上一篇文章并使用过 EVE App 的话，会发现他们有很多类似之处；这里以前通过 EVE 应用添加的设备也直接同步了过来，添加新设备过程也非常相似。在首页面列出了所有的设备，同时可以自己添加情景模式一键开启多个设备；针对每个房间有单独的页面，同时也列出了有当前房间内设备的情景模式开关。信息相对比较全面，直接能知道这是哪个屋子的哪个设备，开关状态比较直观。</p>
+
+<h2 id="toc_1">枢纽</h2>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/ios10homeappexperience/home3.png" alt=""/></p>
+
+<p>这个 App 的第三页是用于设置自动化工作的界面，允许你基于位置和时间来自动执行一些操作。通过 Apple TV 作为整个系统的枢纽，协调配件使你不在家的时也能自动化工作。而且可以在你的手机没有连接同一个 WiFi 的情况下去控制你的设备。可惜宝宝穷，宝宝没有 Apple TV，这里不能体验了。 不过可以想象，通过你的一些设置，可以在晚上回家的路上自动打开热水器烧水，回到家的时候就能洗个舒服的热水澡，想想都有些小激动呢。</p>
+
+<h2 id="toc_2">控制中心整合</h2>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/ios10homeappexperience/home4.png" alt=""/></p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/ios10homeappexperience/home8.png" alt=""/></p>
+
+<p>苹果直接把设备的控制列为了系统级别，宝宝终于不用去费劲的打开 App 控制电灯了。如果你愿意，可以设置直接在锁屏界面就打开控制中心，更方便了呢，不过小心熊孩纸玩弄你的手机把你家电器都打开，hia hia。</p>
+
+<h2 id="toc_3">Siri</h2>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/ios10homeappexperience/home5.png" alt=""/></p>
+
+<p>一如既往，Siri 还是可以控制我们的设备，而且可以通过自己设置的场景模式方便的切换，宝宝自己做了个小灯，晚上到家后直接告诉 Siri 在家，小灯自动点亮，晚上躺在床上轻轻说一声：“嘿 Siri，睡觉”，自动把灯光调暗，换个适合睡眠的颜色，再也不用下地去关灯了。</p>
+
+<p>不过不知道是测试版的原因还是自己制作的设备没有经过认证，在单独使用 Siri 去更改一个设备的时候 Siri不理解我的意思（这在 iOS 9 的时候还是工作的）！</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/ios10homeappexperience/home6.png" alt=""/></p>
+
+<p>更让宝宝生气的是，Siri 你不工作了 VwV .. ..</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/ios10homeappexperience/home7.png" alt=""/></p>
+
+<p>不过目前还是第一版测试版系统，也有可能是我自己制作的设备问题，这个问题以后再说，等宝宝有钱了买一套飞利浦的 Hub，哼哼。</p>
+
+<p>总体来说这个 App 还是很不错滴，而且融合在了系统里，控制更方便，加上 Siri 的语言控制和 Apple TV 的自动化控制，已经有了一些智能家居的影子（现在我更愿意用自动化来称呼他，更加贴切一些）。</p>
+
+<p>以上。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[制作一个用 Siri 控制的 WiFi 灯]]></title>
+    <link href="hellowk.cc/14834570756285.html"/>
+    <updated>2016-03-13T20:00:00+08:00</updated>
+    <id>hellowk.cc/14834570756285.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>偶然间在 <a href="http://www.makeuseof.com/service/diy-projects/">make use of</a> 发现一篇文章 <a href="http://www.makeuseof.com/tag/make-diy-siri-controlled-wi-fi-light/" title="How to Make a DIY Siri-Controlled Wi-Fi Light">How to Make a DIY Siri-Controlled Wi-Fi Light</a>，使用 Siri 控制一个可以连接 WiFi 的灯，哦。。。。不对，等会，，，什么东西控制？？</p>
+
+<p><strong>Siri？</strong></p>
+
+<p>仔细看看，果然是 Siri，费劲阅读下来，果然是篇好文章，充分吊起了我 DIY 的念头，正好手里有一部分需要的东西，然后去某宝凑齐其他的东西，开始自己做一个。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/siricontrolledwifilight/siri_controlled_wifi_light_1.png" alt=""/></p>
+
+<span id="more"></span><!-- more -->
+
+<p>这个使用 Siri 控制的灯除了一个能运行 Siri 的设备外，还需要一些其他的东西：</p>
+
+<ul>
+<li>一个可以运行 Linux 的服务器，这里选择使用过完年刚入手的 NanoPi2，正好空闲。NanoPi自带 WiFi，用着更方便，我的树莓派被用在制作魔镜上面了，用树莓派也是一样的，树莓派推荐 Raspberry Pi 2 model B 树莓派使用网线连接也可以（最新出的 RPi3 有 WiFi 哦）。</li>
+<li>一个 ESP8266 的 NodeMCU 模块，有 WiFi，还有个小型的处理器可以直接运行代码，WiFi 灯就用这个控制。</li>
+<li>一个 WS2812 的 LED 灯带，这个灯带的光源采用 SMD 5050 LED，自带控制芯片，具有以下好处，做个环境灯还是不错的：
+
+<ul>
+<li>每个像素点的三基色颜色可实现256级亮度显示，完成16777216种颜色的全真色彩显示。</li>
+<li>串行级联接口，能通过一根信号线完成数据的接收与解码。</li>
+<li>任意两点传传输距离在不超过5米时无需增加任何电路。</li>
+</ul></li>
+</ul>
+
+<p>我这里只是使用了一个 16 灯的灯环来做实验，跟灯带是一样的，只是个数不同。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/siricontrolledwifilight/siri_controlled_wifi_light_2.png" alt=""/></p>
+
+<h2 id="toc_0">搭建一个给 Siri 提供服务的服务器</h2>
+
+<p>用 Siri 控制电灯可不是你跟她说两句话就可以的，至少目前不行，她不知道你到底要干什么；但是有了服务器后你只需跟她动动嘴她就知道要干什么了。</p>
+
+<h3 id="toc_1">搭建 mqtt 服务器</h3>
+
+<p>MQTT（Message Queuing Telemetry Transport，消息队列遥测传输）是IBM开发的一个即时通讯协议，有可能成为物联网的重要组成部分。该协议支持所有平台，几乎可以把所有联网物品和外部连接起来，被用来当做传感器和致动器（比如通过Twitter让房屋联网）的通信协议。</p>
+
+<p>我们需要他作为消息的传输。</p>
+
+<h4 id="toc_2">安装 git</h4>
+
+<p>有些系统内没有带 git，需要自己安装：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install git
+</code></pre>
+
+<h4 id="toc_3">安装 libwebsockets</h4>
+
+<p>这里需要这个库做 <code>web sockets</code> 的支持：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install cmake libssl-dev
+cd &lt;SRC&gt;   # i.e. your source code home
+sudo wget http://git.warmcat.com/cgi-bin/cgit/libwebsockets/snapshot/libwebsockets-1.6.0-chrome48-firefox42.tar.gz
+sudo tar -xzvf libwebsockets-1.6.0-chrome48-firefox42.tar.gz
+cd libwebsockets-1.6.0-chrome48-firefox42/
+mkdir build
+cd build
+cmake .. -DOPENSSL_ROOT_DIR=/usr/bin/openssl
+make
+sudo make install
+</code></pre>
+
+<h4 id="toc_4">安装 Mosquitto</h4>
+
+<p>Mosquitto 是一款实现了消息推送协议 MQTT v3.1 的开源消息代理软件，提供轻量级的，支持可发布/可订阅的的消息推送模式，使设备对设备之间的短消息通信变得简单，比如现在应用广泛的低功耗传感器，手机、嵌入式计算机、微型控制器等移动设备。一个典型的应用案例就是 Andy Stanford-Clark Mosquitto（MQTT协议创始人之一）在家中实现的远程监控和自动化。</p>
+
+<p>这个安装比较复杂，但是只要有点耐心，还是很容易的。</p>
+
+<pre><code class="language-no-highlight">cd &lt;SRC&gt;   # i.e. your source code home 你放源代码的地方
+sudo wget http://mosquitto.org/files/source/mosquitto-1.4.8.tar.gz
+sudo tar xvf mosquitto-1.4.8.tar.gz
+cd mosquitto-1.4.8/
+</code></pre>
+
+<p>首先需要编辑 <code>config.mk</code> 打开 <code>websockets</code> 为 <code>yes</code>：</p>
+
+<pre><code class="language-no-highlight">sudo vim config.mk
+</code></pre>
+
+<p>找到 <code>WITH_WEBSOCKETS</code>，修改为：</p>
+
+<pre><code class="language-profile">WITH_WEBSOCKETS:=yes
+</code></pre>
+
+<p>然后安装 <code> pre-reqs:-</code> （支持文件？）</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install uuid-dev xsltproc docbook-xsl
+</code></pre>
+
+<p>最后：</p>
+
+<pre><code class="language-no-highlight">make
+make test
+sudo make install
+</code></pre>
+
+<p>如果你遇到关于缺失 <code>ares.h</code> 的错误：</p>
+
+<pre><code class="language-no-highlight">cd &lt;SRC&gt;   # i.e. your source code home
+wget http://c-ares.haxx.se/download/c-ares-1.10.0.tar.gz
+tar xvf c-ares-1.10.0.tar.gz
+cd c-ares-1.10.0
+./configure
+make
+</code></pre>
+
+<blockquote>
+<p>如果你 <code>make test</code> 遇到了错误，估计是 websockets 在共享库的目录中没有放库文件，试试这么做：</p>
+
+<pre><code class="language-no-highlight">cd &lt;SRC&gt;/org.eclipse.mosquitto/test/broker
+../../src/mosquitto -p 1888
+</code></pre>
+
+<p>如果是共享库的问题，你可以马上看到他，像这样做一些事儿：</p>
+
+<pre><code class="language-no-highlight">find /usr -name libwebsockets.so.6
+</code></pre>
+
+<p>我的是：</p>
+
+<pre><code class="language-no-highlight">/usr/local/lib/libwebsockets.so.6
+</code></pre>
+
+<p>然后：</p>
+
+<pre><code class="language-no-highlight">sudo vi /etc/ld.so.conf.d/libc.conf
+</code></pre>
+
+<p>在最后添加：</p>
+
+<pre><code class="language-profile">\#lib64c default configuration
+/usr/local/lib64
+</code></pre>
+
+<p>然后：</p>
+
+<pre><code class="language-no-highlight">sudo ldconfig
+</code></pre>
+
+<p>重试 <code>make test</code>。</p>
+</blockquote>
+
+<p><code>make test</code> 没问题后：</p>
+
+<pre><code class="language-no-highlight">sudo make install
+</code></pre>
+
+<p>复制配置文件和建立一个 <code>Service User ID</code> 。</p>
+
+<pre><code class="language-no-highlight">sudo cp mosquitto.conf /etc/mosquitto
+sudo useradd -r -m -d /var/lib/mosquitto -s /usr/sbin/nologin -g nogroup mosquitto
+</code></pre>
+
+<p><strong> 3.10.2016 Update：编辑配置文件</strong>
+编辑 conf 文件：</p>
+
+<pre><code class="language-no-highlight">sudo vim /etc/mosquitto/mosquitto.conf
+</code></pre>
+
+<p>然后在最下面写入：</p>
+
+<pre><code class="language-profile">port 1883
+listener 9001
+protocol websockets
+</code></pre>
+
+<p>这个配置是使用 ‘9001’ 作为 websockets 的监听端口，这样通过 web 的链接就走 ‘9001’ 这个端口，而 client 通过 ’1883‘ 这个端口来通信，这也是默认 client 的端口。</p>
+
+<p>启动服务：</p>
+
+<pre><code class="language-no-highlight">sudo /usr/local/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
+</code></pre>
+
+<h4 id="toc_5">开机自启动</h4>
+
+<p>如果你重启一下会发现 mosquitto 服务没有开机运行，每次手动运行会很麻烦，所以我们创建一个启动服务让他开机运行。</p>
+
+<p>新建一个启动服务文件：</p>
+
+<pre><code class="language-no-highlight">sudo vim  /etc/init.d/mosquitto
+</code></pre>
+
+<p>输入一下内容：</p>
+
+<pre><code class="language-profile">#!/bin/bash
+# /etc/init.d/mosquitto
+
+### BEGIN INIT INFO
+# Provides:          mosquitto
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start mosquitto at boot time
+# Description:       Enable service provided by daemon.
+### END INIT INFO
+
+case &quot;$1&quot; in 
+    start)
+        echo &quot;Starting Mosquitto Server&quot;
+        /usr/local/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf &lt; /dev/null &amp;
+        ;;
+    stop)
+        echo &quot;Stopping Mosquitto Server&quot;
+        killall mosquitto
+        ;;
+    *)
+        echo &quot;Usage: /etc/init.d/mosquitto start|stop&quot;
+        exit 1
+        ;;
+esac
+
+exit 0
+</code></pre>
+
+<p>然后进行以下操作让服务开机运行：</p>
+
+<pre><code class="language-no-highlight">sudo chown root:root /etc/init.d/mosquitto
+sudo chmod +x /etc/init.d/mosquitto
+sudo update-rc.d mosquitto defaults
+sudo update-rc.d mosquitto enable
+</code></pre>
+
+<p>重启试试看，可以使用 MQTT.fx 这个软件进行测试。</p>
+
+<h3 id="toc_6">安装 Homekit 服务器</h3>
+
+<p>HomeKit，是苹果2014年发布的智能家居平台。这才是我们使用 Siri 控制电灯的关键。</p>
+
+<h4 id="toc_7">安装 Node.js</h4>
+
+<p>我们一会要安装 <code>HAP-NodeJS</code> 这个开源的 HomeKit 服务器，但是他需要 <code>Node.js</code> 的支持：</p>
+
+<pre><code class="language-no-highlight">sudo wget https://nodejs.org/dist/v5.8.0/node-v5.8.0-linux-armv7l.tar.xz
+sudo tar xvf node-v5.8.0-linux-armv7l.tar.xz 
+</code></pre>
+
+<p>解压后，在 <code>bin</code> 文件夹中已经存在 <code>node</code> 以及 <code>npm</code>，如果你进入到对应文件的中执行命令行一点问题都没有，不过不是全局的，所以将这个设置为全局就好了：</p>
+
+<pre><code class="language-no-highlight">sudo ln -s /source-code-home/node-v5.8.0-linux-armv7l/bin/node /usr/local/bin/node
+udo ln -s /source-code-home/node-v5.8.0-linux-armv7l/bin/npm /usr/local/bin/npm
+</code></pre>
+
+<p>这里 <code>/source-code-home/</code> 就是你放 <code>Node.js</code> 的地方，改成自己的就好。</p>
+
+<p>接下来，我们安装一些 <code>Node</code> 的模块：</p>
+
+<pre><code class="language-no-highlight">sudo npm install -g npm
+sudo npm install -g node-gyp
+</code></pre>
+
+<p>实际上，第一条代码是使用 Node Package Manager (npm) 安装一个最新的版本。这一步我卡了一晚上也没有过去，直接略过。</p>
+
+<p>第二条命令如果有错误请试试：</p>
+
+<pre><code class="language-no-highlight">sudo npm cache clean
+</code></pre>
+
+<h4 id="toc_8">HAP-NodeJS:</h4>
+
+<p><a href="https://github.com/KhaosT/HAP-NodeJS">HAP-NodeJS</a> 是使用 <code>Node.js</code> 实现的 HomeKit 服务器，这是 HomeKit 请求和 WiFi 设备之间的桥梁。</p>
+
+<p>安装 HAP 很简单：</p>
+
+<pre><code class="language-no-highlight">git clone https://github.com/KhaosT/HAP-NodeJS.git
+cd HAP-NodeJS
+npm rebuild
+sudo npm install node-persist
+sudo npm install srp
+</code></pre>
+
+<p>在安装 <code>srp</code> 时如果出现 <code>#error This version of node/NAN/v8 requires a C++11 compiler</code>：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install gcc-4.8 g++-4.8
+sudo update-alternatives --install/usr/bin/gccgcc/usr/bin/gcc-4.6 20
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 20
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
+</code></pre>
+
+<p>然后继续：</p>
+
+<pre><code class="language-no-highlight">sudo npm install srp
+sudo npm install mdns --unsafe-perm
+</code></pre>
+
+<p>安装 <code>mdns</code> 时如果出现 <code>error: dns_sd.h: No such file or directory </code>：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install libavahi-compat-libdnssd-dev
+</code></pre>
+
+<p>继续：</p>
+
+<pre><code class="language-no-highlight">sudo npm install mdns --unsafe-perm
+sudo npm install debug
+sudo npm install ed25519 --unsafe-perm
+sudo npm install curve25519 --unsafe-perm
+</code></pre>
+
+<p>这样 HAP 就全部弄好了，你可以通过以下命令去运行：</p>
+
+<pre><code class="language-no-highlight">sudo node Core.js
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/siricontrolledwifilight/siri_controlled_wifi_light_3.png" alt=""/></p>
+
+<p>你立刻就能看到已经创建了 6 个虚拟的设备。我们使用这些作为我们 WiFi 灯的开始，但是我们要先使用这些开始测试一下。</p>
+
+<p>现在你需要一个可以使用 Siri 的 Apple 设备；苹果并没有提供一个关于 Homekit 的 App，所以我们可以下载一个免费的软件：<a href="https://itunes.apple.com/us/app/elgato-eve/id917695792?mt=8" title="Elgato Eve app">Elgato Eve app</a>，一个一个可以让你添加自己的设备（即使不是 Elgato 的设备）到 Homekit 网络并管理的 App。</p>
+
+<p>第一次打开软件他会让你命名你的家，填好后进行下一步，这里我们选择<code>添加附件</code>，然后选择一个设备，比如 <code>light</code>。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/siricontrolledwifilight/siri_controlled_wifi_light_4.png" alt=""/></p>
+
+<p>然后他会公诉你需要唯一的设置代码才能安全的添加到家庭，不管他，选择<strong>添加到「你家的名字」</strong>。</p>
+
+<p>然后他会告诉你此配件没有认证，仍然添加，然后他会与此配件配对。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/siricontrolledwifilight/siri_controlled_wifi_light_5.png" alt=""/></p>
+
+<p>选手动输入代码，然后输入以下的数字：</p>
+
+<pre><code class="language-no-highlight">031-45-154
+</code></pre>
+
+<p>这个代码可以在 <code>Light_accessory.js</code> 文件中找到并修改。</p>
+
+<p>添加这个配件到你的默认房间，给他起个名字，然后选择一个图标。</p>
+
+<p>然后你回到你运行 HAP-NodeJS 的命令行那里，你会发现会有消息“Are we on?”出现，这是软件在查看此配件的信息。然后打开 Siri 告诉她：“把（你给灯起的名字）打开”，然后在关闭它。然后你会在命令行内发现如下信息：</p>
+
+<pre><code class="language-text">Are we on? No.
+Turning the light on!
+Turning the light off!
+</code></pre>
+
+<p>非常棒，到这里我们就完成了服务的搭建，你也可以使用 Siri 控制一个虚拟的灯，接下来我们就实际制作一个真的 WiFi 灯。</p>
+
+<h2 id="toc_9">制作一个真的 WiFi 灯</h2>
+
+<p>在这里这个硬件我们使用 NodeMCU 开发板去控制 WS2812 的灯带，你会发现惊人的简单，我们能直接使用 NodeMCU 开发板驱动灯带然后使用 USB 去链接（当然如果灯带过长还是建议你用的单独的电源去驱动灯带然后使用 NodeMCU 开发板来控制它）。如果你没有这个灯带的话，你也可以使用一个继电器去控制电灯的电源，或者你能使用的方式去控制它，不过，注意安全。</p>
+
+<p>把灯带的电源线连在开发板的 VIN Pin，地线连在 GND Pin，把信号线接在 NodeMCU 上标有 D2 字样的针脚上（或者你自己喜欢的那个，当然程序中也要对应修改）。</p>
+
+<p>如果你还没有搭建使用 Arduino 编译 NodeMCU 的环境，你可以先去 <a href="http://www.makeuseof.com/tag/meet-arduino-killer-esp8266/" title="ESP8266: Arduino Killer">ESP8266: Arduino Killer</a> 这篇文章搭建好环境并能工作后再回来继续我们的制作。你需要安装一下这些库：</p>
+
+<p><a href="https://github.com/adafruit/Adafruit_NeoPixel" title="Adafruit’s NeoPixels">Adafruit’s NeoPixels</a>
+<a href="https://github.com/256dpi/arduino-mqtt">Arduino-MQTT</a></p>
+
+<p>然后你可以把下面的代码 Update 到你的 NodeMCU 中：</p>
+
+<pre><code class="language-C">#include &lt;ESP8266WiFi.h&gt;
+#include &lt;MQTTClient.h&gt;
+#include &lt;Adafruit_NeoPixel.h&gt;
+
+#define PIN 4
+
+// Parameter 1 = number of pixels in strip
+// Parameter 2 = Arduino pin number (most are valid)
+// Parameter 3 = pixel type flags, add together as needed:
+//   NEO_KHZ800  800 KHz bitstream (most NeoPixel products w/WS2812 LEDs)
+//   NEO_KHZ400  400 KHz (classic &#39;v1&#39; (not v2) FLORA pixels, WS2811 drivers)
+//   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
+//   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(16, PIN, NEO_GRB + NEO_KHZ800);
+
+const char* ssid = &quot;your wifi ssid&quot;;
+const char* password = &quot;your wifi password&quot;;
+const char* host = &quot;homekit/officelight&quot;; // the name of your fixture, and the base channel to listen to
+const char* server = &quot;192.168.31.206&quot;; // your MQTT server host
+String clientName = &quot;officelight&quot;;
+
+
+/**************************************************************/
+/* NO NEED TO CHANGE BENEATH THIS LINE */
+
+int hue = 0;
+float brightness = 0.0;
+float saturation = 0.0;
+
+#define BUFFER_SIZE 100
+
+WiFiClient wifiClient;
+MQTTClient client;
+
+void setup() {
+  Serial.begin(115200);
+  client.begin(server,wifiClient);
+  Serial.println(&quot;Booting&quot;);
+
+//  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(&quot;.&quot;);
+  }
+  Serial.println(&quot;&quot;);
+
+  Serial.println(&quot;Ready&quot;);
+  Serial.print(&quot;IP address: &quot;);
+  Serial.println(WiFi.localIP());
+
+  strip.begin();
+  strip.show(); // Initialize all pixels to &#39;off&#39;
+
+}
+
+void loop() {
+  if (WiFi.status() == WL_CONNECTED) {
+    if (!client.connected()) {
+      if (client.connect((char*) clientName.c_str())) {
+        client.publish(&quot;outTopic&quot;,(String)&quot;hello world, I&#39;m &quot;+host);
+        client.subscribe(host+(String)&quot;/#&quot;);
+      }
+    }
+
+    if (client.connected())
+      client.loop();
+  }
+}
+
+// Convert Hue/Saturation/Brightness values to a packed 32-bit RBG color.
+// hue must be a float value between 0 and 360
+// saturation must be a float value between 0 and 1
+// brightness must be a float value between 0 and 1
+uint32_t HSVColor(float h, float s, float v) {
+
+  h = constrain(h, 0, 360);
+  s = constrain(s, 0, 1);
+  v = constrain(v, 0, 1);
+
+  int i, b, p, q, t;
+  float f;
+
+  h /= 60.0;  // sector 0 to 5
+  i = floor( h );
+  f = h - i;  // factorial part of h
+
+  b = v * 255;
+  p = v * ( 1 - s ) * 255;
+  q = v * ( 1 - s * f ) * 255;
+  t = v * ( 1 - s * ( 1 - f ) ) * 255;
+
+  switch( i ) {
+    case 0:
+      return strip.Color(b, t, p);
+    case 1:
+      return strip.Color(q, b, p);
+    case 2:
+      return strip.Color(p, b, t);
+    case 3:
+      return strip.Color(p, q, b);
+    case 4:
+      return strip.Color(t, p, b);
+    default:
+      return strip.Color(b, p, q);
+  }
+}
+
+void currentValues(){
+  Serial.println(&quot;&quot;);
+  Serial.println(&quot;Current State&quot;);
+  Serial.print(&quot;Hue (0-360):&quot;);
+  Serial.println(hue);
+  Serial.print(&quot;Saturation (0-100 in, 0-1):&quot;);
+  Serial.println(saturation*100);
+  Serial.print(&quot;Brightness (0-100):&quot;);
+  Serial.println(brightness*100);
+  Serial.println(&quot;&quot;);
+}
+
+void messageReceived(String topic, String payload, char * bytes, unsigned int lgth) {
+  uint16_t i, j;
+
+  currentValues();
+  String myMessage = String(payload);
+  // handle message arrived
+  Serial.print(topic);
+  Serial.print(&quot; =&gt; &quot;);
+  String myTopic = String(topic);
+
+  if (topic == host) {
+    Serial.println(payload);
+
+    if(payload== &quot;on&quot;){
+      brightness = 1.0;
+
+      for (i = 0; i &lt; strip.numPixels(); i ++) {
+        strip.setPixelColor(i, HSVColor(hue,saturation,brightness));
+      }
+      strip.show();
+    } else {
+      brightness = 0.0;
+
+      for(i = 0; i &lt; strip.numPixels(); i ++) {
+        strip.setPixelColor(i, HSVColor(hue,saturation,brightness));
+      }
+      strip.show();
+    }
+
+  } else if (topic == host + (String)&quot;/brightness&quot;) { 
+    // Brightness up to 100
+    Serial.println(payload);
+    brightness = (payload.toFloat()) / 100;
+    for (i = 0; i &lt; strip.numPixels(); i ++) {
+      strip.setPixelColor(i, HSVColor(hue,saturation,brightness));
+    }
+    strip.show();
+
+  } else if (topic == host + (String)&quot;/hue&quot;) { 
+    // Hue value 0-360
+    Serial.println(payload);
+    hue = payload.toInt();
+    for (i = 0; i &lt; strip.numPixels(); i ++) {
+      strip.setPixelColor(i, HSVColor(hue,saturation,brightness));
+    }
+    strip.show();
+
+  } else if (topic == host + (String)&quot;/saturation&quot;) { 
+    // Saturation value at 0-100
+    Serial.println(payload);
+    saturation = (payload.toFloat()) / 100;
+    for (i = 0; i &lt; strip.numPixels(); i ++) {
+      strip.setPixelColor(i, HSVColor(hue,saturation,brightness));
+    }
+    strip.show();
+
+  }
+  currentValues();
+}
+</code></pre>
+
+<p>你需要把这些改成你自己的网络设置：</p>
+
+<pre><code class="language-C">const char* ssid = &quot;your wifi ssid&quot;;
+const char* password = &quot;your wifi password&quot;;
+const char* host = &quot;homekit/officelight&quot;;
+const char* server = &quot;192.168.31.206&quot;;
+</code></pre>
+
+<p>这里只使用了16颗 LED 的小灯组，你可以添加更多的灯并控制它。上传完成后你就可以打开你最喜欢的 MQTT 客户端测试一下了：</p>
+
+<ul>
+<li>你可以发送 <code>on</code> 到 <code>homekit/officelight</code> 打开灯带，发送 <code>off</code> 关闭它。</li>
+<li>你能发送数字 0 - 360 到 <code>homekit/officelight/hue</code> 来改变颜色。这里使用的是 <a href="https://en.wikipedia.org/wiki/HSL_and_HSV" title="HSV color space">HSV color space</a>，所以 0 和 360 是红，120 是绿，240 是蓝。</li>
+<li>你能发送 0 - 100 到 <code>homekit/officelight/brightness</code> 来改变灯的亮度，也就是 0% - 100% 的亮度值。</li>
+<li>同理可以发送到 <code>homekit/officelight/saturation</code> 改变饱和度，最大是 100。</li>
+</ul>
+
+<p>测试完成后你就可以把灯带固定到你想要放的地方了。然后回来我们继续，让 Siri 能够控制他。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/siricontrolledwifilight/siri_controlled_wifi_light_6.png" alt=""/></p>
+
+<h2 id="toc_10">设定一个 HomeKit 的附件</h2>
+
+<p>回到我们的 HAP-NodeJS 服务器的目录下，定位到 <code>/accessories</code> 文件夹下面，你可以直接使用以下命令下载一个已经配置好的附件文件到你的目录中：</p>
+
+<pre><code class="language-no-highlight">wget https://gist.githubusercontent.com/jamesabruce/a6607fa9d93e41042fee/raw/12e4fd1d1c2624e7540ba5e17c3e79bc6bdec5fd/Officelight_accessory.js
+</code></pre>
+
+<p>或者复制下面的代码新建一个名称格式为 <code>[you accessories name]_accessory.js</code> 的文件：</p>
+
+<pre><code class="language-javascript">//MQTT Setup
+var mqtt = require(&#39;mqtt&#39;);
+console.log(&quot;Connecting to MQTT broker...&quot;);
+var mqtt = require(&#39;mqtt&#39;);
+var options = {
+  port: 1883,
+  host: &#39;localhost&#39;,
+  clientId: &#39;HelloWk Wifi Light&#39;
+};
+var client = mqtt.connect(options);
+console.log(&quot;Wifi Light Connected to MQTT broker&quot;);
+
+
+var Accessory = require(&#39;../&#39;).Accessory;
+var Service = require(&#39;../&#39;).Service;
+var Characteristic = require(&#39;../&#39;).Characteristic;
+var uuid = require(&#39;../&#39;).uuid;
+
+//here&#39;s a fake hardware device that we&#39;ll expose to HomeKit
+var OFFICELIGHT = {
+  powerOn: false,
+  brightness: 100, // percentage
+  hue: 0,
+  saturation: 0,
+
+  setPowerOn: function(on) { 
+    console.log(&quot;Turning Office Light %s!&quot;, on ? &quot;on&quot; : &quot;off&quot;);
+
+    if (on) {
+      client.publish(&#39;homekit/officelight&#39;, &#39;on&#39;);
+      OFFICELIGHT.powerOn = on;
+    } 
+    else {
+      client.publish(&#39;homekit/officelight&#39;,&#39;off&#39;);
+      OFFICELIGHT.powerOn = false;   
+   };
+
+  },
+  setBrightness: function(brightness) {
+    console.log(&quot;Setting light brightness to %s&quot;, brightness);
+    client.publish(&#39;homekit/officelight/brightness&#39;,String(brightness));
+    OFFICELIGHT.brightness = brightness;
+  },
+  setHue: function(hue){
+    console.log(&quot;Setting light Hue to %s&quot;, hue);
+    client.publish(&#39;homekit/officelight/hue&#39;,String(hue));
+    OFFICELIGHT.hue = hue;
+  },
+  setSaturation: function(saturation){
+    console.log(&quot;Setting light Saturation to %s&quot;, saturation);
+    client.publish(&#39;homekit/officelight/saturation&#39;,String(saturation));
+    OFFICELIGHT.saturation = saturation;
+  },
+  identify: function() {
+    console.log(&quot;Identify the light!&quot;);
+  }
+}
+
+// Generate a consistent UUID for our light Accessory that will remain the same even when
+// restarting our server. We use the `uuid.generate` helper function to create a deterministic
+// UUID based on an arbitrary &quot;namespace&quot; and the word &quot;OFFICELIGHT&quot;.
+var lightUUID = uuid.generate(&#39;hap-nodejs:accessories:OFFICELIGHT&#39;);
+    
+// This is the Accessory that we&#39;ll return to HAP-NodeJS that represents our fake light.
+var light = exports.accessory = new Accessory(&#39;Office Light&#39;, lightUUID);
+    
+// Add properties for publishing (in case we&#39;re using Core.js and not BridgedCore.js)
+light.username = &quot;FF:FF:FF:FF:CC:1A&quot;;
+light.pincode = &quot;031-45-154&quot;;
+    
+// set some basic properties (these values are arbitrary and setting them is optional)
+light
+  .getService(Service.AccessoryInformation)
+  .setCharacteristic(Characteristic.Manufacturer, &quot;MakeUseOf&quot;)
+  .setCharacteristic(Characteristic.Model, &quot;Rev-1&quot;)
+  .setCharacteristic(Characteristic.SerialNumber, &quot;LOLWUT&quot;);
+
+// listen for the &quot;identify&quot; event for this Accessory
+light.on(&#39;identify&#39;, function(paired, callback) {
+  OFFICELIGHT.identify();
+  callback(); // success
+});
+
+// Add the actual Lightbulb Service and listen for change events from iOS.
+// We can see the complete list of Services and Characteristics in `lib/gen/HomeKitTypes.js`
+light
+    .addService(Service.Lightbulb, &quot;Office Light&quot;) // services exposed to the user should have &quot;names&quot; like &quot;Fake Light&quot; for us
+    .getCharacteristic(Characteristic.On)
+    .on(&#39;set&#39;, function(value, callback) {
+       OFFICELIGHT.setPowerOn(value);
+       callback(); // Our fake Light is synchronous - this value has been successfully set
+    });
+    
+// We want to intercept requests for our current power state so we can query the hardware itself instead of
+// allowing HAP-NodeJS to return the cached Characteristic.value.
+light
+    .getService(Service.Lightbulb)
+    .getCharacteristic(Characteristic.On)
+    .on(&#39;get&#39;, function(callback) {
+    
+      // this event is emitted when you ask Siri directly whether your light is on or not. you might query
+      // the light hardware itself to find this out, then call the callback. But if you take longer than a
+      // few seconds to respond, Siri will give up.
+    
+     var err = null; // in case there were any problems
+    
+     if (OFFICELIGHT.powerOn) {
+        console.log(&quot;Are we on? Yes.&quot;);
+        callback(err, true);
+     } else {
+        console.log(&quot;Are we on? No.&quot;);
+        callback(err, false);
+      }
+    });
+    
+// also add an &quot;optional&quot; Characteristic for Brightness
+light
+  .getService(Service.Lightbulb)
+  .addCharacteristic(Characteristic.Brightness)
+  .on(&#39;get&#39;, function(callback) {
+    callback(null, OFFICELIGHT.brightness);
+  })
+  .on(&#39;set&#39;, function(value, callback) {
+    OFFICELIGHT.setBrightness(value);
+    callback();
+  })
+
+light
+  .getService(Service.Lightbulb)
+  .addCharacteristic(Characteristic.Hue)
+  .on(&#39;get&#39;,function(callback){
+   callback(null,OFFICELIGHT.hue);
+   })
+   .on(&#39;set&#39;,function(value,callback){
+   OFFICELIGHT.setHue(value);
+   callback();   
+   })
+
+light
+  .getService(Service.Lightbulb)
+  .addCharacteristic(Characteristic.Saturation)
+  .on(&#39;get&#39;,function(callback){
+   callback(null,OFFICELIGHT.saturation);
+   })
+   .on(&#39;set&#39;,function(value,callback){
+   OFFICELIGHT.setSaturation(value);
+   callback();   
+   })
+</code></pre>
+
+<p>实际上，不管你是直接下载文件也好还是新建也好，本质都是复制默认的 <code>light accessory</code>，然后改成你自己的需要的名字，以下是你自己创建一个 <code>accessory</code> 时需要注意的地方：</p>
+
+<ul>
+<li>所有的 accessory 都要命名为 <strong><code>*_accessory.js</code></strong></li>
+<li>添加你自己的 MQTT 服务在文件的最上方。</li>
+<li>如果你想设置一个自己的设备名，搜索/替换 所有的 <code>officelight</code> 为你自己的唯一不变的设备名。</li>
+<li>为你的设备分配一个唯一的 16 进制的标识（<code>light.username = “1B:2B:3C:5D:6E:FF”;</code>）。</li>
+<li>不要更改 PIN 码，他有一个固定的格式，如果你随便改的话将不能成功配对。</li>
+</ul>
+
+<p>现在你把你的新设备加入 Elgato Eve app 来试试看吧。如果出现提示缺少 <code>mqtt</code> 时运行一下命令：</p>
+
+<pre><code class="language-no-highlight">sudo npm install mqtt
+</code></pre>
+
+<p>然后再试一遍。</p>
+
+<p>最后，我们把 HAP-NodeJS 加入开机自动运行，编辑 <code>etc/rc.local</code> 这个文件，把下面这行加在 <code>exit 0</code> 之前：</p>
+
+<pre><code class="language-no-highlight">sudo node /home/pi/HAP-NodeJS/Core.js &lt; /dev/null &amp;
+</code></pre>
+
+<p>最后一个步骤：去定位到 <code>/accessories</code> 文件夹下，删除其他的虚拟设备，好了，你可以尽情体验 Siri 控制灯带了。</p>
+
+<h2 id="toc_11">还有什么是 Siri 能够控制的？</h2>
+
+<p>现在你已经会了最基本的控制，但是这里你能控制的东西没有极限——如果你能使用 <code>Javascript</code> 进行编程的话，你可以创建你自己的设备文件。这个项目有很多的潜力，只要你能想得到，相信你会玩的很愉快。</p>
+
+<p>以上。</p>
+
+<hr/>
+
+<p>更多精彩内容：<a href="http://www.shumeipaiba.com">树莓派吧</a>，更多树莓派问题讨论：<a href="http://bbs.shumeipaiba.com/forum-41-1.html" title="树莓派吧论坛">树莓派吧论坛</a></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[一个新玩具——NanoPi2]]></title>
+    <link href="hellowk.cc/14834536550124.html"/>
+    <updated>2016-02-22T20:00:00+08:00</updated>
+    <id>hellowk.cc/14834536550124.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>过完年弄了一个新玩具——NanoPi2，采用Cortex-A9架构的四核S5P4418处理器（主频1.4GHz），内存为1G DDR3，同时板上集成了802.11 b/g/n无线网卡及蓝牙4.0模块，可支持Android与Debian双系统，支持HDMI和LCD同步输出，并拥有丰富的扩展接口，兼容树莓派GPIO，PCB尺寸只有40*75mm。</p>
+
+<span id="more"></span><!-- more -->
+
+<p>下面是对比图：</p>
+
+<p><img src="http://wiki.friendlyarm.com/wiki/images/9/93/NanoPi_2-B03.png" alt="尺寸对比"/>
+<img src="http://wiki.friendlyarm.com/wiki/images/7/73/NanoPi_2-B11.png" alt="资源对比"/></p>
+
+<h2 id="toc_0">入门</h2>
+
+<h3 id="toc_1">准备工作</h3>
+
+<ul>
+<li>NanoPi2 主板</li>
+<li>microSD卡/TF卡</li>
+<li>一个microUSB接口的外接电源，要求输出为5V/2A（可使用同规格的手机充电器）</li>
+<li>一台支持HDMI输入的显示器或者电视（或选购LCD配件）</li>
+<li>一套USB键盘鼠标，同时连接还需要USB HUB （或选购串口转接板，要PC上进行操作）</li>
+<li>一台 Linux 电脑，需要联网，建议使用Ubuntu 14.04 64位系统</li>
+</ul>
+
+<p>首先一个 NanoPi2 的主板是少不了了，然后是一个 TF 卡，用于安装操作系统，TF 卡要求 Class10 或以上的最少 8GB 的 SDHC卡。电源最后够 2A，否则可能会出现带不动的情况。显示器和鼠标看个人需求，如果使用的是默认开启无线热点的固件，可用 VNC 或 SSH 登录。Linux 电脑可以在现有系统上搭建一个虚拟机就好。</p>
+
+<h3 id="toc_2">制作带系统的 SD 卡</h3>
+
+<p>首先访问<a href="http://wiki.friendlyarm.com/wiki/nanopi2/download/">此处</a>下载需要的固件文件，我下载的是 <code>nanopi2-debian-sd4g-wifiap.img.zip</code> 这个 Debian 的系统固件（默认开启无线热点，可用 VNC 或 SSH 登录）。</p>
+
+<p>然后在 Windows 平台下，以管理员身份运行 <a href="http://www.softpedia.com/get/CD-DVD-Tools/Data-CD-DVD-Burning/Win32-Disk-Imager.shtml">Win32 Disk Imager</a> 这个工具，选择你的SD卡盘符，选择你要烧写的系统固件，点击 Write 按钮烧写即可。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_1.png" alt="Win32 Disk Imager 烧写固件到 SD 卡"/></p>
+
+<p>SD 卡制作完成后，把 SD 卡插入 NanoPi 2 的 BOOT 卡槽，上电启动，看到蓝灯和绿灯已经闪烁，就已经成功启动 NanoPi2 了。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_2.png" alt="成功启动 NanoPi2"/></p>
+
+<h3 id="toc_3">关于LCD/HDMI分辨率</h3>
+
+<p><a href="http://wiki.friendlyarm.com/wiki/index.php/NanoPi_2/zh">Wiki</a> 上提到系统启动时 uboot 会自动识别 LCD，成功则会设置为该 LCD 的显示分辨率，失败则缺省会设置为 HDMI 720P 模式。由于我不需要使用屏幕（打算以后做智能控制，主要使用 GPIO），所以这里不必理会。</p>
+
+<h3 id="toc_4">通过 ssh 登录 Debian</h3>
+
+<p>我是祼板运行系统（既没有连接LCD也没有连接HDMI），并且烧写了带 <code>-wifiap.img</code> 后辍的固件，然后我可以使用手机，或者有无线网卡的电脑连接到 NanoPi2 开放的 <code>nanopi2-wifiap</code> 无线热点（默认密码是 123456789)，连接成功后，通过 <code>ssh root@192.168.8.1</code> 在终端上登录，默认的 <code>root</code> 用户密码是 <code>fa</code>。</p>
+
+<p>这里使用手机连接 NanoPi2 的无线热点：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_3.png" alt="连接 NanoPi2 的无线热点"/></p>
+
+<p>使用 Prompt 这个软件通过 ssh 登录到系统：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_4.png" alt="通过 ssh root@192.168.8.1 在终端上登录，默认的 root 用户密码是 fa"/></p>
+
+<p>登录成功：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_5.png" alt="成功登录 ssh"/></p>
+
+<h3 id="toc_5">关闭无线热点并连接无线网络</h3>
+
+<p>我们先把要连接的无线路由器配置好，使用 ssh 连接 NanoPi2 以后，输入 <code>ifconfig -a</code> 命令查询一下 WiFi 的网络接口，<code>wlan</code> 开头的就是 WiFi:</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_6.png" alt="查询 WiFi 的网络接口"/></p>
+
+<p>默认情况下是 <code>wlan0</code>：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_7.png" alt="查询到的 WiFi 的网络 wlan0"/></p>
+
+<p>然后需要在 <code>/etc/network/interfaces.d/</code> 目录下新建一个与网络接口同名的配置文件，用 vim 命令新建 <code>wlan0</code> 文件：</p>
+
+<pre><code class="language-no-highlight">vim /etc/network/interfaces.d/wlan0
+</code></pre>
+
+<p>添加如下内容（如果打开有内容直接替换），其中，<code>YourWiFiESSID</code> 和 <code>YourWiFiPassword</code> 请替换成你要连接的无线名称和密码：</p>
+
+<pre><code class="language-profile">auto wlan0
+iface wlan0 inet dhcp
+wpa-driver nl80211
+wpa-ssid YourWiFiESSID
+wpa-ap-scan 1
+wpa-psk YourWiFiPassword
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_8.png" alt="编辑 wlan0 文件"/></p>
+
+<p>最后一步，使用以下命令退出无线热点模式，命令执行后会重启设备，重启后，会根据上面的配置，自动连接 Wifi：</p>
+
+<pre><code class="language-no-highlight">turn-wifi-into-apmode no
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_9.png" alt="退出无线热点模式"/></p>
+
+<p>等重新启动后我们就可以在路由器的后台发现 NanoPi2 已经成功连接到 Wifi 上了，我这里的设备名称为 <code>FRIENDLYARM</code>：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_10.png" alt="成功连接到 Wifi"/></p>
+
+<p>这里我们记下 NanoPi2 的 IP 地址，打开电脑（这里我用的是苹果电脑）的终端，使用 <code>ssh</code> 和刚才得到的 IP 地址登录系统，这里用的是 <code>fa</code> 用户登录，使用 <code>ls</code> 查看目录，登录成功：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_11.png" alt="在电脑上通过 ssh 登录系统"/></p>
+
+<p>为了保证 <code>ssh</code> 的流畅，我们关闭 Wifi 的省电模式，使用 <code>su</code> 命令回车并输入 <code>root</code> 用户的密码获取 <code>root</code> 权限，然后使用命令 <code>iwconfig wlan0 power off</code> 关闭 Wifi 的省电模式，然后使用 <code>exit</code> 退出 <code>root</code>。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_12.png" alt="关闭 Wifi 的省电模式"/></p>
+
+<h3 id="toc_6">需改用户密码</h3>
+
+<p>直接使用命令 <code>passwd</code> + 用户名，修改的就是相应用户名的密码。
+例如我要修改 <code>root</code> 用户的密码，输入命令 <code>passwd root</code> 回车后连续输入两次密码就修改成功了。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_13.png" alt="修改用户的密码"/></p>
+
+<h3 id="toc_7">安装Debian软件包</h3>
+
+<p>官方提供的是标准的 Debian jessie 系统，你可以使用 <code>apt-get</code> 等命令来安装软件包，如果板子是首次运行，需要先用以下命令更新软件包列表：</p>
+
+<pre><code class="language-no-highlight">apt-get update
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_14.png" alt="更新软件包列表"/></p>
+
+<p>然后就可以安装软件包了，例如要安装ftp服务器，使用以下命令：</p>
+
+<pre><code class="language-no-highlight">apt-get install vsftpd
+</code></pre>
+
+<h2 id="toc_8">PC 机环境搭建</h2>
+
+<p>玩开源硬件做一定的深入后，需要做的是在 PC 机下搭建一个 Linux 环境，比如扩展文件系统大小啊，交叉编译啊什么的。</p>
+
+<h3 id="toc_9">搭建 Ubuntu</h3>
+
+<p>我这里使用的是 Parallels Desktop 安装的 Ubuntu，省事，方便，一键自动下载安装，然后就可以用了。</p>
+
+<p>具体安装这里就不说了，每个人用的虚拟机不同，还有喜欢 VMware 的，而且安装方法网上一搜一大堆，这里就不说了。</p>
+
+<h3 id="toc_10">建立交叉编译环境</h3>
+
+<p>头一次接触交叉编译环境，我就在这里犯了个错误，没有详细了解什么事交叉编译环境，还以为是建立在 NanoPi 上的，就一股脑去安装，结果不能用去问客服，技术公休不上班，自己只能看帖子，才了解到这个是要装在 PC 机上编译 ARM 架构的程序所建立的环境，嵌入式开发板最大的问题就是内存小，运行速度慢，而 PC 机可以弥补这个缺点，但是，我们用的 PC 机是 x64 或 x86 架构的，编译出来的二进制文件在 ARM 上是执行不了的，这时候就需要安装交叉编译环境，好在 x64 或 x86 架构的机器上编译出 ARM 上能执行的二进制文件。</p>
+
+<p>关于如何安装交叉编译环境，<a href="http://wiki.friendlyarm.com/wiki/index.php/NanoPi_2/zh#.E5.AE.89.E8.A3.85.E4.BA.A4.E5.8F.89.E7.BC.96.E8.AF.91.E5.99.A8">官方 Wiki</a>写的很清楚，首先下载并解压编译器:</p>
+
+<pre><code class="language-no-highlight">git clone https://github.com/friendlyarm/prebuilts.git
+sudo mkdir -p /opt/FriendlyARM/toolchain
+sudo tar xf prebuilts/gcc-x64/arm-cortexa9-linux-gnueabihf-4.9.3.tar.xz -C /opt/FriendlyARM/toolchain/
+</code></pre>
+
+<p>然后将编译器的路径加入到 <code>PATH</code> 中，用vim编辑 <code> ~/.bashrc</code>，在末尾加入以下内容：</p>
+
+<pre><code class="language-profile">export PATH=/opt/FriendlyARM/toolchain/4.9.3/bin:$PATH
+export GCC_COLORS=auto
+</code></pre>
+
+<p>执行一下 <code>~/.bashrc</code> 脚本让设置立即在当前 <code>shell</code> 窗口中生效，注意 <code>.</code> 后面有个空格：</p>
+
+<pre><code class="language-no-highlight">. ~/.bashrc
+</code></pre>
+
+<p>注意这个编译器是 64 位的，不能在 32 位的 Linux 系统上运行，安装完成后，你可以快速的验证是否安装成功：</p>
+
+<pre><code class="language-no-highlight">arm-linux-gcc -v
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_101.png" alt="验证安装"/></p>
+
+<h2 id="toc_11">NanoPi 环境搭建</h2>
+
+<p>NanoPi 上开发环境的搭建，一个是添加环境变量，让你在非 <code>root</code> 下也能执行各种指令，包括 <code>sudo</code> 指令。</p>
+
+<p>然后设置 <code>sudo</code> 不需要再输入密码。</p>
+
+<p>再一个是文件系统的扩展，NanoPi SD 卡烧入系统后，你会发现只用了 2G 多，剩下的没有使用，把剩下的卡扩展出来增加存储空间。</p>
+
+<p>最后是安装 FTP 服务器，使 NanoPi 和电脑之间文件传输更方便。</p>
+
+<h3 id="toc_12">添加环境变量</h3>
+
+<p>拿到 NanoPi 烧入系统上电后会发现在普通用户下一些常用的命令无法执行，有些可能<code>sudo</code> 这个指令也不能执行，只有在 <code>root</code> 权限下才能执行，这也是我前面没有使用 <code>sudo</code> 的原因（我这里是可以使用 sudo 的，但是为了多数情况考虑没有使用）。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_15.png" alt="常用命令无法执行"/></p>
+
+<p>首先使用 <code>su</code> 进入 <code>root</code> 权限，执行：</p>
+
+<pre><code class="language-no-highlight">echo $PATH
+</code></pre>
+
+<p>查看一下 <code>root</code> 用户的环境变量:</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_16.png" alt="查看 root 的环境变量"/></p>
+
+<p>每一个 <code>:</code> 之后是一个执行路径，把这些都记记下来，然后回到 <code>fa</code> 用户下，再次使用 <code>echo $PATH</code> 查看一下 <code>fa</code> 用户的环境变量：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_17.png" alt="查看 fa 的环境变量"/></p>
+
+<p>与刚才 <code>root</code> 用户的环境变量作对比，找出 <code>fa</code> 用户没有的变量：</p>
+
+<pre><code class="language-profile">/usr/local/sbin:/usr/sbin:/sbin
+</code></pre>
+
+<p>然后使用 <code>vim</code> 编辑 <code>fa</code> 用户的 <code>.bashrc</code> 文件：</p>
+
+<pre><code class="language-profile">vim ~/.bashrc
+</code></pre>
+
+<p>在文件最后一行加上你少的路径：</p>
+
+<pre><code class="language-profile">export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_18.png" alt="添加缺少路径"/></p>
+
+<p>保存退出。</p>
+
+<p>执行一下 <code>~/.bashrc</code> 脚本让设置立即在当前 <code>shell</code> 窗口中生效，注意 <code>.</code> 后面有个空格：</p>
+
+<pre><code class="language-no-highlight">. ~/.bashrc
+</code></pre>
+
+<p>使用 <code>ifconfig</code> 测试一下，配置成功：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_19.png" alt="环境变量配置成功"/></p>
+
+<h3 id="toc_13">设置 sudo 不需要再输入密码</h3>
+
+<p>使用 <code>su</code> 切换到 <code>root</code> 权限（这里有人说需要使用 <code>su -</code>， 说这和 <code>su</code> 是不同的，在用命令 <code>su</code> 的时候只是切换到 <code>root</code> ，但没有把 <code>root</code> 的环境变量传过去，还是当前用乎的环境变量，用 <code>su -</code> 命令将环境变量也一起带过去，就象和 <code>root</code> 登录一样），编辑 /etc/sudoers 这个文件：</p>
+
+<pre><code class="language-no-highlight">vim /etc/sudoers
+</code></pre>
+
+<p>找到这一行：</p>
+
+<pre><code class="language-profile">root    ALL=(ALL:ALL) ALL
+</code></pre>
+
+<p>把下面以要修改的用户名开头的那行改成（如果没有在下面添加）：</p>
+
+<pre><code class="language-profile">fa      ALL=(ALL:ALL) NOPASSWD: ALL
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_20.png" alt="编辑 /etc/sudoers"/></p>
+
+<p>因为这个文件是只读文件，所以使用 <code>w!</code> 强制保存，再使用 <code>q</code> 退出。</p>
+
+<p>退出 <code>root</code> 权限，<code>sudo</code> 就不在需要输入密码了。</p>
+
+<h3 id="toc_14">扩展文件系统</h3>
+
+<p>扩展可以使用<a href="http://wiki.friendlyarm.com/wiki/index.php/NanoPi_2/zh#NanoPi_2_.E6.89.A9.E5.B1.95TF.E5.8D.A1.E5.88.86.E5.8C.BA" title="NanoPi 2 扩展TF卡分区">官方 Wiki</a>给的方式使用命令行扩展，这里我在 Ubuntu 上使用 GParted Partition Editor 这个软件扩展，很方便，减少了出错的可能性。
+软件在 Ubuntu 的应用市场就有，一件安装。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_21.png" alt="Ubuntu 应用市场的 GParted Partition Editor"/></p>
+
+<p>把 SD 卡连到 Ubuntu 上，打开软件，在右上角选择 SD 卡（一般多为 <code>/dev/sdb</code>），上边那个是我虚拟机的硬盘，搞错了那就 XXOO 了再装一次虚拟机吧，所以千万不要选错。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_22.png" alt="选择 SD 卡"/></p>
+
+<p>选择后我们可以看到 <code>Label</code> 那里标有 <code>rootfs</code> 的就是我们要扩展的分区，而且会发现有很大一部分空间没有使用，接下来我们就把这部分扩展到 <code>rootfs</code>。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_23.png" alt="未利用空间"/></p>
+
+<p>右击 <code>rootfs</code> 这个分区选择 <code>Unmount</code> 卸载这个分区:</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_24.png" alt="卸载分区"/></p>
+
+<p>再次右击 <code>rootfs</code> 这个分区选择 <code>Resize/Move</code>:</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_25.png" alt="选择扩展"/></p>
+
+<p>把表示使用空间的这个条拉到头，点resize就可以了：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_26.png" alt="扩展空间"/></p>
+
+<p>最后点最上边的对号应用扩展：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_27.png" alt="应用扩展"/></p>
+
+<p>然后会扩展磁盘，稍等一会就好了：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/hellonanopi2/hello_nanopi2_28.png" alt="正在扩展磁盘"/></p>
+
+<h3 id="toc_15">安装 FTP 服务器</h3>
+
+<p>FTP 的安装很简单：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install vsftpd
+</code></pre>
+
+<p>安装完成后启动 FTP 服务：</p>
+
+<pre><code class="language-no-highlight">sudo service vsftpd start
+</code></pre>
+
+<p>编辑 vsftdp 的配置文件</p>
+
+<pre><code class="language-no-highlight">sudo vim /etc/vsftpd.conf
+</code></pre>
+
+<p>这里我放一下我自己的配置：</p>
+
+<pre><code class="language-profile">配置文件： /etc/vsftpd.conf 这里删除了所有#号注释的内容
+-------------------------------------------------------
+listen=NO
+listen_ipv6=YES
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=000
+dirmessage_enable=YES
+use_localtime=YES
+connect_from_port_20=YES
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=vsftpd
+rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+ssl_enable=NO
+local_root=/var/www
+</code></pre>
+
+<p>具体配置讲解看这个链接：<a href="http://os.51cto.com/art/201008/221842.htm" title="史上最详细的 vsftpd 配置文件讲解">史上最详细的 vsftpd 配置文件讲解</a>。</p>
+
+<p>以上。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用树莓派制作一个魔镜3（更加高级的功能）]]></title>
+    <link href="hellowk.cc/14834518879850.html"/>
+    <updated>2016-02-20T20:00:00+08:00</updated>
+    <id>hellowk.cc/14834518879850.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>为魔镜添加更多的功能。</p>
+
+<p>目前添加了农历显示和室内温度、湿度的功能，添加了一个按钮用于刷新页面。</p>
+
+<p>Coming soon…</p>
+
+<p>目前弄到了一个新的小玩意儿————基于 ESP8266-12E 的 NodeMCU 开发板，打算把温度服务放在开发板上运行，这样就可以避免树莓派自身发热对温度湿度的影响；同时还可以添加 PM2.5 传感器模块，功能更丰富。</p>
+
+<p>由于在做 MQTT 协议服务器的时候出了些小问题需要重新安装操作系统和重新搭建 MQTT 服务，哦对了还有可以用 Siri 控制的 Homekit 服务。</p>
+
+<p>温度服务外置了，所以我会先把上面那些内容总结完后再回来补这篇文章的内容。</p>
+
+<p>以上。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用树莓派制作一个魔镜2（界面开发）]]></title>
+    <link href="hellowk.cc/14834480982085.html"/>
+    <updated>2016-02-20T20:00:00+08:00</updated>
+    <id>hellowk.cc/14834480982085.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>千呼万唤始出来！Greetings.</p>
+
+<p>回顾一下，买了合适的镜子、显示器，做了个新外壳，安装好硬件及配置完成树莓派，那就进入最后一步——界面开发。</p>
+
+<p>程序界面不是一个神奇的应用，仅仅是一个全屏幕网页。老外提到这样能用 HTML、CSS 和 Javascript 开发外，还有一个额外的好处，在将它放入魔镜之前，能在我的（他的）苹果电脑上开发测试。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_11.png" alt="开发调试"/></p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">看看老外都做了什么</h2>
+
+<p>代码老外都写好了，而且在 Github 上开源了代码，所以直接拿来用就好了，在拿来用之前，我们看看他都做了什么。</p>
+
+<h3 id="toc_1">使用开源库</h3>
+
+<blockquote>
+<p>In addition to some self written code, I use a few opensource libraries to speed things up:  </p>
+
+<p><strong><a href="http://jquery.com/">Jquery</a></strong><br/>
+As almost any site, Magic Mirror uses Jquery to ease the DOM manipulation. Perfect for lazy people like me.  </p>
+
+<p><strong><a href="http://momentjs.com/">Moment.js</a></strong><br/>
+This will help me to do some easy timestamp manipulation. A huge timesaver when working with dates and times.  </p>
+
+<p><strong><a href="https://github.com/AIRSHP/Feed-To-JSON">FeedToJson</a></strong><br/>
+A convinient way to convert RSS feeds into javascript usable JSON data.  </p>
+
+<p><strong><a href="https://github.com/thybag/JavaScript-Ical-Parser">iCal Parser</a></strong><br/>
+Does some conversion of iCal data to JSON. Unfortunately this Library isn’t very polished, so it needed some additional work.<br/>
+Above libraries, combined with my own HTML and Javascript is enough to make the Mirror do the Magic.    </p>
+</blockquote>
+
+<p>老外在自己写的代码基础上，用了一些开源库文件来优化它的运行速度：魔镜使用 Jquery 来简化 DOM 操作方式。使用 Moment 减少在时间安排的操作，尤其是在争分夺秒时更节省不少时间。使用 FeedToJson 将 RSS 订阅用 Javascript 转成 JSON 数据。iCal Parser 将 iCal 数据转化为 JSON，可惜这个库文件并不完美，需要一些额外的优化。  </p>
+
+<p>以上这些库文件，加上自己的 HTML 和 Javascript 足够使镜子成精了。</p>
+
+<h3 id="toc_2">设计</h3>
+
+<blockquote>
+<p>Of course, my Magic Mirror needs a shiny design. And since I’m a hardcore Apple Fanboy, this design should fit in <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html">Apple’s Design Guidelines</a>:    </p>
+
+<blockquote>
+<p>Bezels, gradients, and drop shadows sometimes lead to heavier UI elements that can overpower or compete with the content. Instead, focus on the content and let the UI play a supporting role.<br/>
+Use plenty of negative space. Negative space makes important content and functionality more noticeable and easier to understand. Negative space can also impart a sense of calm and tranquility, and it can make an app look more focused and efficient.  </p>
+</blockquote>
+
+<p>How to achieve this? Clean typography by using <a href="https://en.wikipedia.org/wiki/Helvetica#Neue_Helvetica_.281983.29">Helvetica Neue</a>, and matching <a href="http://erikflowers.github.io/weather-icons/">iconography</a> for the weather information.    </p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_12.png" alt="Helvetica Neue"/></p>
+
+<p>Since the mirror will only function as a mirror when there’s no light behind the mirror. It’s important to use a black background. For the best contrast the content will therefor be white. And some shades of grey. Let’s say 50 …<br/>
+Of course I could add some colors, but for now i go for the clean black and white approach. I didn’t want my mirror to be more colorful than my own reflection.    </p>
+</blockquote>
+
+<p>魔镜需要个酷炫设计。不只是原作者，我本人也是个严重果粉，那么在设计上要遵从苹果系的设计指标：  </p>
+
+<blockquote>
+<p>边框、倾角、阴影效果有时是用户界面厚重感的因素，甚至能盖过显示内容的光芒。所以，专注在内容设计，把用户交互界面摆在辅助位置上。<br/>
+利用足够的实体空间，它是个重要内涵，在感官上更让人注意和易于理解。    </p>
+</blockquote>
+
+<p>怎么做到这一点？用<a href="https://en.wikipedia.org/wiki/Helvetica#Neue_Helvetica_.281983.29">Helvetica Neue 字体</a>，用<a href="http://erikflowers.github.io/weather-icons/">天气图标</a>对应显示天气信息。</p>
+
+<p>镜子在背后没有光源时就只是一面镜子，用黑色背景是个重要设定。而为了有最好的对比度，显示内容字体应为白色，在加一些灰色阴影边缘，那灰度为50吧……</p>
+
+<p>大可以加上一些其他色彩，但目前为止只想做到简洁的黑白界面。</p>
+
+<blockquote>
+<p>我可不想镜子比我的尊容还要出彩。</p>
+</blockquote>
+
+<p>（译者注：镜子：好吧，我不告诉你谁是世界上最帅的男人。镜子，碎。）</p>
+
+<h3 id="toc_3">API 设计</h3>
+
+<p>为了接收想在镜子上显示的数据，用了一些开源 API 和反馈代码。还有谁不太清楚什么是 API，<a href="https://zh.wikipedia.org/wiki/API">维基百科</a>里面有详尽的解释：    </p>
+
+<blockquote>
+<p>电脑操作系统（Operating system）’或‘程序库’提供给应用程序调用使用的代码。</p>
+</blockquote>
+
+<p>API就像你家的DVD播放器背后那样充满接口——如果你将其他设备连接到它的话，它就变得更加有用，这些接口本质上就是 API。API 让设备变得功能强大、有趣，尤其对我这种电脑狂人来说。</p>
+
+<h4 id="toc_4">Openweathermap.org</h4>
+
+<p>Openweathermap 有很好的 API 接口，能够免费得到天气预报信息。它允许你查询区域内的信息，定义你想要的信息类别。在这里用了两个连接，一个是当前天气，另一个是预报天气。</p>
+
+<h4 id="toc_5">iCal Calendar</h4>
+
+<p>iCloud 允许你以 iCal 格式分享日历。因为 javascript 无法做到这一点（因为多站点脚本安全问题），需要通过 PHP 代理服务器来开启数据。这其实很容易，只有三行代码而已：</p>
+
+<pre><code class="language-php">&lt;!--?php &lt;br ?--&gt;    
+$url = &quot;https://p01-calendarws.icloud.com/ca/subscribe/1/mysupersecreticloudhash&quot;;
+echo file_get_contents($url);
+</code></pre>
+
+<p>只需查询 <code>calendar.php</code> 就能将在同一个服务器内日历表在界面上显示出来。    </p>
+
+<p>前面说过的 iCal 语法分析编辑把信息解析成有用信息。可是，iCloud 在他们的反馈中用了一些非标准标签，要添加额外的代码行来将代码解析为 javascript 文件。</p>
+
+<h4 id="toc_6">新闻订阅</h4>
+
+<p>原作者新闻订阅只是用到了荷兰公共广播公司的 RSS 订阅功能。这里我们要改成国内自己的新闻，具体有那些？看<a href="https://www.zhihu.com/question/19580096" title="你必读的 RSS 订阅源有哪些? - 调查类问题 - 知乎">这里</a>。可是，订阅不支持 JSON 格式数据，因此我用了 FeedToJson 插件来把 RSS 数据转为 JSON 格式的。</p>
+
+<h3 id="toc_7">其他</h3>
+
+<p>其他内容，例如当前日期与实践，还有问候语都只是一些简单的 Javascript 语句。</p>
+
+<h2 id="toc_8">把页面放入魔镜</h2>
+
+<p>以上那么多都是把老外的原话拿来修修改改，现在终于到了自己的 Show Time！把页面放入魔镜。</p>
+
+<p>老外把代码直接开源，放在了 Github 上，地址在 <a href="https://github.com/MichMich/MagicMirror">这里</a>。</p>
+
+<p><strong>Update：我自己的源代码：<a href="https://github.com/HelloWk/MagicMirror">HelloWk/MagicMirror</a>，内容没有变，在原基础上添加了中文字体的支持，树莓派在英文环境也可以使用中文了。</strong></p>
+
+<p>如果你是大神，大可以直接使用 <code>git clone</code> 直接克隆到 <code>/var/www/</code> 目录中，但我这里没有这么做，我还要做一些改动，所以使用 Git 更新文件对于我来说没有用了，过后还要把修改好的代码开源到自己的 Github 中，所以直接下载源文件到电脑。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_13.png" alt="下载 Magic Mirror 的源文件"/></p>
+
+<p>这里要感谢老外的无私贡献，否则我们也无法快速的制作我们自己的魔镜。</p>
+
+<h3 id="toc_9">使用 FTP 传输文件</h3>
+
+<p>接下来就是把文件传入树莓派的 <code>/var/www/html</code> 目录中，这里我在树莓派上搭建了 FTP 服务器用于传文件，等基本调试完毕后可以选择使用 Git 来管理文件，我为了方便调试就使用了 FTP，配合 Transmit（Mac 上的 FTP 软件，Windows 可以使用 FlashFXP）就可以很轻松的传输文件了。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_14.png" alt="使用 Transmit 上传文件"/></p>
+
+<p>FTP 的安装很简单：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install vsftpd
+</code></pre>
+
+<p>安装完成后启动 FTP 服务：</p>
+
+<pre><code class="language-no-highlight">sudo service vsftpd start
+</code></pre>
+
+<p>编辑 vsftdp 的配置文件</p>
+
+<pre><code class="language-no-highlight">sudo vim /etc/vsftpd.conf
+</code></pre>
+
+<p>这里我放一下我自己的配置：</p>
+
+<pre><code class="language-profile"># 配置文件： /etc/vsftpd.conf 这里删除了所有#号注释的内容
+# -------------------------------------------------------
+listen=NO
+listen_ipv6=YES
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=000
+dirmessage_enable=YES
+use_localtime=YES
+connect_from_port_20=YES
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=vsftpd
+rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+ssl_enable=NO
+local_root=/var/www/html
+</code></pre>
+
+<p>具体配置讲解看这个链接：<a href="http://os.51cto.com/art/201008/221842.htm" title="史上最详细的 vsftpd 配置文件讲解">史上最详细的 vsftpd 配置文件讲解</a>。</p>
+
+<p>这里有一点需要注意的是，我的树莓派 Apache 服务器安装好后在 <code>/var/www/</code> 目录中还存在一个 <code>html</code> 的文件夹，而且默认的 <code>index.html</code> 也在这个 <code>html</code> 文件夹中，所以我也把文件放在了这个文件夹中。<del>不过我想直接放在 <code>/var/www/</code> 目录应该是可以的，没有尝试，谁遇到了同样的情况可以自己尝试一下。</del></p>
+
+<p><strong>3.10.2016 update：必须放入 <code>/var/www/html</code> 中，直接放在 <code>/var/www/</code> 无法找到 <code>index.html</code>。</strong></p>
+
+<p>这时就可以重启树莓派，然后就能看见页面成功的在魔镜上运行了。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_15.png" alt="页面成功的在魔镜上运行"/></p>
+
+<h2 id="toc_10">具体配置</h2>
+
+<p>能运行后当然还有许多工作要做，毕竟直接拿来的代码会水土不服，我需要对他进行汉化，调整天气设置和日历设置，还有订阅的问题（目前还不能成功显示）。</p>
+
+<p>Ps： 由于做完时间太久，可能有些步骤忘记了，如有问题可以在下方留言。</p>
+
+<h3 id="toc_11">功能的开启与关闭</h3>
+
+<p>不得不说老外考虑的很周到，把所有功能作成了插件的形式，不想使用某个功能直接关闭就可以了。
+在代码的 <code>js/main.js</code> 这个文件中，最下方会有一些以 <code>.init()</code> 结尾的语句：</p>
+
+<pre><code class="language-html">version.init();
+time.init();
+tem_hum.init();
+calendar.init();
+compliments.init();
+weather.init();
+news.init();
+</code></pre>
+
+<p>想关闭哪个功能直接用 <code>//</code> 注释掉即可，重新开启只需去掉注释。例如我不想要 calendar 的功能，就在 <code>calendar.init();</code> 前加上 <code>//</code> :</p>
+
+<pre><code class="language-html">//calendar.init();
+</code></pre>
+
+<h3 id="toc_12">区域设置</h3>
+
+<p>区域有关设置一个是前文提到的树莓派自身 <code>raspi-config</code> 中区域的设置，还有就是在代码的 <code>js/config.js</code> 这个文件中，<del>在文件的第二行把 <code>lang</code> 的值改成 <code>cn</code>：</del></p>
+
+<p><strong>3.10.2016 update：第二行 <code>lang</code> 的值改成 <code>zh-cn</code>: </strong></p>
+
+<pre><code class="language-json">lang: &#39;zh-cn&#39;,
+</code></pre>
+
+<h3 id="toc_13">设置天气</h3>
+
+<p>首先我们需要到 <a href="openweathermap.org">Openweathermap</a> 去注册一个免费的账号，会得到一个 API key，然后我们把这个 key 写在 <code>js/config.js</code> 这个文件的 <code>weather: {}</code> 中,同时把参数 <code>q</code> 改成你自己的城市（提前在网页测试），<code>lang</code> 的值改成 <code>zh_cn</code>：</p>
+
+<pre><code class="language-json">weather: {
+    // change weather params here:
+    // units: metric or imperial
+    interval: 60000,
+    fadeInterval: 10000,
+    params: {
+        q: ‘Beijing’,
+        // units: &#39;metric&#39;,
+        // if you want a different lang for the weather that what is set above, change it here
+        lang: &#39;cn&#39;,
+        APPID: &#39;YOUR_FREE_OPENWEATHER_API_KEY&#39;
+    }
+}
+</code></pre>
+
+<p>这里我还添加了 <code>interval: 60000, fadeInterval: 10000</code> 两个参数</p>
+
+<blockquote>
+<p>（在 <code>weather.js</code> 文件中有访问，</p>
+
+<p><code>updateInterval: config.weather.interval || 6000</code>
+ <code>fadeInterval: config.weather.fadeInterval || 1000</code> </p>
+
+<p>不写这两个参数使用默认参数 6000 和 1000），</p>
+</blockquote>
+
+<p>目的是为了放慢请求次数，在使用作者默认设置的时候没访问一次在 Chrome 的控制台就输出一个错误，还没有详细信息，最后使用 Safari 发现 429 错误，Too Many Requests，好吧，我慢点。</p>
+
+<p>在树莓派上接个键盘，按 <code>Ctrl + R</code> 刷新页面（为此我在树莓派的 GPIO 上接了一个按钮，然后写了一个 Python 文件开机运行，按下后模拟键盘的 <code>Ctrl + R</code> 动作），天气成功显示。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_16.png" alt="接在树莓派 GPIO 上的按钮"/></p>
+
+<p>也可以把天气换成国内的 API，这样数据应该更准确一些，因为需要重新解析 Json 文件，偷个懒就没有换。</p>
+
+<p>可能预报的星期还没有汉化，等后续我们接着改。</p>
+
+<h3 id="toc_14">日历设置</h3>
+
+<p>日历设置比较简单，打开 Mac 上的日历软件（没有 Mac 的可以登录 <a href="https://www.icloud.com" title="iCloud">iCloud</a> 获取），获取分享日历的地址，把地址的 <code>webcal</code> 换成 <code>https</code>，写在 <code>js/config.js</code> 这个文件的 <code>calendar: {}</code> 中。</p>
+
+<pre><code class="language-json">calendar: {
+    maximumEntries: 10,
+    url: &quot;https://p32-calendars.icloud.com/published/2/19serRMXg_-dwh...(your ical url)&quot;
+}
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_17.png" alt="在日历中获取日历的地址"/></p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_18.png" alt="在iCloud中获取日历的地址"/></p>
+
+<h3 id="toc_15">新闻订阅</h3>
+
+<p>订阅只需取得订阅源的地址然后写在 <code>js/config.js</code> 这个文件的 <code>news: {}</code> 中即可。</p>
+
+<pre><code class="language-json">news: {
+    feed: &#39;http://feeds2.feedburner.com/cnbeta_full&#39;
+}
+</code></pre>
+
+<p>找不到订阅？看<a href="https://www.zhihu.com/question/19580096" title="你必读的 RSS 订阅源有哪些? - 调查类问题 - 知乎">这里</a>。</p>
+
+<p>到这里基本的设置就完成了，接下来就是解决最后的问题——汉化。</p>
+
+<h2 id="toc_16">汉化页面</h2>
+
+<p><code>js/config.js</code> 这个文件中，</p>
+
+<pre><code class="language-json">lang: &#39;zh-cn&#39;,
+</code></pre>
+
+<p>修改好后就已经是汉化好了，然后直接汉化问候语就好。。如果你没能汉化成功，这里还有手动修改文件汉化的方法。没看见？点下面按钮☟</p>
+
+<script type="text/javascript">  
+//===========================点击展开关闭效果====================================  
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){  
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;  
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;  
+var openTip = oOpenTip || "";  
+var shutTip = oShutTip || "";  
+if(targetObj.style.display!="none"){  
+   if(shutAble) return;  
+   targetObj.style.display="none";  
+   if(openTip  &&  shutTip){  
+    sourceObj.innerHTML = shutTip;   
+   }  
+} else {  
+   targetObj.style.display="block";  
+   if(openTip  &&  shutTip){  
+    sourceObj.innerHTML = openTip;   
+   }  
+}  
+}  
+</script>
+
+<div style="text-align: center;">
+    <button onclick="openShutManager(this,'box4',false,'点击关闭','点击展开')" >点击展开</button>
+</div>
+
+<pre id="box4" style="display:none">
+
+################################################################################
+
+改完区域后不知道是自己忘记了什么并没有完全汉化，还是一半中文一半英文的，索性直接修改代码汉化。
+
+**时间汉化**
+
+作者使用 `moment.js` 这个库，同时也给我们汉化提供了方便，查阅了一下相关文档，只需调用 `.locale('zh-cn')` 就能格式化为中文。
+
+打开 `time/time.js`，这个就是用来控制显示时间日期的文件，找到 `var _now = moment();`  这一行，在下面一行加上 `_now.locale('zh-cn');` 即可。
+
+```javascript
+var _now = moment();
+_now.locale('zh-cn');
+```
+
+**日历汉化**
+
+控制日历的文件是 `calendar/calendar.js`，该文件需要改的地方比较多，但也很好找，都是跟 `moment` 相关的。
+
+找到：
+
+```javascript
+if (e.startDate == undefined){
+//some old events in Gmail Calendar is "start_date"
+//FIXME: problems with Gmail's TimeZone
+var days = moment(e.DTSTART).diff(moment(), 'days');
+var seconds = moment(e.DTSTART).diff(moment(), 'seconds');
+var startDate = moment(e.DTSTART);
+} else {
+var days = moment(e.startDate).diff(moment(), 'days');
+var seconds = moment(e.startDate).diff(moment(), 'seconds');
+var startDate = moment(e.startDate);
+}
+```
+
+改成：
+
+```javascript
+if (e.startDate == undefined){
+//some old events in Gmail Calendar is "start_date"
+//FIXME: problems with Gmail's TimeZone
+var days = moment(e.DTSTART).locale('zh-cn').diff(moment(), 'days');
+var seconds = moment(e.DTSTART).locale('zh-cn').diff(moment(), 'seconds');
+var startDate = moment(e.DTSTART).locale('zh-cn');
+} else { 
+var days = moment(e.startDate).locale('zh-cn').diff(moment(), 'days');
+var seconds = moment(e.startDate).locale('zh-cn').diff(moment(), 'seconds');
+var startDate = moment(e.startDate).locale('zh-cn');
+}
+```
+
+紧接着一段：
+
+```javascript
+//only add fututre events, days doesn't work, we need to check seconds
+if (seconds >= 0) {
+if (seconds <= 60*60*5 || seconds >= 60*60*24*2) {
+var time_string = moment(startDate).fromNow();
+}else {
+var time_string = moment(startDate).calendar()
+}
+if (!e.RRULE) {
+this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+e.seconds = seconds;
+}
+```
+
+改成：
+
+```javascript
+//only add fututre events, days doesn't work, we need to check seconds
+if (seconds >= 0) {
+if (seconds <= 60*60*5 || seconds >= 60*60*24*2) {
+ var time_string = moment(startDate).locale('zh-cn').fromNow();
+ }else {
+var time_string = moment(startDate).locale('zh-cn').calendar()
+}
+if (!e.RRULE) {
+ this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+e.seconds = seconds;
+}
+```
+
+再往下：
+
+```javascript
+for (date in dates) {
+var dt = new Date(dates[date]);
+var days = moment(dt).diff(moment(), 'days');
+var seconds = moment(dt).diff(moment(), 'seconds');
+var startDate = moment(dt);
+
+if (seconds >= 0) {
+if (seconds <= 60*60*5 || seconds >= 60*60*24*2) {
+var time_string = moment(dt).fromNow();
+} else {
+var time_string = moment(dt).calendar()
+}
+this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+}
+```
+
+改成：
+
+
+```javascript
+for (date in dates) {
+var dt = new Date(dates[date]);
+var days = moment(dt).locale('zh-cn').diff(moment(), 'days');
+var seconds = moment(dt).locale('zh-cn').diff(moment(), 'seconds');
+var startDate = moment(dt).locale('zh-cn');
+
+if (seconds >= 0) {
+if (seconds <= 60*60*5 || seconds >= 60*60*24*2) {
+var time_string = moment(dt).locale('zh-cn').fromNow();
+} else {
+var time_string = moment(dt).locale('zh-cn').calendar()
+}
+this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+}
+```
+
+虽然改动比较多，但是都是比较好找的地方，配合搜索 `moment` 关键字添加 `.locale('zh-cn')`，还是很容易的，只是需要点耐心花点时间罢了。
+
+**天气汉化**
+
+控制天气的文件是 `weather/weather.js`，只有一处需要修改，找到`_forecastHtml += '<td class="day">' ...`; 这行代码加上 `.locale('zh-cn')` 即可。
+
+```javascript
+_forecastHtml += '<td class="day">' + moment(_forecast.dt, 'X').locale('zh-cn').format('ddd') + '</td>';
+```
+ 
+################################################################################
+</pre>
+
+<h3 id="toc_17">问候语汉化</h3>
+
+<p>找到 <code>js/config.js</code> 这个文件中的 <code>complimentscn: {}</code> ，把里面的英文问候语改成你自己喜欢的就可以了。如果你喜欢，还可以改成比较个性的语句，比如夸一下自己的女朋友，或者调侃一下自己很帅。 </p>
+
+<pre><code class="language-json">complimentscn: {
+    interval: 30000,
+    fadeInterval: 4000,
+    morning: [
+        &#39;早上好！&#39;,
+        &#39;享受美好一天！&#39;,
+        &#39;昨晚睡得如何？&#39;
+    ],
+    afternoon: [
+        &#39;你好!&#39;,
+        &#39;嗯，你看起来很不错!&#39;,
+        &#39;你今天看起来很好!&#39;
+    ],
+    evening: [
+        &#39;喔, 不错嘛!&#39;,
+        &#39;今天过得怎么样？&#39;,
+        &#39;嗨!&#39;
+    ]
+}
+</code></pre>
+
+<h3 id="toc_18">新闻订阅</h3>
+
+<p>新闻订阅这里没有可以汉化的内容，你的订阅源的语言是什么就显示什么，除非你有更高的要求，把所有语言全部翻译成中文，那需要链接翻译模块，太麻烦。</p>
+
+<h2 id="toc_19">最终成果</h2>
+
+<p>到这为止我们已经做好了一个自己的魔镜，远没有我们想象的那么难。</p>
+
+<p>最后晒一张最终成果的照片，图中因为调试所以把树莓派拿了下来，还增加了农历和室内温度湿度的功能，添加了一个按钮用于刷新页面，我会再写一篇文章总结下这几个功能的制作。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_19.png" alt="最终效果"/></p>
+
+<p>PS：由于对外框不是很满意，一过完年就淘了个差不多大的相框，打算安装到相框中再看看效果。相框还在路上，等到后再上传新的照片。</p>
+
+<h2 id="toc_20">未来展望</h2>
+
+<p>由于树莓派强大的 GPIO，设想把这块镜子放在进门的玄关处，一个是充当试衣镜，再一个添加触摸功能在屏幕上添加 Button 通过树莓派的 GPIO 控制屋内电灯和电器的，出门时即可快速关掉所有的灯和电器，进门时也可以进行开启热水器等操作。如果再加上手机远程控制，离智能家居的步伐就又进了一步。</p>
+
+<p>以上。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用树莓派制作一个魔镜1（硬件制作和环境搭建）]]></title>
+    <link href="hellowk.cc/14834426274852.html"/>
+    <updated>2016-02-18T20:00:00+08:00</updated>
+    <id>hellowk.cc/14834426274852.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>偶然看到老外用树莓派制作了一面魔镜，自己正好也有一个树莓派，就也做了一个。</p>
+
+<h2 id="toc_0">做个智能的镜子</h2>
+
+<p>在网上看了很多使用树莓派制作一面能显示内容的镜子，正好手里有一个树莓派，本打算做一个 NAS 使用，但是 100M 的网口和通过 USB 读取硬盘乌龟一样的速度，决定自己也弄一个魔镜玩玩。    </p>
+
+<p>网上能查到的文章有两篇，一个瑞典的，一个应该应该是美国的，大同小异，但是 <a href="http://michaelteeuw.nl/tagged/magicmirror" title="Xonay Labs | Michael Teeuw">瑞典</a> 这个更和我的口味，写的也比较明白，就跟着做了。 </p>
+
+<span id="more"></span><!-- more -->
+
+<p>国内也有翻译后的文章，但是比较落后（原作者有更新），地址:<a href="http://shumeipai.nxez.com/2015/04/08/make-magic-mirror-with-raspberry-pi.html" title="树莓派磨制“魔镜”全记录">瑞典的</a>, <a href="http://www.freebuf.com/tools/91497.html?utm_source=tuicool&amp;utm_medium=referral" title="用树莓派和显示器制作一面“魔镜”">美国的</a>。</p>
+
+<p>有问题可以直接留言或加 QQ 群 <code>137605115</code>，或点击这个： <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=f1a1c6fcd1a57f2083026ca220c8139f6859276e40f1228539a2a7d282466c76">😈点我加群😈</a> ，我是群里的管理员，可以直接找我讨论，我不在时其他人也能帮你解答问题。</p>
+
+<h2 id="toc_1">制作材料</h2>
+
+<h3 id="toc_2">关于镜子</h3>
+
+<p>镜子是这个魔镜的关键，要可以单面透光那种，和警察局问询室内那面镜子原理一样，当只有一间房有光时，它就像一面镜子，其他时候它就是普通玻璃窗。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_1.png" alt="原子镜"/></p>
+
+<p>这种镜子叫做原子镜，最关键器材之一，那个万能网站也可以买到。这里需要提醒大家的是，在买镜子之前，规划好自己魔镜的尺寸，以免到手不好加工。  </p>
+
+<p>这里我没有买原子镜，原因嘛——太贵，我使用了另一种东西代替它——单透膜，就是贴玻璃那种。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_2.png" alt="单透膜"/></p>
+
+<p>效果么，当然是自己把自己坑了，效果太差了。</p>
+
+<p>上一张最终效果图：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_3.png" alt="最终效果"/></p>
+
+<h3 id="toc_3">显示器</h3>
+
+<p>显示器是这里最贵的配件了，老外们都是直接拆显示器的，但是咱们有万能的某个网站，淘到了一块14寸的40针 LED 接口的三星裸屏。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_4.png" alt="三星的裸屏"/></p>
+
+<p>但是树莓派是 HDMI 输出，所以又淘到了这个东西：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_5.png" alt="液晶驱动板"/></p>
+
+<p>连接在一起：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_6.png" alt="驱动液晶屏"/></p>
+
+<h3 id="toc_4">外壳</h3>
+
+<p>屏幕解决了，剩下的就是外框了，想要实用必须有个漂亮的壳子，要不一堆电路板看着也闹心不是。</p>
+
+<p>老外的家伙事儿是真多，分分钟自己做一个壳子出来，自己条件不允许做一个壳子了，怎么办？想了好几天，偶然看到了一个亚克力做的广告牌，让我眼前一亮：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_7.png" alt="亚克力的广告牌"/></p>
+
+<p>镜子最终不也要挂在墙上，跟这个很像，而且镜子本来也是这么挂在墙上的，就它了。</p>
+
+<p>前面也说了我是用单透膜替代原子镜的，所以直接把单透膜呼在一整块亚克力板上就好了，接下来就是考虑怎么固定显示器和树莓派还有那个比树莓派还大的驱动板。</p>
+
+<p>思考了几天，熬了几个夜，终于做出了这个 CAD 的图（原图是用 Sketch 画的，然后让亚克力板定制的师傅给画的 CAD 图），满满的成就感：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_8.png" alt="外壳的 CAD 图"/></p>
+
+<p>最大的用来做镜面，然后用一个框把显示器固定，后面一块板子固定驱动板和树莓派。合在一起的效果：</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_9.png" alt="外壳的 CAD 图和在一起的效果"/></p>
+
+<p>然后就是等啊等，好不容易快递到了，心碎了一地啊，做镜面那块裂了个缝，固定显示器的框直接断了，但是马上过年了快递停运没办法只能简单粘了一下就用了。</p>
+
+<h3 id="toc_5">组装</h3>
+
+<p>忘了拍一下组装时候的照片，直接晒一下成品吧，只能说大大小小的螺丝弄起来也头大。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_10.png" alt="组装完成"/></p>
+
+<p>到时候做完把四个角换成广告钉定在墙上就可以了（可以想到最终没有实施，效果不好而且太小，还有一个问题就是树莓派可以从驱动板取电，但是驱动板的电源跟笔记本电源差不多，完全没法上墙）。</p>
+
+<h2 id="toc_6">安装树莓派和软件调试</h2>
+
+<h3 id="toc_7">安装树莓派系统</h3>
+
+<p>安装系统就不细说了，不会的看这里：<br/>
+<a href="http://www.cnblogs.com/abel/p/3441175.html">系统安装和一些配置</a><br/>
+<a href="http://shumeipai.nxez.com/2014/05/18/raspberry-pi-under-mac-osx-to-install-raspbian-system.html" title="Mac OSX下给树莓派安装Raspbian系统">Mac OSX 下给树莓派安装 Raspbian 系统</a><br/>
+<a href="http://shumeipai.nxez.com/2013/10/04/configuring-raspberry-pi-support-chinese.html">配置树莓派支持中文</a>     </p>
+
+<p><strong>Update：我自己的魔镜源代码：<a href="https://github.com/HelloWk/MagicMirror">HelloWk/MagicMirror</a>，内容没有变，在原基础上添加了中文字体的支持，树莓派在英文环境也可以使用中文了，避免部分同学在调中文环境时发生的问题，可以省去配置树莓派支持中文这个步骤。</strong></p>
+
+<p>拷贝一个映像档需要很长时间，拿杯咖啡，坐下，在等待中享受咖啡因的感觉。</p>
+
+<p>完成拷贝后，启动树莓派、登入，进入命令行的 <code>sudo raspi-config</code> （<a href="http://shumeipai.nxez.com/2013/09/07/raspi-config-configuration-raspberry-pie.html">使用raspi-config 配置树莓派</a>）开始配置向导。在这个配置中，有几件重要事项需要配置：</p>
+
+<ul>
+<li>确保系统启动到桌面（取代命令行模式或调试模式）。</li>
+<li>调整时区，使魔镜显示正确时间。 </li>
+</ul>
+
+<p>如果你想做和这个一样的镜子，尽管尝试选择所有其他选项。只是记住，如果选砸了，就再泡杯咖啡重装系统吧。</p>
+
+<h3 id="toc_8">WIFI 链接</h3>
+
+<p>不想在魔镜上加任何多余的连接线，就只能选择了以 Wifi 连接因特网。</p>
+
+<p>这部分正如老外所说，不同的接收器会有不同的问题，具体的，<a href="http://bit.ly/1no5v66">看看这个神器的网站</a>。安装确实很花时间。</p>
+
+<p>如果你使用的 WIFI 接收器是 EDUP 的 EP-N8508GS，那么可以直接看看<a href="http://blog.csdn.net/xukai871105/article/details/38170513(http://shumeipai.nxez.com/2015/11/23/raspberry-pi-configuration-file-config-txt-nstructions.html#more-2236)">这篇文章</a>。</p>
+
+<h3 id="toc_9">屏幕设置</h3>
+
+<p>如果你想让魔镜为纵向肖像模式，所以需要将屏幕顺时针旋转90度。</p>
+
+<p>树莓派的BIOS设置储存在系统启动分区中。在这分区中，有一个 <code>config.txt</code> 文件，载有所有设置。要旋转显示器，在这文件内加上以下一行代码：</p>
+
+<pre><code class="language-profile">display_rotate=1
+</code></pre>
+
+<p>要让显示器连接更加可靠，我就不解释为何加上下面允许 HDMI 线热插拔的代码了：</p>
+
+<pre><code class="language-profile">hdmi_force_hotplug=1
+</code></pre>
+
+<p>关于分辨率的设置，可以看下这篇文章：
+<a href="https://www.raspberrypi.org/forums/viewtopic.php?t=121195&amp;p=818455">树莓派配置文档 config.txt 说明</a></p>
+
+<h3 id="toc_10">网络服务器</h3>
+
+<p>要维持界面（很简单的一个网页），需要在树莓派上 Apache 服务器。用老外的话就是：这在树莓派上是其中一个很常见的应用，安装过程简直行云流水。</p>
+
+<p>安装之前要更新一下，确定用的是最新系统软件（重要，很多安装错误都可以通过更新解决）。</p>
+
+<pre><code class="language-no-highlight">sudo apt-get update &amp;&amp; apt-get upgrade -y
+</code></pre>
+
+<p>安装 Apache：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install apache2 apache2-doc apache2-utils
+</code></pre>
+
+<p>加上 PHP 支持：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install libapache2-mod-php5 php5 php-pear php5-xcache
+</code></pre>
+
+<p>重启之后，网页服务器就挂载上线运行了！在 <code>/var/www/html</code> 文件夹内放置了 <code>index.php</code> 文件，将浏览器首页指向树莓派的 IP 地址，发现成功了。</p>
+
+<h3 id="toc_11">信息模式（kioskmode）</h3>
+
+<p>在信息模式（kioskmode）下用 Chromium 浏览器显示的网页。</p>
+
+<p>安装 Chromium 和屏蔽鼠标的软件</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install chromium x11-xserver-utils unclutter
+</code></pre>
+
+<p>当然到这里出问题了，Chromium 无法安装！！出了一堆问题，连夜翻‘墙去 Google 终于发现了解决办法：<a href="http://ports.ubuntu.com/pool/universe/c/chromium-browser/">这里</a>。其实老外原文对这问题个有说明，只是国内翻译的文章没有更新，所以没有看到，其实看看原文就能发现人家都解决好了。</p>
+
+<p><strong>注意，注意，注意！！！</strong>不能使用上面那个命令，90% 的人会出问题，可能只有那些幸运儿会成功。不要问我数据怎么来的，猜的！！！前面偷懒只是给了链接，妹子看到糊涂了，没能成功安装，所以这里详细写下，使用下面的方法安装：</p>
+
+<p>首先，在这里下载最新的chromium:
+<a href="http://ports.ubuntu.com/pool/universe/c/chromium-browser/">http://ports.ubuntu.com/pool/universe/c/chromium-browser/</a>
+这么多文件怎么下？无妨，找类似于下面的这三个文件，然后都下载下来：</p>
+
+<pre><code class="language-no-highlight">chromium-codecs-ffmpeg-extra_50.0.2661.102-0ubuntu0.16.04.1.1237_armhf.deb
+chromium-browser-l10n_50.0.2661.102-0ubuntu0.16.04.1.1237_all.deb
+chromium-browser_50.0.2661.102-0ubuntu0.16.04.1.1237_armhf.deb
+</code></pre>
+
+<p>这三个文件应该只是中间的版本号不同，其他的是一样的。</p>
+
+<p><strong>update:如果高版本有问题，那就换个低版本的。</strong></p>
+
+<p>然后把这三个文件传入你的树莓派中，比如 <code>~/source_code/chromium</code>，进入这个文件夹，然后运行下面两条命令，恩，换成你自己下载的那个版本的：</p>
+
+<pre><code class="language-no-highlight">sudo dpkg -i chromium-codecs-ffmpeg-extra_50.0.2661.102-0ubuntu0.16.04.1.1237_armhf.deb 
+sudo dpkg -i chromium-browser-l10n_50.0.2661.102-0ubuntu0.16.04.1.1237_all.deb chromium-browser_50.0.2661.102-0ubuntu0.16.04.1.1237_armhf.deb
+</code></pre>
+
+<p>这样 chromium 就安装好了。然后安装屏蔽鼠标的软件：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install x11-xserver-utils unclutter
+</code></pre>
+
+<h3 id="toc_12">禁用屏幕保护和自动重启</h3>
+
+<p>然后需要一些额外设置，在信息模式下禁用屏幕保护和自动重启。
+这部也卡住了很久，由于系统版本不同，所以有些设置也发生了变化，最后参考<a href="">这篇文章</a>，修改这个文件：</p>
+
+<pre><code class="language-no-highlight">~/.config/lxsession/LXDE-pi/autostart
+</code></pre>
+
+<p>在 <code>@xscreensaver -no-splash</code> 前面加上了 <code>#</code> 号。
+还加入了以下代码：</p>
+
+<pre><code class="language-vim">@xset s off
+@xset -dpms
+@xset s noblank
+@chromium-browser --kiosk --incognito http://localhost
+</code></pre>
+
+<p>这样就能完全禁用所有屏保功能，及 Chromium 浏览器在开机后自动启动，开启全屏模式并导向本地主页。</p>
+
+<p>然后重启树莓派检查效果。树莓派启动还是挺慢的，但最终测试页还是在旋转了90度的画面上显示出来。</p>
+
+<h3 id="toc_13">树莓派 Wifi 掉线问题</h3>
+
+<p>在使用过程中发现过一阵 SSH 和 FTP 就链接不上了，这怎么行？Wifi 断了这个镜子不就不能工作了。解决这个问题很简单，创建并编辑文件 <code>/etc/modprobe.d/8192cu.conf</code> 并且粘贴下列内容：</p>
+
+<pre><code class="language-vim">#Disable power saving
+options 8192cu rtw_power_mgnt=0 rtw_enusbss=1 rtw_ips_mode=1
+</code></pre>
+
+<p>然后使用 <code>sudo reboot</code> 进行重启就可以了。</p>
+
+<p>以上。</p>
+
+]]></content>
+  </entry>
+  
+</feed>

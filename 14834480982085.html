@@ -1,0 +1,833 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+     使用树莓派制作一个魔镜2（界面开发） - WILL KEEP ... 
+  </title>
+   
+  <link href="atom.xml" rel="alternate" title="WILL KEEP ..." type="application/atom+xml">
+  <link rel="stylesheet" href="asset/css/bootstrap.css">
+  <link href="asset/css/themify-icons.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" href="asset/css/foundation.min.css" />
+  <link rel="stylesheet" href="asset/css/docs.css" />
+  <script src="asset/js/vendor/modernizr.js"></script>
+  <script src="asset/js/vendor/jquery.js"></script>
+  <script src="asset/js/parallax/parallax.min.js"></script>
+  <script src="asset/highlightjs/highlight.pack.js"></script>
+  <script src="asset/js/typing.min.js"></script>
+  <script src="asset/js/scripts.js"></script>
+  <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="asset/css/theme.css">
+  <link rel="stylesheet" href="asset/css/custom.css">
+  <link rel="stylesheet" href="asset/css/typing.css">
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <script type="text/javascript">
+    function before_search() {
+      var searchVal = 'site:hellowk.cc ' + document.getElementById('search_input').value;
+      document.getElementById('search_q').value = searchVal;
+      return true;
+    }
+  </script>
+</head>
+
+<body class="antialiased hide-extras">
+  <div class="marketing off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+      <nav class="top-bar docs-bar hide-for-small" data-topbar>
+        <div class="top-bar-section">
+          <div class="row">
+            <div style="position: relative;width:100%;">
+              <div style="position: absolute; width:100%;">
+                <ul class="left">
+                  <img src="asset/img/logo.png" style="height: 40px;">
+                </ul>
+                <ul id="main-menu" class="right">
+                  
+                  <li id=""><a target="_self" href="index.html">Home</a></li>
+                  
+                  <li id=""><a target="_self" href="archives.html">Archives</a></li>
+                  
+                  <li id=""><a target="_self" href="about.html">About</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="tab-bar show-for-small">
+        <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+          <span> &nbsp; WILL KEEP ...</span>
+        </a>
+      </nav>
+
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="archives.html">Archives</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><label>Categories</label></li>
+
+          
+          <li><a href="raspberry-pi.html">RASPBERRY PI</a></li>
+          
+          <li><a href="NANO%20PI.html">NANO PI</a></li>
+          
+          <li><a href="HOME%20AUTOMATION.html">HOME AUTOMATION</a></li>
+          
+
+        </ul>
+      </aside>
+      <a class="exit-off-canvas" href="#"></a>
+      <div id="main-content" role="main" class="scroll-container"> <script type="text/javascript">
+  $(function() {
+    $('#menu_item_index').addClass('is_active');
+  });
+</script>
+<div class="bigtitle">
+  <div class="row">
+    <div class="col-sm-12 mb0">
+        <h2 class="uppercase mb8">使用树莓派制作一个魔镜2（界面开发）</h2>
+        <div class="read-more clearfix">
+
+          <ul class="post-meta">
+            <li>
+              <i class="ti-calendar"></i>
+              <span class="date">2/20/2016 20:0 下午</span>
+            </li>
+            <li>
+              
+              <i class="ti-tag"></i>
+              <span>posted in&nbsp;</span>  
+              <span class="posted-in"><a href='raspberry-pi.html'>RASPBERRY PI</a></span> 
+            </li>
+            <li>
+              <span class="comments">
+             
+             
+           </span>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-8 medium-8 columns">
+    <div class="markdown-body article-wrap">
+      <div class="article">
+        
+      </div>
+      <!-- article -->
+
+      <div class="article-content">
+        <hr/>
+
+<p>千呼万唤始出来！Greetings.</p>
+
+<p>回顾一下，买了合适的镜子、显示器，做了个新外壳，安装好硬件及配置完成树莓派，那就进入最后一步——界面开发。</p>
+
+<p>程序界面不是一个神奇的应用，仅仅是一个全屏幕网页。老外提到这样能用 HTML、CSS 和 Javascript 开发外，还有一个额外的好处，在将它放入魔镜之前，能在我的（他的）苹果电脑上开发测试。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_11.png" alt="开发调试"/></p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">看看老外都做了什么</h2>
+
+<p>代码老外都写好了，而且在 Github 上开源了代码，所以直接拿来用就好了，在拿来用之前，我们看看他都做了什么。</p>
+
+<h3 id="toc_1">使用开源库</h3>
+
+<blockquote>
+<p>In addition to some self written code, I use a few opensource libraries to speed things up:  </p>
+
+<p><strong><a href="http://jquery.com/">Jquery</a></strong><br/>
+As almost any site, Magic Mirror uses Jquery to ease the DOM manipulation. Perfect for lazy people like me.  </p>
+
+<p><strong><a href="http://momentjs.com/">Moment.js</a></strong><br/>
+This will help me to do some easy timestamp manipulation. A huge timesaver when working with dates and times.  </p>
+
+<p><strong><a href="https://github.com/AIRSHP/Feed-To-JSON">FeedToJson</a></strong><br/>
+A convinient way to convert RSS feeds into javascript usable JSON data.  </p>
+
+<p><strong><a href="https://github.com/thybag/JavaScript-Ical-Parser">iCal Parser</a></strong><br/>
+Does some conversion of iCal data to JSON. Unfortunately this Library isn’t very polished, so it needed some additional work.<br/>
+Above libraries, combined with my own HTML and Javascript is enough to make the Mirror do the Magic.    </p>
+</blockquote>
+
+<p>老外在自己写的代码基础上，用了一些开源库文件来优化它的运行速度：魔镜使用 Jquery 来简化 DOM 操作方式。使用 Moment 减少在时间安排的操作，尤其是在争分夺秒时更节省不少时间。使用 FeedToJson 将 RSS 订阅用 Javascript 转成 JSON 数据。iCal Parser 将 iCal 数据转化为 JSON，可惜这个库文件并不完美，需要一些额外的优化。  </p>
+
+<p>以上这些库文件，加上自己的 HTML 和 Javascript 足够使镜子成精了。</p>
+
+<h3 id="toc_2">设计</h3>
+
+<blockquote>
+<p>Of course, my Magic Mirror needs a shiny design. And since I’m a hardcore Apple Fanboy, this design should fit in <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html">Apple’s Design Guidelines</a>:    </p>
+
+<blockquote>
+<p>Bezels, gradients, and drop shadows sometimes lead to heavier UI elements that can overpower or compete with the content. Instead, focus on the content and let the UI play a supporting role.<br/>
+Use plenty of negative space. Negative space makes important content and functionality more noticeable and easier to understand. Negative space can also impart a sense of calm and tranquility, and it can make an app look more focused and efficient.  </p>
+</blockquote>
+
+<p>How to achieve this? Clean typography by using <a href="https://en.wikipedia.org/wiki/Helvetica#Neue_Helvetica_.281983.29">Helvetica Neue</a>, and matching <a href="http://erikflowers.github.io/weather-icons/">iconography</a> for the weather information.    </p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_12.png" alt="Helvetica Neue"/></p>
+
+<p>Since the mirror will only function as a mirror when there’s no light behind the mirror. It’s important to use a black background. For the best contrast the content will therefor be white. And some shades of grey. Let’s say 50 …<br/>
+Of course I could add some colors, but for now i go for the clean black and white approach. I didn’t want my mirror to be more colorful than my own reflection.    </p>
+</blockquote>
+
+<p>魔镜需要个酷炫设计。不只是原作者，我本人也是个严重果粉，那么在设计上要遵从苹果系的设计指标：  </p>
+
+<blockquote>
+<p>边框、倾角、阴影效果有时是用户界面厚重感的因素，甚至能盖过显示内容的光芒。所以，专注在内容设计，把用户交互界面摆在辅助位置上。<br/>
+利用足够的实体空间，它是个重要内涵，在感官上更让人注意和易于理解。    </p>
+</blockquote>
+
+<p>怎么做到这一点？用<a href="https://en.wikipedia.org/wiki/Helvetica#Neue_Helvetica_.281983.29">Helvetica Neue 字体</a>，用<a href="http://erikflowers.github.io/weather-icons/">天气图标</a>对应显示天气信息。</p>
+
+<p>镜子在背后没有光源时就只是一面镜子，用黑色背景是个重要设定。而为了有最好的对比度，显示内容字体应为白色，在加一些灰色阴影边缘，那灰度为50吧……</p>
+
+<p>大可以加上一些其他色彩，但目前为止只想做到简洁的黑白界面。</p>
+
+<blockquote>
+<p>我可不想镜子比我的尊容还要出彩。</p>
+</blockquote>
+
+<p>（译者注：镜子：好吧，我不告诉你谁是世界上最帅的男人。镜子，碎。）</p>
+
+<h3 id="toc_3">API 设计</h3>
+
+<p>为了接收想在镜子上显示的数据，用了一些开源 API 和反馈代码。还有谁不太清楚什么是 API，<a href="https://zh.wikipedia.org/wiki/API">维基百科</a>里面有详尽的解释：    </p>
+
+<blockquote>
+<p>电脑操作系统（Operating system）’或‘程序库’提供给应用程序调用使用的代码。</p>
+</blockquote>
+
+<p>API就像你家的DVD播放器背后那样充满接口——如果你将其他设备连接到它的话，它就变得更加有用，这些接口本质上就是 API。API 让设备变得功能强大、有趣，尤其对我这种电脑狂人来说。</p>
+
+<h4 id="toc_4">Openweathermap.org</h4>
+
+<p>Openweathermap 有很好的 API 接口，能够免费得到天气预报信息。它允许你查询区域内的信息，定义你想要的信息类别。在这里用了两个连接，一个是当前天气，另一个是预报天气。</p>
+
+<h4 id="toc_5">iCal Calendar</h4>
+
+<p>iCloud 允许你以 iCal 格式分享日历。因为 javascript 无法做到这一点（因为多站点脚本安全问题），需要通过 PHP 代理服务器来开启数据。这其实很容易，只有三行代码而已：</p>
+
+<pre><code class="language-php">&lt;!--?php &lt;br ?--&gt;    
+$url = &quot;https://p01-calendarws.icloud.com/ca/subscribe/1/mysupersecreticloudhash&quot;;
+echo file_get_contents($url);
+</code></pre>
+
+<p>只需查询 <code>calendar.php</code> 就能将在同一个服务器内日历表在界面上显示出来。    </p>
+
+<p>前面说过的 iCal 语法分析编辑把信息解析成有用信息。可是，iCloud 在他们的反馈中用了一些非标准标签，要添加额外的代码行来将代码解析为 javascript 文件。</p>
+
+<h4 id="toc_6">新闻订阅</h4>
+
+<p>原作者新闻订阅只是用到了荷兰公共广播公司的 RSS 订阅功能。这里我们要改成国内自己的新闻，具体有那些？看<a href="https://www.zhihu.com/question/19580096" title="你必读的 RSS 订阅源有哪些? - 调查类问题 - 知乎">这里</a>。可是，订阅不支持 JSON 格式数据，因此我用了 FeedToJson 插件来把 RSS 数据转为 JSON 格式的。</p>
+
+<h3 id="toc_7">其他</h3>
+
+<p>其他内容，例如当前日期与实践，还有问候语都只是一些简单的 Javascript 语句。</p>
+
+<h2 id="toc_8">把页面放入魔镜</h2>
+
+<p>以上那么多都是把老外的原话拿来修修改改，现在终于到了自己的 Show Time！把页面放入魔镜。</p>
+
+<p>老外把代码直接开源，放在了 Github 上，地址在 <a href="https://github.com/MichMich/MagicMirror">这里</a>。</p>
+
+<p><strong>Update：我自己的源代码：<a href="https://github.com/HelloWk/MagicMirror">HelloWk/MagicMirror</a>，内容没有变，在原基础上添加了中文字体的支持，树莓派在英文环境也可以使用中文了。</strong></p>
+
+<p>如果你是大神，大可以直接使用 <code>git clone</code> 直接克隆到 <code>/var/www/</code> 目录中，但我这里没有这么做，我还要做一些改动，所以使用 Git 更新文件对于我来说没有用了，过后还要把修改好的代码开源到自己的 Github 中，所以直接下载源文件到电脑。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_13.png" alt="下载 Magic Mirror 的源文件"/></p>
+
+<p>这里要感谢老外的无私贡献，否则我们也无法快速的制作我们自己的魔镜。</p>
+
+<h3 id="toc_9">使用 FTP 传输文件</h3>
+
+<p>接下来就是把文件传入树莓派的 <code>/var/www/html</code> 目录中，这里我在树莓派上搭建了 FTP 服务器用于传文件，等基本调试完毕后可以选择使用 Git 来管理文件，我为了方便调试就使用了 FTP，配合 Transmit（Mac 上的 FTP 软件，Windows 可以使用 FlashFXP）就可以很轻松的传输文件了。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_14.png" alt="使用 Transmit 上传文件"/></p>
+
+<p>FTP 的安装很简单：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install vsftpd
+</code></pre>
+
+<p>安装完成后启动 FTP 服务：</p>
+
+<pre><code class="language-no-highlight">sudo service vsftpd start
+</code></pre>
+
+<p>编辑 vsftdp 的配置文件</p>
+
+<pre><code class="language-no-highlight">sudo vim /etc/vsftpd.conf
+</code></pre>
+
+<p>这里我放一下我自己的配置：</p>
+
+<pre><code class="language-profile"># 配置文件： /etc/vsftpd.conf 这里删除了所有#号注释的内容
+# -------------------------------------------------------
+listen=NO
+listen_ipv6=YES
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=000
+dirmessage_enable=YES
+use_localtime=YES
+connect_from_port_20=YES
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=vsftpd
+rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+ssl_enable=NO
+local_root=/var/www/html
+</code></pre>
+
+<p>具体配置讲解看这个链接：<a href="http://os.51cto.com/art/201008/221842.htm" title="史上最详细的 vsftpd 配置文件讲解">史上最详细的 vsftpd 配置文件讲解</a>。</p>
+
+<p>这里有一点需要注意的是，我的树莓派 Apache 服务器安装好后在 <code>/var/www/</code> 目录中还存在一个 <code>html</code> 的文件夹，而且默认的 <code>index.html</code> 也在这个 <code>html</code> 文件夹中，所以我也把文件放在了这个文件夹中。<del>不过我想直接放在 <code>/var/www/</code> 目录应该是可以的，没有尝试，谁遇到了同样的情况可以自己尝试一下。</del></p>
+
+<p><strong>3.10.2016 update：必须放入 <code>/var/www/html</code> 中，直接放在 <code>/var/www/</code> 无法找到 <code>index.html</code>。</strong></p>
+
+<p>这时就可以重启树莓派，然后就能看见页面成功的在魔镜上运行了。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_15.png" alt="页面成功的在魔镜上运行"/></p>
+
+<h2 id="toc_10">具体配置</h2>
+
+<p>能运行后当然还有许多工作要做，毕竟直接拿来的代码会水土不服，我需要对他进行汉化，调整天气设置和日历设置，还有订阅的问题（目前还不能成功显示）。</p>
+
+<p>Ps： 由于做完时间太久，可能有些步骤忘记了，如有问题可以在下方留言。</p>
+
+<h3 id="toc_11">功能的开启与关闭</h3>
+
+<p>不得不说老外考虑的很周到，把所有功能作成了插件的形式，不想使用某个功能直接关闭就可以了。
+在代码的 <code>js/main.js</code> 这个文件中，最下方会有一些以 <code>.init()</code> 结尾的语句：</p>
+
+<pre><code class="language-html">version.init();
+time.init();
+tem_hum.init();
+calendar.init();
+compliments.init();
+weather.init();
+news.init();
+</code></pre>
+
+<p>想关闭哪个功能直接用 <code>//</code> 注释掉即可，重新开启只需去掉注释。例如我不想要 calendar 的功能，就在 <code>calendar.init();</code> 前加上 <code>//</code> :</p>
+
+<pre><code class="language-html">//calendar.init();
+</code></pre>
+
+<h3 id="toc_12">区域设置</h3>
+
+<p>区域有关设置一个是前文提到的树莓派自身 <code>raspi-config</code> 中区域的设置，还有就是在代码的 <code>js/config.js</code> 这个文件中，<del>在文件的第二行把 <code>lang</code> 的值改成 <code>cn</code>：</del></p>
+
+<p><strong>3.10.2016 update：第二行 <code>lang</code> 的值改成 <code>zh-cn</code>: </strong></p>
+
+<pre><code class="language-json">lang: &#39;zh-cn&#39;,
+</code></pre>
+
+<h3 id="toc_13">设置天气</h3>
+
+<p>首先我们需要到 <a href="openweathermap.org">Openweathermap</a> 去注册一个免费的账号，会得到一个 API key，然后我们把这个 key 写在 <code>js/config.js</code> 这个文件的 <code>weather: {}</code> 中,同时把参数 <code>q</code> 改成你自己的城市（提前在网页测试），<code>lang</code> 的值改成 <code>zh_cn</code>：</p>
+
+<pre><code class="language-json">weather: {
+    // change weather params here:
+    // units: metric or imperial
+    interval: 60000,
+    fadeInterval: 10000,
+    params: {
+        q: ‘Beijing’,
+        // units: &#39;metric&#39;,
+        // if you want a different lang for the weather that what is set above, change it here
+        lang: &#39;cn&#39;,
+        APPID: &#39;YOUR_FREE_OPENWEATHER_API_KEY&#39;
+    }
+}
+</code></pre>
+
+<p>这里我还添加了 <code>interval: 60000, fadeInterval: 10000</code> 两个参数</p>
+
+<blockquote>
+<p>（在 <code>weather.js</code> 文件中有访问，</p>
+
+<p><code>updateInterval: config.weather.interval || 6000</code>
+ <code>fadeInterval: config.weather.fadeInterval || 1000</code> </p>
+
+<p>不写这两个参数使用默认参数 6000 和 1000），</p>
+</blockquote>
+
+<p>目的是为了放慢请求次数，在使用作者默认设置的时候没访问一次在 Chrome 的控制台就输出一个错误，还没有详细信息，最后使用 Safari 发现 429 错误，Too Many Requests，好吧，我慢点。</p>
+
+<p>在树莓派上接个键盘，按 <code>Ctrl + R</code> 刷新页面（为此我在树莓派的 GPIO 上接了一个按钮，然后写了一个 Python 文件开机运行，按下后模拟键盘的 <code>Ctrl + R</code> 动作），天气成功显示。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_16.png" alt="接在树莓派 GPIO 上的按钮"/></p>
+
+<p>也可以把天气换成国内的 API，这样数据应该更准确一些，因为需要重新解析 Json 文件，偷个懒就没有换。</p>
+
+<p>可能预报的星期还没有汉化，等后续我们接着改。</p>
+
+<h3 id="toc_14">日历设置</h3>
+
+<p>日历设置比较简单，打开 Mac 上的日历软件（没有 Mac 的可以登录 <a href="https://www.icloud.com" title="iCloud">iCloud</a> 获取），获取分享日历的地址，把地址的 <code>webcal</code> 换成 <code>https</code>，写在 <code>js/config.js</code> 这个文件的 <code>calendar: {}</code> 中。</p>
+
+<pre><code class="language-json">calendar: {
+    maximumEntries: 10,
+    url: &quot;https://p32-calendars.icloud.com/published/2/19serRMXg_-dwh...(your ical url)&quot;
+}
+</code></pre>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_17.png" alt="在日历中获取日历的地址"/></p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_18.png" alt="在iCloud中获取日历的地址"/></p>
+
+<h3 id="toc_15">新闻订阅</h3>
+
+<p>订阅只需取得订阅源的地址然后写在 <code>js/config.js</code> 这个文件的 <code>news: {}</code> 中即可。</p>
+
+<pre><code class="language-json">news: {
+    feed: &#39;http://feeds2.feedburner.com/cnbeta_full&#39;
+}
+</code></pre>
+
+<p>找不到订阅？看<a href="https://www.zhihu.com/question/19580096" title="你必读的 RSS 订阅源有哪些? - 调查类问题 - 知乎">这里</a>。</p>
+
+<p>到这里基本的设置就完成了，接下来就是解决最后的问题——汉化。</p>
+
+<h2 id="toc_16">汉化页面</h2>
+
+<p><code>js/config.js</code> 这个文件中，</p>
+
+<pre><code class="language-json">lang: &#39;zh-cn&#39;,
+</code></pre>
+
+<p>修改好后就已经是汉化好了，然后直接汉化问候语就好。。如果你没能汉化成功，这里还有手动修改文件汉化的方法。没看见？点下面按钮☟</p>
+
+<script type="text/javascript">  
+//===========================点击展开关闭效果====================================  
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){  
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;  
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;  
+var openTip = oOpenTip || "";  
+var shutTip = oShutTip || "";  
+if(targetObj.style.display!="none"){  
+   if(shutAble) return;  
+   targetObj.style.display="none";  
+   if(openTip  &&  shutTip){  
+    sourceObj.innerHTML = shutTip;   
+   }  
+} else {  
+   targetObj.style.display="block";  
+   if(openTip  &&  shutTip){  
+    sourceObj.innerHTML = openTip;   
+   }  
+}  
+}  
+</script>
+
+<div style="text-align: center;">
+    <button onclick="openShutManager(this,'box4',false,'点击关闭','点击展开')" >点击展开</button>
+</div>
+
+<pre id="box4" style="display:none">
+
+################################################################################
+
+改完区域后不知道是自己忘记了什么并没有完全汉化，还是一半中文一半英文的，索性直接修改代码汉化。
+
+**时间汉化**
+
+作者使用 `moment.js` 这个库，同时也给我们汉化提供了方便，查阅了一下相关文档，只需调用 `.locale('zh-cn')` 就能格式化为中文。
+
+打开 `time/time.js`，这个就是用来控制显示时间日期的文件，找到 `var _now = moment();`  这一行，在下面一行加上 `_now.locale('zh-cn');` 即可。
+
+```javascript
+var _now = moment();
+_now.locale('zh-cn');
+```
+
+**日历汉化**
+
+控制日历的文件是 `calendar/calendar.js`，该文件需要改的地方比较多，但也很好找，都是跟 `moment` 相关的。
+
+找到：
+
+```javascript
+if (e.startDate == undefined){
+//some old events in Gmail Calendar is "start_date"
+//FIXME: problems with Gmail's TimeZone
+var days = moment(e.DTSTART).diff(moment(), 'days');
+var seconds = moment(e.DTSTART).diff(moment(), 'seconds');
+var startDate = moment(e.DTSTART);
+} else {
+var days = moment(e.startDate).diff(moment(), 'days');
+var seconds = moment(e.startDate).diff(moment(), 'seconds');
+var startDate = moment(e.startDate);
+}
+```
+
+改成：
+
+```javascript
+if (e.startDate == undefined){
+//some old events in Gmail Calendar is "start_date"
+//FIXME: problems with Gmail's TimeZone
+var days = moment(e.DTSTART).locale('zh-cn').diff(moment(), 'days');
+var seconds = moment(e.DTSTART).locale('zh-cn').diff(moment(), 'seconds');
+var startDate = moment(e.DTSTART).locale('zh-cn');
+} else { 
+var days = moment(e.startDate).locale('zh-cn').diff(moment(), 'days');
+var seconds = moment(e.startDate).locale('zh-cn').diff(moment(), 'seconds');
+var startDate = moment(e.startDate).locale('zh-cn');
+}
+```
+
+紧接着一段：
+
+```javascript
+//only add fututre events, days doesn't work, we need to check seconds
+if (seconds >= 0) {
+if (seconds <= 60*60*5 || seconds >= 60*60*24*2) {
+var time_string = moment(startDate).fromNow();
+}else {
+var time_string = moment(startDate).calendar()
+}
+if (!e.RRULE) {
+this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+e.seconds = seconds;
+}
+```
+
+改成：
+
+```javascript
+//only add fututre events, days doesn't work, we need to check seconds
+if (seconds >= 0) {
+if (seconds <= 60*60*5 || seconds >= 60*60*24*2) {
+ var time_string = moment(startDate).locale('zh-cn').fromNow();
+ }else {
+var time_string = moment(startDate).locale('zh-cn').calendar()
+}
+if (!e.RRULE) {
+ this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+e.seconds = seconds;
+}
+```
+
+再往下：
+
+```javascript
+for (date in dates) {
+var dt = new Date(dates[date]);
+var days = moment(dt).diff(moment(), 'days');
+var seconds = moment(dt).diff(moment(), 'seconds');
+var startDate = moment(dt);
+
+if (seconds >= 0) {
+if (seconds <= 60*60*5 || seconds >= 60*60*24*2) {
+var time_string = moment(dt).fromNow();
+} else {
+var time_string = moment(dt).calendar()
+}
+this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+}
+```
+
+改成：
+
+
+```javascript
+for (date in dates) {
+var dt = new Date(dates[date]);
+var days = moment(dt).locale('zh-cn').diff(moment(), 'days');
+var seconds = moment(dt).locale('zh-cn').diff(moment(), 'seconds');
+var startDate = moment(dt).locale('zh-cn');
+
+if (seconds >= 0) {
+if (seconds <= 60*60*5 || seconds >= 60*60*24*2) {
+var time_string = moment(dt).locale('zh-cn').fromNow();
+} else {
+var time_string = moment(dt).locale('zh-cn').calendar()
+}
+this.eventList.push({'description':e.SUMMARY,'seconds':seconds,'days':time_string});
+}
+}
+```
+
+虽然改动比较多，但是都是比较好找的地方，配合搜索 `moment` 关键字添加 `.locale('zh-cn')`，还是很容易的，只是需要点耐心花点时间罢了。
+
+**天气汉化**
+
+控制天气的文件是 `weather/weather.js`，只有一处需要修改，找到`_forecastHtml += '<td class="day">' ...`; 这行代码加上 `.locale('zh-cn')` 即可。
+
+```javascript
+_forecastHtml += '<td class="day">' + moment(_forecast.dt, 'X').locale('zh-cn').format('ddd') + '</td>';
+```
+ 
+################################################################################
+</pre>
+
+<h3 id="toc_17">问候语汉化</h3>
+
+<p>找到 <code>js/config.js</code> 这个文件中的 <code>complimentscn: {}</code> ，把里面的英文问候语改成你自己喜欢的就可以了。如果你喜欢，还可以改成比较个性的语句，比如夸一下自己的女朋友，或者调侃一下自己很帅。 </p>
+
+<pre><code class="language-json">complimentscn: {
+    interval: 30000,
+    fadeInterval: 4000,
+    morning: [
+        &#39;早上好！&#39;,
+        &#39;享受美好一天！&#39;,
+        &#39;昨晚睡得如何？&#39;
+    ],
+    afternoon: [
+        &#39;你好!&#39;,
+        &#39;嗯，你看起来很不错!&#39;,
+        &#39;你今天看起来很好!&#39;
+    ],
+    evening: [
+        &#39;喔, 不错嘛!&#39;,
+        &#39;今天过得怎么样？&#39;,
+        &#39;嗨!&#39;
+    ]
+}
+</code></pre>
+
+<h3 id="toc_18">新闻订阅</h3>
+
+<p>新闻订阅这里没有可以汉化的内容，你的订阅源的语言是什么就显示什么，除非你有更高的要求，把所有语言全部翻译成中文，那需要链接翻译模块，太麻烦。</p>
+
+<h2 id="toc_19">最终成果</h2>
+
+<p>到这为止我们已经做好了一个自己的魔镜，远没有我们想象的那么难。</p>
+
+<p>最后晒一张最终成果的照片，图中因为调试所以把树莓派拿了下来，还增加了农历和室内温度湿度的功能，添加了一个按钮用于刷新页面，我会再写一篇文章总结下这几个功能的制作。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/magicmirror/magic_mirror_19.png" alt="最终效果"/></p>
+
+<p>PS：由于对外框不是很满意，一过完年就淘了个差不多大的相框，打算安装到相框中再看看效果。相框还在路上，等到后再上传新的照片。</p>
+
+<h2 id="toc_20">未来展望</h2>
+
+<p>由于树莓派强大的 GPIO，设想把这块镜子放在进门的玄关处，一个是充当试衣镜，再一个添加触摸功能在屏幕上添加 Button 通过树莓派的 GPIO 控制屋内电灯和电器的，出门时即可快速关掉所有的灯和电器，进门时也可以进行开启热水器等操作。如果再加上手机远程控制，离智能家居的步伐就又进了一步。</p>
+
+<p>以上。</p>
+
+
+
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+          <p class="text-left" style="padding:15px 0px;">
+            
+            <a href="14834518879850.html" title="Previous Post: 使用树莓派制作一个魔镜3（更加高级的功能）">&laquo; 使用树莓派制作一个魔镜3（更加高级的功能）</a> 
+          </p>
+        </div>
+        <div class="large-6 columns">
+          <p class="text-right" style="padding:15px 0px;">
+            
+            <a href="14834426274852.html" title="Next Post: 使用树莓派制作一个魔镜1（硬件制作和环境搭建）">使用树莓派制作一个魔镜1（硬件制作和环境搭建） &raquo;</a> 
+          </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+            
+        </div>
+      </div>
+    </div>
+    <!-- article-wrap -->
+  </div>
+  <!-- large 8 --> <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+      <div id="site-info" class="site-info">
+        
+        <!--        <h1>WILL KEEP ...</h1>-->
+<!--
+        <h6 class="h-center">在平坦的路面上曲折前行</h2>
+        <div class="site-des"></div>
+        <div class="social">
+           
+           
+           
+          
+           
+           
+           
+          
+          <a target="_blank" class="weibo" href="http://weibo.com/wkaiai" title="weibo">Weibo</a>
+           
+           
+          
+          <a target="_blank" class="github" target="_blank" href="https://github.com/HelloWk" title="GitHub">GitHub</a>
+           
+          
+          <a target="_blank" class="email" href="mailto:katalynn00@gmail.com" title="Email">Email</a>
+          
+          <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+-->
+          	</div>
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="raspberry-pi.html"><strong>RASPBERRY PI</strong></a>
+        
+            <a href="NANO%20PI.html"><strong>NANO PI</strong></a>
+        
+            <a href="HOME%20AUTOMATION.html"><strong>HOME AUTOMATION</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="14834592005558.html">新年新气象，博客更换全新 UI 啦</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14834588749279.html">iOS 10 Home App 简单体验</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14834570756285.html">制作一个用 Siri 控制的 WiFi 灯</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14834536550124.html">一个新玩具——NanoPi2</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="14834518879850.html">使用树莓派制作一个魔镜3（更加高级的功能）</a>
+			      </li>
+		     
+		  
+		      
+		  
+		      
+		   
+		  		</ul>
+                </div>
+              </div>
+              
+<!--
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>DOC</h2>
+                </div>
+                <div class="side-content">
+                
+                </div>
+              </div>
+-->
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row --> <div class="page-bottom clearfix footer-1 bg-dark">
+  <div class="row">
+
+    <div id="site-info" class="site-info">
+      <h6 class="h-center">在平坦的路面上曲折前行</h6>
+      <div class="social">
+         
+         
+         
+        
+         
+         
+         
+        
+        <a target="_blank" class="weibo" href="http://weibo.com/wkaiai" title="weibo">Weibo</a>
+         
+         
+        
+        <a target="_blank" class="github" target="_blank" href="https://github.com/HelloWk" title="GitHub">GitHub</a>
+         
+        
+        <a target="_blank" class="email" href="mailto:katalynn00@gmail.com" title="Email">Email</a>
+        
+        <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+      </div>
+    </div>
+    
+    <p class="copyright">
+      Copyright &copy; 2017 - <a target="_blank" href="about.html">ChenhsinWong</a><br>
+    </p>
+  </div>
+  <a class="btn btn-sm fade-half back-to-top inner-link hidden-xs" href="#top">Top</a>
+</div>
+</section>
+</div>
+</div>
+
+ 
+
+<script src="asset/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+
+  function fixSidebarHeight() {
+    var w1 = $('.markdown-body').height();
+    var w2 = $('#sidebar').height();
+    if (w1 > w2) {
+      $('#sidebar').height(w1);
+    };
+  }
+  $(function() {
+    fixSidebarHeight();
+  })
+  $(window).load(function() {
+    fixSidebarHeight();
+  });
+</script>
+
+<script src="asset/chart/all-min.js"></script><script type="text/javascript">$(function(){    var mwebii=0;    var mwebChartEleId = 'mweb-chart-ele-';    $('pre>code').each(function(){        mwebii++;        var eleiid = mwebChartEleId+mwebii;        if($(this).hasClass('language-sequence')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = Diagram.parse($(this).text());            diagram.drawSVG(eleiid,{theme: 'simple'});        }else if($(this).hasClass('language-flow')){            var ele = $(this).addClass('nohighlight').parent();            $('<div id="'+eleiid+'"></div>').insertAfter(ele);            ele.hide();            var diagram = flowchart.parse($(this).text());            diagram.drawSVG(eleiid);        }    });});</script> <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script> 
+
+</body>
+
+</html>

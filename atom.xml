@@ -4,7 +4,7 @@
   <title><![CDATA[WILL KEEP ...]]></title>
   <link href="hellowk.cc/atom.xml" rel="self"/>
   <link href="hellowk.cc/"/>
-  <updated>2017-03-23T22:42:44+08:00</updated>
+  <updated>2017-03-23T22:46:19+08:00</updated>
   <id>hellowk.cc/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -239,7 +239,7 @@ tail -f /var/log/homebridge.err
 
 <p>然后 进入局域网通讯协议内，打开局域网通信协议开关，然后会得到一个密码，点击确定后再次进入此页面，密码保持不变即开启成功，记录此密码备用。</p>
 
-<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-%E4%BE%BF%E6%90%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%EF%BC%88PNG%20%E5%9B%BE%E5%83%8F%EF%BC%89-5481A184C8EB-1.png" alt="便携网络图形图像（PNG 图像）-5481A184C8EB-1"/></p>
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-%E4%BE%BF%E6%90%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%EF%BC%88PNG%20%E5%9B%BE%E5%83%8F%EF%BC%89-5481A184C8EB.png" alt="便携网络图形图像（PNG 图像）-5481A184C8EB"/></p>
 
 <h3 id="toc_7">修改配置文件</h3>
 

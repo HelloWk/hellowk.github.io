@@ -171,7 +171,8 @@ blockquote h6 {
 }
 .markdown-body li {
   font-size: 14px;
-/*  list-style-type: disc;*/
+  list-style-type: disc;
+  list-style-image:url("../img/oval.png");
 }
 #sidebar { 
   margin-top: 50px;

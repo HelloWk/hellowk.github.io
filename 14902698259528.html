@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>
-     新年新气象，博客更换全新 UI 啦 - WILL KEEP ... 
+     使用 Siri 控制你的家 2 - 接入米家的产品 - WILL KEEP ... 
   </title>
    
   <link href="atom.xml" rel="alternate" title="WILL KEEP ..." type="application/atom+xml">
@@ -95,23 +95,26 @@
 <div class="bigtitle">
   <div class="row">
     <div class="col-sm-12 mb0">
-        <h2 class="uppercase mb8">新年新气象，博客更换全新 UI 啦</h2>
+        <h2 class="uppercase mb8">使用 Siri 控制你的家 2 - 接入米家的产品</h2>
         <div class="read-more clearfix">
 
           <ul class="post-meta">
             <li>
               <i class="ti-calendar"></i>
-              <span class="date">1/5/2017 0:0 上午</span>
+              <span class="date">3/23/2017 19:50 下午</span>
             </li>
             <li>
-               
+              
+              <i class="ti-tag"></i>
+              <span>posted in&nbsp;</span>  
+              <span class="posted-in"><a href='HOME%20AUTOMATION.html'>HOME AUTOMATION</a></span> 
             </li>
             <li>
               <span class="comments">
              
              
              &nbsp;
-             <a class="ds-thread-count" data-thread-key="14834592005558.html" data-count-type="comments" href="14834592005558.html#ds-thread"></a>
+             <a class="ds-thread-count" data-thread-key="14902698259528.html" data-count-type="comments" href="14902698259528.html#ds-thread"></a>
              
            </span>
             </li>
@@ -132,23 +135,137 @@
       <div class="article-content">
         <hr/>
 
-<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-01-04-2017.png" alt="2017"/></p>
+<p>上一篇文章我们搭建了用于接入 Homekit 的服务器，这次我们就看看如何把米家的产品接入到 Homekit 中。</p>
 
-<p>新一年到了，我的对博客也进行了一次小升级：</p>
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">支持的设备</h2>
+
+<p>当然，不是所有的米家设备都支持接入的，目前知道可以接入的产品有：</p>
 
 <ul>
-<li>更换了 Markdown 编辑器 MWeb，非常好用，购买了正版序列号，为独立开发者做支持。自我感觉比使用还u。。＋ Hexo 的组合方式更方便，MWeb 的 Markdown 格式更符合官方规定，而且自带生成静态页，直接 push 到GitHub就好。</li>
-<li>重新绘制了 UI，目前虽然还有点小毛病，但已可以使用，新版 UI 使用了白色作为主题风格，更清新、简洁。</li>
-<li>由于格式的不同，旧文章需要修改才能再新版显示；目前已经全部修改完成，但难免会有部分显示错误，后期陆续更新。</li>
+<li>Yeelight 系列灯具（灯泡，灯带，目前新增了小米LED台灯，吸顶灯未知，应该支持，床头灯未知）</li>
+<li>Aqara 系列，智能插座 Zigbee 版，门窗传感器，人体传感器，温湿度传感器。（使用这些设备需要配合米家多功能网关使用，Yeelight可单独使用）。</li>
 </ul>
 
-<p>新的一年开始了，我也会陆续更新有关家居自动化的文章，预计今年会加大更新的度，和大家一起改造家中设备，研究家居自动化控制。</p>
+<h2 id="toc_1">接入 Yeelight</h2>
 
-<p>目前还有更换博客名称的想法，还没有想好叫什么，想好后会更新一次 UI，同时域名也会更换，老域名会链接到新域名上，新老域名均可访问（预计持续一年），然后逐步淘汰就域名的使用，全面启用新域名。</p>
+<p>我们先说说 Yeelight 的接入，这个比较简单，只需要安装插件开启 Yeelight 的极客模式即可。</p>
 
-<p>最后，祝大家新年快乐！</p>
+<h3 id="toc_2">安装插件</h3>
+
+<p>SSH 进入树莓派， 运行以下命令安装 Yeelight 插件：</p>
+
+<pre><code class="language-no-highlight">sudo npm install -g homebridge-yeelight
+</code></pre>
+
+<h3 id="toc_3">打开极客模式</h3>
+
+<p>进入 Yeelight 的 App，添加好你的灯，然后点击你要接入 Homekit 的设备 -&gt; 设置 -&gt; 极客模式，打开极客模式的开关即可。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-%E4%BE%BF%E6%90%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%EF%BC%88PNG%20%E5%9B%BE%E5%83%8F%EF%BC%89-3D7F3C02C1F5-1.png" alt="便携网络图形图像（PNG 图像）-3D7F3C02C1F5-1"/></p>
+
+<p>然后运行 <code>homebridge</code> 命令，过一阵你就会发现在你的家庭 App 中已经出现了这个设备。</p>
+
+<h2 id="toc_4">接入其他米家设备</h2>
+
+<p>其他支持的设备有个共同的特点，那就是需要接入到米家多功能网关中。</p>
+
+<p>我们要做的就是把多功能网关加入到 homebridge 中，这样网关下面所有支持的设备就可以自动连入到家庭中了。</p>
+
+<h3 id="toc_5">安装插件</h3>
+
+<p>SSH 进入树莓派， 运行以下命令安装插件：</p>
+
+<pre><code class="language-no-highlight">sudo npm install -g homebridge-aqara
+</code></pre>
+
+<h3 id="toc_6">获取 sid 和 局域网通信</h3>
+
+<p>首先我们打开米家 App， 然后进入网关，点击右上角的更多，然后选择关于。</p>
+
+<p>在关于页面中，我们需要连续点击页面下部空白部分，直到出现更多的选项。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-%E4%BE%BF%E6%90%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%EF%BC%88PNG%20%E5%9B%BE%E5%83%8F%EF%BC%89-9EA05CEFACAC-1.png" alt="便携网络图形图像（PNG 图像）-9EA05CEFACAC-1"/></p>
+
+<p>然后我们可以在网关信息中找到 <code>mac=&quot;AA:BB:CC:DD:EE:FF&quot;</code> 这样的一串数据，引号内的数据去掉冒号就是我们所需要的 sid：<code>aabbccddeeff</code>，记下备用。</p>
+
+<p>然后 进入局域网通讯协议内，打开局域网通信协议开关，然后会得到一个密码，点击确定后再次进入此页面，密码保持不变即开启成功，记录此密码备用。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-%E4%BE%BF%E6%90%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%EF%BC%88PNG%20%E5%9B%BE%E5%83%8F%EF%BC%89-5481A184C8EB-1.png" alt="便携网络图形图像（PNG 图像）-5481A184C8EB-1"/></p>
+
+<h3 id="toc_7">修改配置文件</h3>
+
+<p>SSH 进入树莓派， 修改配置文件：</p>
+
+<pre><code class="language-no-highlight">vim ~/.homebridge/config.json
+</code></pre>
+
+<p>然后在 <code>platforms</code> 中添加以下配置信息, 其中 <code>sid</code> 和 <code>password</code> 替换为上一步中记录的内容：</p>
+
+<pre><code class="language-json">{
+    &quot;platform&quot;: &quot;AqaraPlatform&quot;,
+    &quot;fakeLightBulbForLightSwitch&quot;: true,
+    &quot;sid&quot;: [
+        &quot;aabbccddeeff&quot;
+    ],
+    &quot;password&quot;: [
+        &quot;0123456789abcdef&quot;
+    ]
+}
+</code></pre>
+
+<p>完整文件：</p>
+
+<pre><code class="language-json">{
+    &quot;bridge&quot;: {
+        &quot;name&quot;: &quot;Homebridge&quot;,
+        &quot;username&quot;: &quot;CC:22:3D:E3:CE:30&quot;,
+        &quot;port&quot;: 51826,
+        &quot;pin&quot;: &quot;031-45-154&quot;
+    },
+    
+    &quot;description&quot;: &quot;This is an example configuration file with one fake accessory and one fake platform. You can use this as a template for creating your own configuration file containing devices you actually own.&quot;,
+
+    &quot;accessories&quot;: [
+        
+    ],
+
+    &quot;platforms&quot;: [
+        {
+            &quot;platform&quot;: &quot;AqaraPlatform&quot;,
+            &quot;fakeLightBulbForLightSwitch&quot;: true,
+            &quot;sid&quot;: [
+                &quot;aabbccddeeff&quot;
+            ],
+            &quot;password&quot;: [
+                &quot;0123456789abcdef&quot;
+            ]
+        }
+    ]
+}
+</code></pre>
+
+<p><strong>注意：</strong> 除添加新配置外，修改或删除配置文件后需要运行 <code>rm -r ~/.homebridge/persist/</code>，<code>rm -r ~/.homebridge/accessories/</code> 删除缓存文件，并需要在家庭应用中重新添加桥接器。</p>
+
+<p>运行 <code>homebridge</code> 命令，过一阵在家庭 App 中会出现相应的设备。</p>
 
 <p>以上。</p>
+
+<hr/>
+
+<p>系列相关链接：</p>
+
+<ul>
+<li><a href="http://www.hellowk.cc/14902608996424.html">使用 Siri 控制你的家 1 - 搭建服务器</a></li>
+<li><a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a></li>
+<li><a href="http://www.hellowk.cc/14902708868181.html">使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</a></li>
+<li>使用 Siri 控制你的家 4 - homebridge-mqtt 插件</li>
+<li>使用 Siri 控制你的家 5 - 自制氛围灯</li>
+<li>使用 Siri 控制你的家 6 - 制作射频发射器</li>
+<li>使用 Siri 控制你的家 7 - 改造灯路，通过射频控制吸顶灯</li>
+<li>......</li>
+</ul>
 
 
 
@@ -159,20 +276,20 @@
         <div class="large-6 columns">
           <p class="text-left" style="padding:15px 0px;">
             
-            <a href="14899022730979.html" title="Previous Post: MQTTT - 好用又好看的MQTT工具">&laquo; MQTTT - 好用又好看的MQTT工具</a> 
+            <a href="14902708868181.html" title="Previous Post: 使用 Siri 控制你的家 3 - 开机自动运行 Homebridge">&laquo; 使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</a> 
           </p>
         </div>
         <div class="large-6 columns">
           <p class="text-right" style="padding:15px 0px;">
             
-            <a href="14834588749279.html" title="Next Post: iOS 10 Home App 简单体验">iOS 10 Home App 简单体验 &raquo;</a> 
+            <a href="14902608996424.html" title="Next Post: 使用 Siri 控制你的家 1 - 搭建服务器">使用 Siri 控制你的家 1 - 搭建服务器 &raquo;</a> 
           </p>
         </div>
       </div>
       <div class="comments-wrap">
         <div class="share-comments">
             
-          <div class="ds-thread" data-thread-key="14834592005558.html" data-url="hellowk.cc/14834592005558.html" data-title="新年新气象，博客更换全新 UI 啦"></div>
+          <div class="ds-thread" data-thread-key="14902698259528.html" data-url="hellowk.cc/14902698259528.html" data-title="使用 Siri 控制你的家 2 - 接入米家的产品"></div>
           
         </div>
       </div>

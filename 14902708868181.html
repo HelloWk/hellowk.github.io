@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>
-     新年新气象，博客更换全新 UI 啦 - WILL KEEP ... 
+     使用 Siri 控制你的家 3 - 开机自动运行 Homebridge - WILL KEEP ... 
   </title>
    
   <link href="atom.xml" rel="alternate" title="WILL KEEP ..." type="application/atom+xml">
@@ -95,23 +95,26 @@
 <div class="bigtitle">
   <div class="row">
     <div class="col-sm-12 mb0">
-        <h2 class="uppercase mb8">新年新气象，博客更换全新 UI 啦</h2>
+        <h2 class="uppercase mb8">使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</h2>
         <div class="read-more clearfix">
 
           <ul class="post-meta">
             <li>
               <i class="ti-calendar"></i>
-              <span class="date">1/5/2017 0:0 上午</span>
+              <span class="date">3/23/2017 20:8 下午</span>
             </li>
             <li>
-               
+              
+              <i class="ti-tag"></i>
+              <span>posted in&nbsp;</span>  
+              <span class="posted-in"><a href='HOME%20AUTOMATION.html'>HOME AUTOMATION</a></span> 
             </li>
             <li>
               <span class="comments">
              
              
              &nbsp;
-             <a class="ds-thread-count" data-thread-key="14834592005558.html" data-count-type="comments" href="14834592005558.html#ds-thread"></a>
+             <a class="ds-thread-count" data-thread-key="14902708868181.html" data-count-type="comments" href="14902708868181.html#ds-thread"></a>
              
            </span>
             </li>
@@ -132,23 +135,156 @@
       <div class="article-content">
         <hr/>
 
-<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-01-04-2017.png" alt="2017"/></p>
+<p>目前为止我们可以把米家的东西加入到我们的 Homekit 中了，但是还不完美，可能你会发现断开 SSH 的时候，Homebridge 也停止运行了，这样肯定不是一个合格的服务器。</p>
 
-<p>新一年到了，我的对博客也进行了一次小升级：</p>
+<p>我们的目的是让他自己在那个角落默默地运行，即使断电重启后也会自动运行 Homebridge 服务。</p>
 
-<ul>
-<li>更换了 Markdown 编辑器 MWeb，非常好用，购买了正版序列号，为独立开发者做支持。自我感觉比使用还u。。＋ Hexo 的组合方式更方便，MWeb 的 Markdown 格式更符合官方规定，而且自带生成静态页，直接 push 到GitHub就好。</li>
-<li>重新绘制了 UI，目前虽然还有点小毛病，但已可以使用，新版 UI 使用了白色作为主题风格，更清新、简洁。</li>
-<li>由于格式的不同，旧文章需要修改才能再新版显示；目前已经全部修改完成，但难免会有部分显示错误，后期陆续更新。</li>
-</ul>
+<span id="more"></span><!-- more -->
 
-<p>新的一年开始了，我也会陆续更新有关家居自动化的文章，预计今年会加大更新的度，和大家一起改造家中设备，研究家居自动化控制。</p>
+<h2 id="toc_0">通过 (init.d) 来开机运行 Homebridge</h2>
 
-<p>目前还有更换博客名称的想法，还没有想好叫什么，想好后会更新一次 UI，同时域名也会更换，老域名会链接到新域名上，新老域名均可访问（预计持续一年），然后逐步淘汰就域名的使用，全面启用新域名。</p>
+<p>开机自动运行很简单，只需要加入开机启动脚本即可：</p>
 
-<p>最后，祝大家新年快乐！</p>
+<p>SSH 进入树莓派， 运行以下命令：</p>
+
+<pre><code class="language-no-highlight">sudo vim /etc/init.d/homebridge
+</code></pre>
+
+<p>粘贴以下内容：</p>
+
+<pre><code class="language-profile">#!/bin/sh
+### BEGIN INIT INFO
+# Provides: homebridge
+# Required-Start:    $network $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start daemon at boot time
+# Description:       Enable service provided by daemon.
+### END INIT INFO
+
+dir=&quot;/home/pi&quot;
+cmd=&quot;DEBUG=* /usr/bin/homebridge&quot;
+user=&quot;pi&quot;
+
+name=`basename $0`
+pid_file=&quot;/var/run/$name.pid&quot;
+stdout_log=&quot;/var/log/$name.log&quot;
+stderr_log=&quot;/var/log/$name.err&quot;
+
+get_pid() {
+    cat &quot;$pid_file&quot;
+}
+
+is_running() {
+    [ -f &quot;$pid_file&quot; ] &amp;&amp; ps `get_pid` &gt; /dev/null 2&gt;&amp;1
+}
+
+case &quot;$1&quot; in
+    start)
+    if is_running; then
+        echo &quot;Already started&quot;
+    else
+        echo &quot;Starting $name&quot;
+        cd &quot;$dir&quot;
+        if [ -z &quot;$user&quot; ]; then
+            sudo $cmd &gt;&gt; &quot;$stdout_log&quot; 2&gt;&gt; &quot;$stderr_log&quot; &amp;
+        else
+            sudo -u &quot;$user&quot; $cmd &gt;&gt; &quot;$stdout_log&quot; 2&gt;&gt; &quot;$stderr_log&quot; &amp;
+        fi
+        echo $! &gt; &quot;$pid_file&quot;
+        if ! is_running; then
+            echo &quot;Unable to start, see $stdout_log and $stderr_log&quot;
+            exit 1
+        fi
+    fi
+    ;;
+    stop)
+    if is_running; then
+        echo -n &quot;Stopping $name..&quot;
+        kill `get_pid`
+        for i in {1..10}
+        do
+            if ! is_running; then
+                break
+            fi
+
+            echo -n &quot;.&quot;
+            sleep 1
+        done
+        echo
+
+        if is_running; then
+            echo &quot;Not stopped; may still be shutting down or shutdown may have failed&quot;
+            exit 1
+        else
+            echo &quot;Stopped&quot;
+            if [ -f &quot;$pid_file&quot; ]; then
+                rm &quot;$pid_file&quot;
+            fi
+        fi
+    else
+        echo &quot;Not running&quot;
+    fi
+    ;;
+    restart)
+    $0 stop
+    if is_running; then
+        echo &quot;Unable to stop, will not attempt to start&quot;
+        exit 1
+    fi
+    $0 start
+    ;;
+    status)
+    if is_running; then
+        echo &quot;Running&quot;
+    else
+        echo &quot;Stopped&quot;
+        exit 1
+    fi
+    ;;
+    *)
+    echo &quot;Usage: $0 {start|stop|restart|status}&quot;
+    exit 1
+    ;;
+esac
+
+exit 0
+</code></pre>
+
+<p>保存，退出，运行下面的命令：</p>
+
+<pre><code class="language-profile">sudo chmod 755 /etc/init.d/homebridge
+sudo update-rc.d homebridge defaults
+</code></pre>
+
+<p>现在就可以在开机的时候自动运行 Homebridge 了。你也可以手动的开启服务：</p>
+
+<pre><code class="language-no-highlight">sudo /etc/init.d/homebridge start
+</code></pre>
+
+<p>使用下面的命令即可查看log 和 error：</p>
+
+<pre><code class="language-no-highlight">tail -f /var/log/homebridge.log
+tail -f /var/log/homebridge.err
+</code></pre>
 
 <p>以上。</p>
+
+<hr/>
+
+<p>系列相关链接：</p>
+
+<ul>
+<li><a href="http://www.hellowk.cc/14902608996424.html">使用 Siri 控制你的家 1 - 搭建服务器</a></li>
+<li><a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a></li>
+<li><a href="http://www.hellowk.cc/14902708868181.html">使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</a></li>
+<li>使用 Siri 控制你的家 4 - homebridge-mqtt 插件</li>
+<li>使用 Siri 控制你的家 5 - 自制氛围灯</li>
+<li>使用 Siri 控制你的家 6 - 制作射频发射器</li>
+<li>使用 Siri 控制你的家 7 - 改造灯路，通过射频控制吸顶灯</li>
+<li>......</li>
+</ul>
 
 
 
@@ -159,20 +295,19 @@
         <div class="large-6 columns">
           <p class="text-left" style="padding:15px 0px;">
             
-            <a href="14899022730979.html" title="Previous Post: MQTTT - 好用又好看的MQTT工具">&laquo; MQTTT - 好用又好看的MQTT工具</a> 
           </p>
         </div>
         <div class="large-6 columns">
           <p class="text-right" style="padding:15px 0px;">
             
-            <a href="14834588749279.html" title="Next Post: iOS 10 Home App 简单体验">iOS 10 Home App 简单体验 &raquo;</a> 
+            <a href="14902698259528.html" title="Next Post: 使用 Siri 控制你的家 2 - 接入米家的产品">使用 Siri 控制你的家 2 - 接入米家的产品 &raquo;</a> 
           </p>
         </div>
       </div>
       <div class="comments-wrap">
         <div class="share-comments">
             
-          <div class="ds-thread" data-thread-key="14834592005558.html" data-url="hellowk.cc/14834592005558.html" data-title="新年新气象，博客更换全新 UI 啦"></div>
+          <div class="ds-thread" data-thread-key="14902708868181.html" data-url="hellowk.cc/14902708868181.html" data-title="使用 Siri 控制你的家 3 - 开机自动运行 Homebridge"></div>
           
         </div>
       </div>

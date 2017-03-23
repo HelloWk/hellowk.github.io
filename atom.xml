@@ -4,13 +4,541 @@
   <title><![CDATA[WILL KEEP ...]]></title>
   <link href="hellowk.cc/atom.xml" rel="self"/>
   <link href="hellowk.cc/"/>
-  <updated>2017-01-07T21:42:27+08:00</updated>
+  <updated>2017-03-23T22:16:07+08:00</updated>
   <id>hellowk.cc/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[使用 Siri 控制你的家 3 - 开机自动运行 Homebridge]]></title>
+    <link href="hellowk.cc/14902708868181.html"/>
+    <updated>2017-03-23T20:08:06+08:00</updated>
+    <id>hellowk.cc/14902708868181.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>目前为止我们可以把米家的东西加入到我们的 Homekit 中了，但是还不完美，可能你会发现断开 SSH 的时候，Homebridge 也停止运行了，这样肯定不是一个合格的服务器。</p>
+
+<p>我们的目的是让他自己在那个角落默默地运行，即使断电重启后也会自动运行 Homebridge 服务。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">通过 (init.d) 来开机运行 Homebridge</h2>
+
+<p>开机自动运行很简单，只需要加入开机启动脚本即可：</p>
+
+<p>SSH 进入树莓派， 运行以下命令：</p>
+
+<pre><code class="language-no-highlight">sudo vim /etc/init.d/homebridge
+</code></pre>
+
+<p>粘贴以下内容：</p>
+
+<pre><code class="language-profile">#!/bin/sh
+### BEGIN INIT INFO
+# Provides: homebridge
+# Required-Start:    $network $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start daemon at boot time
+# Description:       Enable service provided by daemon.
+### END INIT INFO
+
+dir=&quot;/home/pi&quot;
+cmd=&quot;DEBUG=* /usr/bin/homebridge&quot;
+user=&quot;pi&quot;
+
+name=`basename $0`
+pid_file=&quot;/var/run/$name.pid&quot;
+stdout_log=&quot;/var/log/$name.log&quot;
+stderr_log=&quot;/var/log/$name.err&quot;
+
+get_pid() {
+    cat &quot;$pid_file&quot;
+}
+
+is_running() {
+    [ -f &quot;$pid_file&quot; ] &amp;&amp; ps `get_pid` &gt; /dev/null 2&gt;&amp;1
+}
+
+case &quot;$1&quot; in
+    start)
+    if is_running; then
+        echo &quot;Already started&quot;
+    else
+        echo &quot;Starting $name&quot;
+        cd &quot;$dir&quot;
+        if [ -z &quot;$user&quot; ]; then
+            sudo $cmd &gt;&gt; &quot;$stdout_log&quot; 2&gt;&gt; &quot;$stderr_log&quot; &amp;
+        else
+            sudo -u &quot;$user&quot; $cmd &gt;&gt; &quot;$stdout_log&quot; 2&gt;&gt; &quot;$stderr_log&quot; &amp;
+        fi
+        echo $! &gt; &quot;$pid_file&quot;
+        if ! is_running; then
+            echo &quot;Unable to start, see $stdout_log and $stderr_log&quot;
+            exit 1
+        fi
+    fi
+    ;;
+    stop)
+    if is_running; then
+        echo -n &quot;Stopping $name..&quot;
+        kill `get_pid`
+        for i in {1..10}
+        do
+            if ! is_running; then
+                break
+            fi
+
+            echo -n &quot;.&quot;
+            sleep 1
+        done
+        echo
+
+        if is_running; then
+            echo &quot;Not stopped; may still be shutting down or shutdown may have failed&quot;
+            exit 1
+        else
+            echo &quot;Stopped&quot;
+            if [ -f &quot;$pid_file&quot; ]; then
+                rm &quot;$pid_file&quot;
+            fi
+        fi
+    else
+        echo &quot;Not running&quot;
+    fi
+    ;;
+    restart)
+    $0 stop
+    if is_running; then
+        echo &quot;Unable to stop, will not attempt to start&quot;
+        exit 1
+    fi
+    $0 start
+    ;;
+    status)
+    if is_running; then
+        echo &quot;Running&quot;
+    else
+        echo &quot;Stopped&quot;
+        exit 1
+    fi
+    ;;
+    *)
+    echo &quot;Usage: $0 {start|stop|restart|status}&quot;
+    exit 1
+    ;;
+esac
+
+exit 0
+</code></pre>
+
+<p>保存，退出，运行下面的命令：</p>
+
+<pre><code class="language-profile">sudo chmod 755 /etc/init.d/homebridge
+sudo update-rc.d homebridge defaults
+</code></pre>
+
+<p>现在就可以在开机的时候自动运行 Homebridge 了。你也可以手动的开启服务：</p>
+
+<pre><code class="language-no-highlight">sudo /etc/init.d/homebridge start
+</code></pre>
+
+<p>使用下面的命令即可查看log 和 error：</p>
+
+<pre><code class="language-no-highlight">tail -f /var/log/homebridge.log
+tail -f /var/log/homebridge.err
+</code></pre>
+
+<p>以上。</p>
+
+<hr/>
+
+<p>系列相关链接：</p>
+
+<ul>
+<li><a href="http://www.hellowk.cc/14902608996424.html">使用 Siri 控制你的家 1 - 搭建服务器</a></li>
+<li><a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a></li>
+<li><a href="http://www.hellowk.cc/14902708868181.html">使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</a></li>
+<li>使用 Siri 控制你的家 4 - homebridge-mqtt 插件</li>
+<li>使用 Siri 控制你的家 5 - 自制氛围灯</li>
+<li>使用 Siri 控制你的家 6 - 制作射频发射器</li>
+<li>使用 Siri 控制你的家 7 - 改造灯路，通过射频控制吸顶灯</li>
+<li>......</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用 Siri 控制你的家 2 - 接入米家的产品]]></title>
+    <link href="hellowk.cc/14902698259528.html"/>
+    <updated>2017-03-23T19:50:25+08:00</updated>
+    <id>hellowk.cc/14902698259528.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>上一篇文章我们搭建了用于接入 Homekit 的服务器，这次我们就看看如何把米家的产品接入到 Homekit 中。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">支持的设备</h2>
+
+<p>当然，不是所有的米家设备都支持接入的，目前知道可以接入的产品有：</p>
+
+<ul>
+<li>Yeelight 系列灯具（灯泡，灯带，目前新增了小米LED台灯，吸顶灯未知，应该支持，床头灯未知）</li>
+<li>Aqara 系列，智能插座 Zigbee 版，门窗传感器，人体传感器，温湿度传感器。（使用这些设备需要配合米家多功能网关使用，Yeelight可单独使用）。</li>
+</ul>
+
+<h2 id="toc_1">接入 Yeelight</h2>
+
+<p>我们先说说 Yeelight 的接入，这个比较简单，只需要安装插件开启 Yeelight 的极客模式即可。</p>
+
+<h3 id="toc_2">安装插件</h3>
+
+<p>SSH 进入树莓派， 运行以下命令安装 Yeelight 插件：</p>
+
+<pre><code class="language-no-highlight">sudo npm install -g homebridge-yeelight
+</code></pre>
+
+<h3 id="toc_3">打开极客模式</h3>
+
+<p>进入 Yeelight 的 App，添加好你的灯，然后点击你要接入 Homekit 的设备 -&gt; 设置 -&gt; 极客模式，打开极客模式的开关即可。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-%E4%BE%BF%E6%90%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%EF%BC%88PNG%20%E5%9B%BE%E5%83%8F%EF%BC%89-3D7F3C02C1F5-1.png" alt="便携网络图形图像（PNG 图像）-3D7F3C02C1F5-1"/></p>
+
+<p>然后运行 <code>homebridge</code> 命令，过一阵你就会发现在你的家庭 App 中已经出现了这个设备。</p>
+
+<h2 id="toc_4">接入其他米家设备</h2>
+
+<p>其他支持的设备有个共同的特点，那就是需要接入到米家多功能网关中。</p>
+
+<p>我们要做的就是把多功能网关加入到 homebridge 中，这样网关下面所有支持的设备就可以自动连入到家庭中了。</p>
+
+<h3 id="toc_5">安装插件</h3>
+
+<p>SSH 进入树莓派， 运行以下命令安装插件：</p>
+
+<pre><code class="language-no-highlight">sudo npm install -g homebridge-aqara
+</code></pre>
+
+<h3 id="toc_6">获取 sid 和 局域网通信</h3>
+
+<p>首先我们打开米家 App， 然后进入网关，点击右上角的更多，然后选择关于。</p>
+
+<p>在关于页面中，我们需要连续点击页面下部空白部分，直到出现更多的选项。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-%E4%BE%BF%E6%90%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%EF%BC%88PNG%20%E5%9B%BE%E5%83%8F%EF%BC%89-9EA05CEFACAC-1.png" alt="便携网络图形图像（PNG 图像）-9EA05CEFACAC-1"/></p>
+
+<p>然后我们可以在网关信息中找到 <code>mac=&quot;AA:BB:CC:DD:EE:FF&quot;</code> 这样的一串数据，引号内的数据去掉冒号就是我们所需要的 sid：<code>aabbccddeeff</code>，记下备用。</p>
+
+<p>然后 进入局域网通讯协议内，打开局域网通信协议开关，然后会得到一个密码，点击确定后再次进入此页面，密码保持不变即开启成功，记录此密码备用。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-%E4%BE%BF%E6%90%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%EF%BC%88PNG%20%E5%9B%BE%E5%83%8F%EF%BC%89-5481A184C8EB-1.png" alt="便携网络图形图像（PNG 图像）-5481A184C8EB-1"/></p>
+
+<h3 id="toc_7">修改配置文件</h3>
+
+<p>SSH 进入树莓派， 修改配置文件：</p>
+
+<pre><code class="language-no-highlight">vim ~/.homebridge/config.json
+</code></pre>
+
+<p>然后在 <code>platforms</code> 中添加以下配置信息, 其中 <code>sid</code> 和 <code>password</code> 替换为上一步中记录的内容：</p>
+
+<pre><code class="language-json">{
+    &quot;platform&quot;: &quot;AqaraPlatform&quot;,
+    &quot;fakeLightBulbForLightSwitch&quot;: true,
+    &quot;sid&quot;: [
+        &quot;aabbccddeeff&quot;
+    ],
+    &quot;password&quot;: [
+        &quot;0123456789abcdef&quot;
+    ]
+}
+</code></pre>
+
+<p>完整文件：</p>
+
+<pre><code class="language-json">{
+    &quot;bridge&quot;: {
+        &quot;name&quot;: &quot;Homebridge&quot;,
+        &quot;username&quot;: &quot;CC:22:3D:E3:CE:30&quot;,
+        &quot;port&quot;: 51826,
+        &quot;pin&quot;: &quot;031-45-154&quot;
+    },
+    
+    &quot;description&quot;: &quot;This is an example configuration file with one fake accessory and one fake platform. You can use this as a template for creating your own configuration file containing devices you actually own.&quot;,
+
+    &quot;accessories&quot;: [
+        
+    ],
+
+    &quot;platforms&quot;: [
+        {
+            &quot;platform&quot;: &quot;AqaraPlatform&quot;,
+            &quot;fakeLightBulbForLightSwitch&quot;: true,
+            &quot;sid&quot;: [
+                &quot;aabbccddeeff&quot;
+            ],
+            &quot;password&quot;: [
+                &quot;0123456789abcdef&quot;
+            ]
+        }
+    ]
+}
+</code></pre>
+
+<p><strong>注意：</strong> 除添加新配置外，修改或删除配置文件后需要运行 <code>rm -r ~/.homebridge/persist/</code>，<code>rm -r ~/.homebridge/accessories/</code> 删除缓存文件，并需要在家庭应用中重新添加桥接器。</p>
+
+<p>运行 <code>homebridge</code> 命令，过一阵在家庭 App 中会出现相应的设备。</p>
+
+<p>以上。</p>
+
+<hr/>
+
+<p>系列相关链接：</p>
+
+<ul>
+<li><a href="http://www.hellowk.cc/14902608996424.html">使用 Siri 控制你的家 1 - 搭建服务器</a></li>
+<li><a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a></li>
+<li><a href="http://www.hellowk.cc/14902708868181.html">使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</a></li>
+<li>使用 Siri 控制你的家 4 - homebridge-mqtt 插件</li>
+<li>使用 Siri 控制你的家 5 - 自制氛围灯</li>
+<li>使用 Siri 控制你的家 6 - 制作射频发射器</li>
+<li>使用 Siri 控制你的家 7 - 改造灯路，通过射频控制吸顶灯</li>
+<li>......</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用 Siri 控制你的家 1 - 搭建服务器]]></title>
+    <link href="hellowk.cc/14902608996424.html"/>
+    <updated>2017-03-23T17:21:39+08:00</updated>
+    <id>hellowk.cc/14902608996424.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>从这篇文章开始，从头带你搭建一个可以用 Siri 控制的家！！而且还带有自动化功能哟~~</p>
+
+<p>从此进屋自动开灯，起夜自动亮夜灯，出门自动关闭所有电源和电灯；平时小管家随叫对到，是不是很贴心~</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-%E4%BE%BF%E6%90%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%EF%BC%88PNG%20%E5%9B%BE%E5%83%8F%EF%BC%89-E7ABBD08CAD0-1.png" alt="便携网络图形图像（PNG 图像）-E7ABBD08CAD0-1"/></p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">都能什么</h2>
+
+<p>好了那就先来看看我们实现了那些功能，给你秀秀先：</p>
+
+<ul>
+<li>直接添加 <a href="http://www.apple.com/cn/shop/accessories/all-accessories/homekit">苹果售卖的 Homekit 配件</a> 或者购买支持 Homekit 的配件，比如 <a href="https://shayjj.tmall.com/category-1275612446.htm?search=y#TmshopSrchNav">PHILIPS 的 Hue 系列</a>，虽然说简单易用，不需要写一行代码以及搭建服务器，但是真的很贵啊。如果你不差钱或者新装修，还是推荐使用这个方式的，毕竟成品的电器用着更有保障，还是安全第一。</li>
+<li>使用小米的相关产品，用一个树莓派做中转，接入 Homekit。相对于原生支持苹果的设备来说，小米的设备便宜很多，但是也有其他的问题：首先你得搭建一个服务器做中转，其次不是所有的小米设备都支持，再者以后能不能支持还是看小米会不会关闭对应的服务，最后呢稳定性也有些问题。</li>
+<li>还可以支持其他的一些品牌的配件，具体可以接入哪些可以看看<a href="https://www.npmjs.com/search?q=homebridge-plugin">这里</a>。当然也是有着稳定性和未来的不确定性问题。</li>
+<li>最后当然是自己制作啦，简单实惠，但是缺点也是最严重的，一个是没有成品那么美观，再一个安全性稳定性都是最差的。</li>
+</ul>
+
+<p>当然这样还不算，如果你有一个 iPad 或者 Apple TV，你还可以实现定时操作，任务触发，地理围栏等一系列自动化功能。</p>
+
+<p>本系列主要说说接入小米的产品和自己制作配件，毕竟原生支持的只要接入就可以了^^。</p>
+
+<h2 id="toc_1">First! 搭建服务器</h2>
+
+<h3 id="toc_2">需要的材料：</h3>
+
+<ul>
+<li>树莓派 × 1</li>
+<li>数据线 × 1</li>
+<li>电源插头 × 1</li>
+<li>高速 TF 卡 × 1</li>
+<li>网线 × 1</li>
+<li>树莓派外壳（选配）</li>
+<li>HDMI 连接线和显示器/电视机，一套键鼠（临时使用）</li>
+</ul>
+
+<h2 id="toc_3">步骤</h2>
+
+<h3 id="toc_4">准备树莓派系统</h3>
+
+<p>首先需要去树莓派的官网下载系统然后烧录到 TF 卡中，然后把 TF 卡放入树莓派，链接鼠标键盘、网线和显示器，上电，设置树莓派。</p>
+
+<p>具体操作细节网上有很多教程，这里就不再重复了。</p>
+
+<p>由于最新的系统中默认没有打开 SSH，所以需要链接显示器在设置中打开 SSH，准备工作就做好了。</p>
+
+<p>然后就可以拔掉显示器和键盘鼠标，把 PI 扔到无人的角落就好。</p>
+
+<h3 id="toc_5">安装Homebridge服务</h3>
+
+<h4 id="toc_6">通过 SSH 进入树莓派</h4>
+
+<p>通过 Mac 或者 Linux，你可以轻松加愉快的登录你的树莓派：</p>
+
+<pre><code class="language-no-highlight">ssh pi@raspberrypi.local
+</code></pre>
+
+<p>默认的用户为 <code>pi</code>， 密码为<code>raspberry</code>。如果不能进入，你也可以在路由器中查看到树莓派的 IP 地址 通过 IP 登录，比如：<code>ssh 10.1.1.2 -l pi</code>。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-14902657517984.jpg" alt=""/></p>
+
+<p>如果你是 Windows，你也可以通过 PuTTY 等软件登录树莓派。</p>
+
+<h4 id="toc_7">树莓派的基本配置</h4>
+
+<p>如果你是首次使用树莓派系统，那么你需要先更新一下系统获取最新的软件源：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get update
+sudo apt-get upgrade
+</code></pre>
+
+<p>然后安装 git 和 make：</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install git make
+</code></pre>
+
+<h4 id="toc_8">安装 Node</h4>
+
+<p>废话不多说，直接运行：</p>
+
+<pre><code class="language-no-highlight">sudo curl -sL https://deb.nodesource.com/setup_7.x | sudo bash -
+sudo apt-get install -y nodejs
+</code></pre>
+
+<p>如此简单。</p>
+
+<h4 id="toc_9">安装一些依赖的程序包</h4>
+
+<p>这个是 <code>HAP-NodeJS</code> 中 <code>mdns</code> 使用的库文件。</p>
+
+<pre><code class="language-no-highlight">sudo apt-get install libavahi-compat-libdnssd-dev
+</code></pre>
+
+<h4 id="toc_10">安装 Homebridge 和依赖</h4>
+
+<pre><code class="language-no-highlight">sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
+cd /usr/lib/node_modules/homebridge/
+sudo npm install --unsafe-perm bignum
+cd /usr/lib/node_modules/hap-nodejs/node_modules/mdns
+sudo node-gyp BUILDTYPE=Release rebuild
+</code></pre>
+
+<h4 id="toc_11">创建配置文件</h4>
+
+<p>必须在 <code>~/.homebridge</code> 下面创建一个 配置文件，Homebridge 才能根据你的配置进行加载配件和桥接器：</p>
+
+<pre><code class="language-no-highlight">vim ~/.homebridge/config.json
+</code></pre>
+
+<p>然后在文件中写入以下配置信息：</p>
+
+<pre><code class="language-json">{
+    &quot;bridge&quot;: {
+        &quot;name&quot;: &quot;Homebridge&quot;,
+        &quot;username&quot;: &quot;CC:22:3D:E3:CE:30&quot;,
+        &quot;port&quot;: 51826,
+        &quot;pin&quot;: &quot;031-45-154&quot;
+    },
+    
+    &quot;description&quot;: &quot;This is an example configuration file with one fake accessory and one fake platform. You can use this as a template for creating your own configuration file containing devices you actually own.&quot;,
+
+    &quot;accessories&quot;: [
+        
+    ],
+
+    &quot;platforms&quot;: [
+        
+    ]
+}
+</code></pre>
+
+<p>保存，退出。</p>
+
+<p>其中 name 是你要给这个 Birdge 的名字，pin 为你要在 Apple 的家庭应用中添加设备时使用的代码。</p>
+
+<h4 id="toc_12">试运行</h4>
+
+<p>然后你就可以运行 <code>homebridge</code> 命令看看是否安装成功了。</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-14902677823482.jpg" alt=""/></p>
+
+<p>我这里已经添加了一些插件，没有添加插件的只是输出的信息比较少而已。</p>
+
+<p>然后你就可以通过手机（需要 iOS 10以上系统）中的家庭应用，来添加你的配件了。具体方法看<a href="https://support.apple.com/zh-cn/HT204893">这里</a>。</p>
+
+<p>当然现在你只能看到一个孤零零的“桥”，别急，这只是后面的基础，下一篇文章将会接入小米的设备，让你秀起来。</p>
+
+<p>你可以使用 <code>Ctrl + C</code> 来停止 Homebridge。</p>
+
+<p>以上。</p>
+
+<hr/>
+
+<p>系列相关链接：</p>
+
+<ul>
+<li><a href="http://www.hellowk.cc/14902608996424.html">使用 Siri 控制你的家 1 - 搭建服务器</a></li>
+<li><a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a></li>
+<li><a href="http://www.hellowk.cc/14902708868181.html">使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</a></li>
+<li>使用 Siri 控制你的家 4 - homebridge-mqtt 插件</li>
+<li>使用 Siri 控制你的家 5 - 自制氛围灯</li>
+<li>使用 Siri 控制你的家 6 - 制作射频发射器</li>
+<li>使用 Siri 控制你的家 7 - 改造灯路，通过射频控制吸顶灯</li>
+<li>......</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MQTTT - 好用又好看的MQTT工具]]></title>
+    <link href="hellowk.cc/14899022730979.html"/>
+    <updated>2017-03-19T13:44:33+08:00</updated>
+    <id>hellowk.cc/14899022730979.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>这一段时间一直在研究苹果的 Homekit，同时也自己制作了一些小玩意。</p>
+
+<p>在制作这些小玩意的时候， 用到了 MQTT 这个东西。</p>
+
+<p>使用在制作这些东西的时候难免会先进行一下测试，然后去 AppStore 上看了一圈也没有好用的 MQTT 工具。</p>
+
+<p>自己会 iOS 开发，索性自己写一个好了。</p>
+
+<p>本着本人是一个最不像程序员的程序员，简单的实现功能肯定不能满足我，于是，可能是目前为止最好看的 MQTT 工具诞生啦！</p>
+
+<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-%E4%BE%BF%E6%90%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%EF%BC%88PNG%20%E5%9B%BE%E5%83%8F%EF%BC%89-4D2BB4057F8E-1.png" alt="便携网络图形图像（PNG 图像）-4D2BB4057F8E-1"/></p>
+
+<span id="more"></span><!-- more -->
+
+<p>目前来说功能还算完整，基本实现了我所知道的和不知道的功能。</p>
+
+<p>自己做的 App 肯定要先吹吹有什么优点了：</p>
+
+<ul>
+<li>整体分为上下两部分（横屏为左右），一半是 Subscribe 一半是 Publish，分工明确而且又在同一页面，在向某一个 Topic 发送消息并在另一个 Topic 接收回执的时候，是灰常灰常方便滴。</li>
+<li>Subscribe 部分可以同时 Subscribe 多个 Topic，在左侧可以快速切换，并可以显示未读过的消息个数。</li>
+<li>加入了历史记录功能，常用的 Topic 就不用重复输入了。</li>
+<li>接收的消息可以 JSON 格式化，转 HEX，转 Base64 查看。</li>
+<li>支持 3D Touch。</li>
+<li>Publish 可以存储经常需要发送的消息（比如我需要经常发送开灯关灯的指令进行测试，但是这个指令是个  JSON 字符串，输入过程难免会有些繁琐费事）。</li>
+<li>可以使用 3D Touch 快速链接已经保存过的服务器。</li>
+<li>支持 URL 访问， 格式为：<code>mqttt://server:port-username-password</code>。 比如：<code>mqttt://10.1.1.1</code>, <code>mqttt://10.1.1.1:1883</code>， <code>mqttt://10.1.1.1-root-admin</code>, <code>mqttt://10.1.1.1:1883-root-admin</code>。</li>
+<li>支持屏幕常亮。</li>
+</ul>
+
+<p>目前来说第一版难免有很多 bug，宝宝也迫切希望大家在使用的时候遇到了什么 bug 也反馈给我，宝宝作为一个独立开发者难免会有很多想不到的地方，欢迎大家反馈！</p>
+
+<p>软件预计 3月28日 上线 App Store，敬请期待。</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[新年新气象，博客更换全新 UI 啦]]></title>

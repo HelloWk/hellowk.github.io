@@ -4,7 +4,7 @@
   <title><![CDATA[WILL KEEP ...]]></title>
   <link href="hellowk.cc/atom.xml" rel="self"/>
   <link href="hellowk.cc/"/>
-  <updated>2017-03-23T22:46:19+08:00</updated>
+  <updated>2017-09-12T11:52:44+09:00</updated>
   <id>hellowk.cc/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -13,9 +13,124 @@
   <generator uri="http://www.mweb.im/">MWeb</generator>
   
   <entry>
+    <title type="html"><![CDATA[使用 Siri 控制你的家 补充 - 功能更全的 Homebridge 米家接入插件]]></title>
+    <link href="hellowk.cc/15051827686802.html"/>
+    <updated>2017-09-12T11:19:28+09:00</updated>
+    <id>hellowk.cc/15051827686802.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>在 <a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a> 中米家的东西加入到我们的 Homekit 中，但是 <code>homebridge-aqara</code> 有一个不好的地方就是支持的设备很少，像 Button 操作，魔方操作，网关自带夜灯，光线传感器都不能利用。</p>
+
+<p>现在，有个更牛的插件出现了，插件作者在 homebridge-aqara 的基础上完善了其他功能的接入，下面让我们来看一下如何启用这个插件。</p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">更换 homebridge-aqara 插件</h2>
+
+<h3 id="toc_1">卸载原有插件</h3>
+
+<p>更换插件之前要卸载原有插件：</p>
+
+<p>SSH 进入树莓派， 运行以下命令卸载插件：</p>
+
+<pre><code class="language-no-highlight">sudo npm uninstall -g homebridge-aqara
+</code></pre>
+
+<h3 id="toc_2">安装插件</h3>
+
+<p>SSH 进入树莓派， 运行以下命令安装插件：</p>
+
+<pre><code class="language-no-highlight">sudo npm install -g npm i homebridge-mi-aqara
+</code></pre>
+
+<h3 id="toc_3">修改配置文件</h3>
+
+<p>SSH 进入树莓派， 修改配置文件：</p>
+
+<pre><code class="language-no-highlight">vim ~/.homebridge/config.json
+</code></pre>
+
+<p>然后在 <code>platforms</code> 中将以下配置信息：</p>
+
+<pre><code class="language-json">{
+    &quot;platform&quot;: &quot;AqaraPlatform&quot;,
+    &quot;fakeLightBulbForLightSwitch&quot;: true,
+    &quot;sid&quot;: [
+        &quot;aabbccddeeff&quot;
+    ],
+    &quot;password&quot;: [
+        &quot;0123456789abcdef&quot;
+    ]
+}
+</code></pre>
+
+<p>修改为：</p>
+
+<pre><code class="language-json">{
+    &quot;platform&quot;: &quot;MiAqaraPlatform&quot;,
+    &quot;sid&quot;: [
+        &quot;aabbccddeeff&quot;
+    ],
+    &quot;password&quot;: [
+        &quot;0123456789abcdef&quot;
+    ]
+}
+</code></pre>
+
+<h3 id="toc_4">清理注册的配件缓存</h3>
+
+<pre><code class="language-no-highlight">cd ~/.homebridge/accessories/
+
+mv cachedAccessories cachedAccessories_`date &#39;+%Y%m%d_%H%M%S&#39;`.bak
+
+echo [] &gt; cachedAccessories
+</code></pre>
+
+<h3 id="toc_5">重启树莓派</h3>
+
+<pre><code class="language-no-highlight">sudo reboot
+</code></pre>
+
+<p>重启过后去 家庭 App 中重新添加一下即可。</p>
+
+<p>以上。</p>
+
+<hr/>
+
+<p>系列相关链接：</p>
+
+<ul>
+<li><a href="http://www.hellowk.cc/14902608996424.html">使用 Siri 控制你的家 1 - 搭建服务器</a></li>
+<li><a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a></li>
+<li><a href="http://www.hellowk.cc/14902708868181.html">使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</a></li>
+<li><a href="http://www.hellowk.cc/15051827686802.html">使用 Siri 控制你的家 补充 - 功能更全的 Homebridge 米家接入插件</a></li>
+<li>使用 Siri 控制你的家 4 - homebridge-mqtt 插件</li>
+<li>使用 Siri 控制你的家 5 - 自制氛围灯</li>
+<li>使用 Siri 控制你的家 6 - 制作射频发射器</li>
+<li>使用 Siri 控制你的家 7 - 改造灯路，通过射频控制吸顶灯</li>
+<li>......</li>
+</ul>
+
+<hr/>
+
+<p>Ps： 这里插几句话:</p>
+
+<p>可能关注我博客的人会发现我可能会半年才更新一次博客，这在急速发展的互联网时代，可能是个很少见的现象，而且还留了许多的坑没有填，估计有很多观众老爷都会怀疑我是不是不更了。</p>
+
+<p>这里呢，我说明一下，这一段时间一直在准备出国的事宜，目前已经全部搞定，生活也稳定了下来，估计用不了多久就会恢复更新；另外一点呢就是由于条件限制可能无法制作 DIY 相关的东西，所以可能以后很长一段时间发布的都是成品的体验和不需要自己动手制作设备的文章。</p>
+
+<p>Pss： </p>
+
+<p>出国前买了 ikbc 的茶轴作为主要输入键盘，可惜现在已经用了三个多月了还是不习惯这个手感，不知是轴体手感不适应还是做工问题，打字速度严重下降，各位大大有什么好的推荐没？不要带小键盘的，不要 HHKB，要 Cherry 青轴，哈哈。如果是蓝牙双模的更好，欢迎去我的微博留言~（哦对了，博客内的评论由于多说的关闭，目前还没有找到替代品，敬请各位转移到我的微博私信我~~微博链接在页面最下面，邮件联系亦可）。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[使用 Siri 控制你的家 3 - 开机自动运行 Homebridge]]></title>
     <link href="hellowk.cc/14902708868181.html"/>
-    <updated>2017-03-23T20:08:06+08:00</updated>
+    <updated>2017-03-23T21:08:06+09:00</updated>
     <id>hellowk.cc/14902708868181.html</id>
     <content type="html"><![CDATA[
 <hr/>
@@ -164,6 +279,7 @@ tail -f /var/log/homebridge.err
 <li><a href="http://www.hellowk.cc/14902608996424.html">使用 Siri 控制你的家 1 - 搭建服务器</a></li>
 <li><a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a></li>
 <li><a href="http://www.hellowk.cc/14902708868181.html">使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</a></li>
+<li><a href="http://www.hellowk.cc/15051827686802.html">使用 Siri 控制你的家 补充 - 功能更全的 Homebridge 米家接入插件</a></li>
 <li>使用 Siri 控制你的家 4 - homebridge-mqtt 插件</li>
 <li>使用 Siri 控制你的家 5 - 自制氛围灯</li>
 <li>使用 Siri 控制你的家 6 - 制作射频发射器</li>
@@ -177,7 +293,7 @@ tail -f /var/log/homebridge.err
   <entry>
     <title type="html"><![CDATA[使用 Siri 控制你的家 2 - 接入米家的产品]]></title>
     <link href="hellowk.cc/14902698259528.html"/>
-    <updated>2017-03-23T19:50:25+08:00</updated>
+    <updated>2017-03-23T20:50:25+09:00</updated>
     <id>hellowk.cc/14902698259528.html</id>
     <content type="html"><![CDATA[
 <hr/>
@@ -307,6 +423,7 @@ tail -f /var/log/homebridge.err
 <li><a href="http://www.hellowk.cc/14902608996424.html">使用 Siri 控制你的家 1 - 搭建服务器</a></li>
 <li><a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a></li>
 <li><a href="http://www.hellowk.cc/14902708868181.html">使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</a></li>
+<li><a href="http://www.hellowk.cc/15051827686802.html">使用 Siri 控制你的家 补充 - 功能更全的 Homebridge 米家接入插件</a></li>
 <li>使用 Siri 控制你的家 4 - homebridge-mqtt 插件</li>
 <li>使用 Siri 控制你的家 5 - 自制氛围灯</li>
 <li>使用 Siri 控制你的家 6 - 制作射频发射器</li>
@@ -320,7 +437,7 @@ tail -f /var/log/homebridge.err
   <entry>
     <title type="html"><![CDATA[使用 Siri 控制你的家 1 - 搭建服务器]]></title>
     <link href="hellowk.cc/14902608996424.html"/>
-    <updated>2017-03-23T17:21:39+08:00</updated>
+    <updated>2017-03-23T18:21:39+09:00</updated>
     <id>hellowk.cc/14902608996424.html</id>
     <content type="html"><![CDATA[
 <hr/>
@@ -485,6 +602,7 @@ sudo node-gyp BUILDTYPE=Release rebuild
 <li><a href="http://www.hellowk.cc/14902608996424.html">使用 Siri 控制你的家 1 - 搭建服务器</a></li>
 <li><a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a></li>
 <li><a href="http://www.hellowk.cc/14902708868181.html">使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</a></li>
+<li><a href="http://www.hellowk.cc/15051827686802.html">使用 Siri 控制你的家 补充 - 功能更全的 Homebridge 米家接入插件</a></li>
 <li>使用 Siri 控制你的家 4 - homebridge-mqtt 插件</li>
 <li>使用 Siri 控制你的家 5 - 自制氛围灯</li>
 <li>使用 Siri 控制你的家 6 - 制作射频发射器</li>
@@ -498,7 +616,7 @@ sudo node-gyp BUILDTYPE=Release rebuild
   <entry>
     <title type="html"><![CDATA[MQTTT - 好用又好看的MQTT工具]]></title>
     <link href="hellowk.cc/14899022730979.html"/>
-    <updated>2017-03-19T13:44:33+08:00</updated>
+    <updated>2017-03-19T14:44:33+09:00</updated>
     <id>hellowk.cc/14899022730979.html</id>
     <content type="html"><![CDATA[
 <hr/>
@@ -543,7 +661,7 @@ sudo node-gyp BUILDTYPE=Release rebuild
   <entry>
     <title type="html"><![CDATA[新年新气象，博客更换全新 UI 啦]]></title>
     <link href="hellowk.cc/14834592005558.html"/>
-    <updated>2017-01-04T00:00:00+08:00</updated>
+    <updated>2017-01-04T01:00:00+09:00</updated>
     <id>hellowk.cc/14834592005558.html</id>
     <content type="html"><![CDATA[
 <hr/>
@@ -572,7 +690,7 @@ sudo node-gyp BUILDTYPE=Release rebuild
   <entry>
     <title type="html"><![CDATA[iOS 10 Home App 简单体验]]></title>
     <link href="hellowk.cc/14834588749279.html"/>
-    <updated>2016-06-20T20:00:00+08:00</updated>
+    <updated>2016-06-20T21:00:00+09:00</updated>
     <id>hellowk.cc/14834588749279.html</id>
     <content type="html"><![CDATA[
 <hr/>
@@ -629,7 +747,7 @@ sudo node-gyp BUILDTYPE=Release rebuild
   <entry>
     <title type="html"><![CDATA[制作一个用 Siri 控制的 WiFi 灯]]></title>
     <link href="hellowk.cc/14834570756285.html"/>
-    <updated>2016-03-13T20:00:00+08:00</updated>
+    <updated>2016-03-13T21:00:00+09:00</updated>
     <id>hellowk.cc/14834570756285.html</id>
     <content type="html"><![CDATA[
 <hr/>
@@ -1386,7 +1504,7 @@ light
   <entry>
     <title type="html"><![CDATA[一个新玩具——NanoPi2]]></title>
     <link href="hellowk.cc/14834536550124.html"/>
-    <updated>2016-02-22T20:00:00+08:00</updated>
+    <updated>2016-02-22T21:00:00+09:00</updated>
     <id>hellowk.cc/14834536550124.html</id>
     <content type="html"><![CDATA[
 <hr/>
@@ -1716,7 +1834,7 @@ local_root=/var/www
   <entry>
     <title type="html"><![CDATA[使用树莓派制作一个魔镜3（更加高级的功能）]]></title>
     <link href="hellowk.cc/14834518879850.html"/>
-    <updated>2016-02-20T20:00:00+08:00</updated>
+    <updated>2016-02-20T21:00:00+09:00</updated>
     <id>hellowk.cc/14834518879850.html</id>
     <content type="html"><![CDATA[
 <hr/>
@@ -1741,7 +1859,7 @@ local_root=/var/www
   <entry>
     <title type="html"><![CDATA[使用树莓派制作一个魔镜2（界面开发）]]></title>
     <link href="hellowk.cc/14834480982085.html"/>
-    <updated>2016-02-20T20:00:00+08:00</updated>
+    <updated>2016-02-20T21:00:00+09:00</updated>
     <id>hellowk.cc/14834480982085.html</id>
     <content type="html"><![CDATA[
 <hr/>
@@ -2249,7 +2367,7 @@ _forecastHtml += '<td class="day">' + moment(_forecast.dt, 'X').locale('zh-cn').
   <entry>
     <title type="html"><![CDATA[使用树莓派制作一个魔镜1（硬件制作和环境搭建）]]></title>
     <link href="hellowk.cc/14834426274852.html"/>
-    <updated>2016-02-18T20:00:00+08:00</updated>
+    <updated>2016-02-18T21:00:00+09:00</updated>
     <id>hellowk.cc/14834426274852.html</id>
     <content type="html"><![CDATA[
 <hr/>

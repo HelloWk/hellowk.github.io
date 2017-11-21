@@ -134,7 +134,7 @@
 
 <p>在 <a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a> 中米家的东西加入到我们的 Homekit 中，但是 <code>homebridge-aqara</code> 有一个不好的地方就是支持的设备很少，像 Button 操作，魔方操作，网关自带夜灯，光线传感器都不能利用。</p>
 
-<p>现在，有个更牛的插件出现了，插件作者在 homebridge-aqara 的基础上完善了其他功能的接入，下面让我们来看一下如何启用这个插件。</p>
+<p>现在，有个更牛的插件出现了，插件作者在 <code>homebridge-aqara</code> 的基础上完善了其他功能的接入，下面让我们来看一下如何启用这个插件。</p>
 
 <span id="more"></span><!-- more -->
 
@@ -155,6 +155,8 @@
 
 <pre><code class="language-no-highlight">sudo npm install -g npm i homebridge-mi-aqara
 </code></pre>
+
+<p>附插件地址：<a href="https://www.npmjs.com/package/homebridge-mi-aqara">homebridge-mi-aqara</a></p>
 
 <h3 id="toc_3">修改配置文件</h3>
 
@@ -179,7 +181,7 @@
 
 <p>修改为：</p>
 
-<pre><code class="language-json">{
+<p><del>{
     &quot;platform&quot;: &quot;MiAqaraPlatform&quot;,
     &quot;sid&quot;: [
         &quot;aabbccddeeff&quot;
@@ -187,6 +189,17 @@
     &quot;password&quot;: [
         &quot;0123456789abcdef&quot;
     ]
+}</del></p>
+
+<p>2017.11.21 update：</p>
+
+<pre><code class="language-json">{
+    &quot;platforms&quot;: [{
+        &quot;platform&quot;: &quot;MiAqaraPlatform&quot;,
+        &quot;gateways&quot;: {
+            &quot;aabbccddeeff&quot;: &quot;0123456789abcdef&quot;
+        }
+    }]
 }
 </code></pre>
 
@@ -245,6 +258,7 @@ echo [] &gt; cachedAccessories
         <div class="large-6 columns">
           <p class="text-left" style="padding:15px 0px;">
             
+            <a href="15087696019624.html" title="Previous Post: MQTTT - 好用又好看的MQTT工具 1.1.0 版">&laquo; MQTTT - 好用又好看的MQTT工具 1.1.0 版</a> 
           </p>
         </div>
         <div class="large-6 columns">
@@ -330,6 +344,12 @@ echo [] &gt; cachedAccessories
 	      
 		      
 			      <li class="post">
+			        <a href="15087696019624.html">MQTTT - 好用又好看的MQTT工具 1.1.0 版</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15051827686802.html">使用 Siri 控制你的家 补充 - 功能更全的 Homebridge 米家接入插件</a>
 			      </li>
 		     
@@ -353,10 +373,6 @@ echo [] &gt; cachedAccessories
 		     
 		  
 		      
-			      <li class="post">
-			        <a href="14899022730979.html">MQTTT - 好用又好看的MQTT工具</a>
-			      </li>
-		     
 		  
 		      
 		  

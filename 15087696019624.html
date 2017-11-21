@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>
-     使用 Siri 控制你的家 1 - 搭建服务器 - WILL KEEP ... 
+     MQTTT - 好用又好看的MQTT工具 1.1.0 版 - WILL KEEP ... 
   </title>
    
   <link href="atom.xml" rel="alternate" title="WILL KEEP ..." type="application/atom+xml">
@@ -95,19 +95,19 @@
 <div class="bigtitle">
   <div class="row">
     <div class="col-sm-12 mb0">
-        <h2 class="uppercase mb8">使用 Siri 控制你的家 1 - 搭建服务器</h2>
+        <h2 class="uppercase mb8">MQTTT - 好用又好看的MQTT工具 1.1.0 版</h2>
         <div class="read-more clearfix">
 
           <ul class="post-meta">
             <li>
               <i class="ti-calendar"></i>
-              <span class="date">3/23/2017 18:21 下午</span>
+              <span class="date">10/23/2017 23:40 下午</span>
             </li>
             <li>
               
               <i class="ti-tag"></i>
               <span>posted in&nbsp;</span>  
-              <span class="posted-in"><a href='HOME%20AUTOMATION.html'>HOME AUTOMATION</a></span> 
+              <span class="posted-in"><a href='APP.html'>APP</a></span> 
             </li>
             <li>
               <span class="comments">
@@ -132,173 +132,57 @@
       <div class="article-content">
         <hr/>
 
-<p>从这篇文章开始，从头带你搭建一个可以用 Siri 控制的家！！而且还带有自动化功能哟~~</p>
+<p>时隔好几个月，软件终于再次更新。</p>
 
-<p>从此进屋自动开灯，起夜自动亮夜灯，出门自动关闭所有电源和电灯；平时小管家随叫对到，是不是很贴心~</p>
+<p>这次有了更美观的页面设计，更加的精致，层次更加清晰，相信使用体验也会上升一个层次。
+ 再者更新了换肤系统，不喜欢绿色风格的人现在还有紫罗兰风格供君选择。
+ 同时也添加了 iPad 的支持， 屏幕大接收消息更爽快。</p>
 
-<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-%E4%BE%BF%E6%90%BA%E7%BD%91%E7%BB%9C%E5%9B%BE%E5%BD%A2%E5%9B%BE%E5%83%8F%EF%BC%88PNG%20%E5%9B%BE%E5%83%8F%EF%BC%89-E7ABBD08CAD0-1.png" alt="便携网络图形图像（PNG 图像）-E7ABBD08CAD0-1"/></p>
+<p><img src="media/15087696019624/15087712888872.jpg" alt=""/></p>
 
 <span id="more"></span><!-- more -->
 
-<h2 id="toc_0">都能干什么</h2>
-
-<p>好了那就先来看看我们实现了哪儿些功能，给你秀秀先：</p>
+<h2 id="toc_0">本次更新内容</h2>
 
 <ul>
-<li>直接添加 <a href="http://www.apple.com/cn/shop/accessories/all-accessories/homekit">苹果售卖的 Homekit 配件</a> 或者购买支持 Homekit 的配件，比如 <a href="https://shayjj.tmall.com/category-1275612446.htm?search=y#TmshopSrchNav">PHILIPS 的 Hue 系列</a>，虽然说简单易用，不需要写一行代码以及搭建服务器，但是真的很贵啊。如果你不差钱或者新装修，还是推荐使用这个方式的，毕竟成品的电器用着更有保障，还是安全第一。</li>
-<li>使用小米的相关产品，用一个树莓派做中转，接入 Homekit。相对于原生支持苹果的设备来说，小米的设备便宜很多，但是也有其他的问题：首先你得搭建一个服务器做中转，其次不是所有的小米设备都支持，再者以后能不能支持还是看小米会不会关闭对应的服务，最后呢稳定性也有些问题。</li>
-<li>还可以支持其他的一些品牌的配件，具体可以接入哪些可以看看<a href="https://www.npmjs.com/search?q=homebridge-plugin">这里</a>。当然也是有着稳定性和未来的不确定性问题。</li>
-<li>最后当然是自己制作啦，简单实惠，但是缺点也是最严重的，一个是没有成品那么美观，再一个安全性稳定性都是最差的。</li>
-</ul>
-
-<p>当然这样还不算，如果你有一个 iPad 或者 Apple TV，你还可以实现定时操作，任务触发，地理围栏等一系列自动化功能。</p>
-
-<p>本系列主要说说接入小米的产品和自己制作配件，毕竟原生支持的只要接入就可以了^^。</p>
-
-<h2 id="toc_1">First! 搭建服务器</h2>
-
-<h3 id="toc_2">需要的材料：</h3>
+<li>更新基础依赖库</li>
+<li>更改部分描述性词汇
 
 <ul>
-<li>树莓派 × 1</li>
-<li>数据线 × 1</li>
-<li>电源插头 × 1</li>
-<li>高速 TF 卡 × 1</li>
-<li>网线 × 1</li>
-<li>树莓派外壳（选配）</li>
-<li>HDMI 连接线和显示器/电视机，一套键鼠（临时使用）</li>
+<li>‘autoSend’ 分别更改为 ‘autoSub’ 和 ’autoPub’</li>
+<li>‘Subscribe Message’ 更改为  ‘Subscribed Messages’</li>
+<li>添加发送内容输入框的提示文字</li>
+</ul></li>
+<li>登录页面密码输入框改为暗文输入</li>
+<li>软件名称从 Mqttt 修改为 MQTTT</li>
+<li>更新  Logo</li>
+<li>更新 UI，更精致，层次更清晰</li>
+<li>调整动画时间，更迅速</li>
+<li>适配 iPhone X</li>
+<li>添加 iPad 支持</li>
+<li>添加换肤系统</li>
+<li>优化代码，运行更流畅</li>
+<li>修正部分bug</li>
 </ul>
 
-<h2 id="toc_3">步骤</h2>
+<p><strong>关于通配符(# and +)问题会在下一个版本支持</strong></p>
 
-<h3 id="toc_4">准备树莓派系统</h3>
+<h2 id="toc_1">下次更新内容</h2>
 
-<p>首先需要去树莓派的官网下载系统然后烧录到 TF 卡中，然后把 TF 卡放入树莓派，链接鼠标键盘、网线和显示器，上电，设置树莓派。</p>
+<ul>
+<li>通配符</li>
+<li>保留历史</li>
+</ul>
 
-<p>具体操作细节网上有很多教程，这里就不再重复了。</p>
+<h2 id="toc_2">其他说明</h2>
 
-<p>由于最新的系统中默认没有打开 SSH，所以需要链接显示器在设置中打开 SSH，准备工作就做好了。</p>
+<p>有人反映了通配符的问题，这个问题是我以前没有遇到过的，有人反馈后我才知道通配符问题；查阅相关资料后发现，添加通配符支持需要修改数据结构，工程量比较大，毕竟只有我自己在做此软件，而且自己的时间有限，所以放在下一个版本进行更新，目前只能辛苦大家订阅所有需要的 Topic 了。</p>
 
-<p>然后就可以拔掉显示器和键盘鼠标，把 PI 扔到无人的角落就好。</p>
+<p>关于退到后台后长时间再次进入不会保留订阅历史，这里我说一下我的想法：</p>
 
-<h3 id="toc_5">安装Homebridge服务</h3>
-
-<h4 id="toc_6">通过 SSH 进入树莓派</h4>
-
-<p>通过 Mac 或者 Linux，你可以轻松加愉快的登录你的树莓派：</p>
-
-<pre><code class="language-no-highlight">ssh pi@raspberrypi.local
-</code></pre>
-
-<p>默认的用户为 <code>pi</code>， 密码为<code>raspberry</code>。如果不能进入，你也可以在路由器中查看到树莓派的 IP 地址 通过 IP 登录，比如：<code>ssh 10.1.1.2 -l pi</code>。</p>
-
-<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-14902657517984.jpg" alt=""/></p>
-
-<p>如果你是 Windows，你也可以通过 PuTTY 等软件登录树莓派。</p>
-
-<h4 id="toc_7">树莓派的基本配置</h4>
-
-<p>如果你是首次使用树莓派系统，那么你需要先更新一下系统获取最新的软件源：</p>
-
-<pre><code class="language-no-highlight">sudo apt-get update
-sudo apt-get upgrade
-</code></pre>
-
-<p>然后安装 git 和 make：</p>
-
-<pre><code class="language-no-highlight">sudo apt-get install git make
-</code></pre>
-
-<h4 id="toc_8">安装 Node</h4>
-
-<p>废话不多说，直接运行：</p>
-
-<pre><code class="language-no-highlight">sudo curl -sL https://deb.nodesource.com/setup_7.x | sudo bash -
-sudo apt-get install -y nodejs
-</code></pre>
-
-<p>如此简单。</p>
-
-<h4 id="toc_9">安装一些依赖的程序包</h4>
-
-<p>这个是 <code>HAP-NodeJS</code> 中 <code>mdns</code> 使用的库文件。</p>
-
-<pre><code class="language-no-highlight">sudo apt-get install libavahi-compat-libdnssd-dev
-</code></pre>
-
-<h4 id="toc_10">安装 Homebridge 和依赖</h4>
-
-<pre><code class="language-no-highlight">sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
-cd /usr/lib/node_modules/homebridge/
-sudo npm install --unsafe-perm bignum
-cd /usr/lib/node_modules/hap-nodejs/node_modules/mdns
-sudo node-gyp BUILDTYPE=Release rebuild
-</code></pre>
-
-<h4 id="toc_11">创建配置文件</h4>
-
-<p>必须在 <code>~/.homebridge</code> 下面创建一个 配置文件，Homebridge 才能根据你的配置进行加载配件和桥接器：</p>
-
-<pre><code class="language-no-highlight">vim ~/.homebridge/config.json
-</code></pre>
-
-<p>然后在文件中写入以下配置信息：</p>
-
-<pre><code class="language-json">{
-    &quot;bridge&quot;: {
-        &quot;name&quot;: &quot;Homebridge&quot;,
-        &quot;username&quot;: &quot;CC:22:3D:E3:CE:30&quot;,
-        &quot;port&quot;: 51826,
-        &quot;pin&quot;: &quot;031-45-154&quot;
-    },
-    
-    &quot;description&quot;: &quot;This is an example configuration file with one fake accessory and one fake platform. You can use this as a template for creating your own configuration file containing devices you actually own.&quot;,
-
-    &quot;accessories&quot;: [
-        
-    ],
-
-    &quot;platforms&quot;: [
-        
-    ]
-}
-</code></pre>
-
-<p>保存，退出。</p>
-
-<p>其中 name 是你要给这个 Birdge 的名字，pin 为你要在 Apple 的家庭应用中添加设备时使用的代码。</p>
-
-<h4 id="toc_12">试运行</h4>
-
-<p>然后你就可以运行 <code>homebridge</code> 命令看看是否安装成功了。</p>
-
-<p><img src="http://7xr14u.com1.z0.glb.clouddn.com/2017-03-23-14902677823482.jpg" alt=""/></p>
-
-<p>我这里已经添加了一些插件，没有添加插件的只是输出的信息比较少而已。</p>
-
-<p>然后你就可以通过手机（需要 iOS 10以上系统）中的家庭应用，来添加你的配件了。具体方法看<a href="https://support.apple.com/zh-cn/HT204893">这里</a>。</p>
-
-<p>当然现在你只能看到一个孤零零的“桥”，别急，这只是后面的基础，下一篇文章将会接入小米的设备，让你秀起来。</p>
-
-<p>你可以使用 <code>Ctrl + C</code> 来停止 Homebridge。</p>
+<p>长时间在后台， MQTT 的链接会自动断开，此时如果再次进入页面时 MQTT 服务处于未连接状态，如果保留历史删除会误认为目前还处于链接状态，所以目前的处理方式是直接退出登录并进入登录页面；既然有人提到了这个需求，下个版本中我会在链接断开后保留历史，并在从后台再次进入软件的时候给出明显的链接断开提示，由用户自己选择退回到登录页面重新登录，当然退出到登录页面前历史会保留，直到退出到登录页面或杀掉程序为止。</p>
 
 <p>以上。</p>
-
-<hr/>
-
-<p>系列相关链接：</p>
-
-<ul>
-<li><a href="http://www.hellowk.cc/14902608996424.html">使用 Siri 控制你的家 1 - 搭建服务器</a></li>
-<li><a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a></li>
-<li><a href="http://www.hellowk.cc/14902708868181.html">使用 Siri 控制你的家 3 - 开机自动运行 Homebridge</a></li>
-<li><a href="http://www.hellowk.cc/15051827686802.html">使用 Siri 控制你的家 补充 - 功能更全的 Homebridge 米家接入插件</a></li>
-<li>使用 Siri 控制你的家 4 - homebridge-mqtt 插件</li>
-<li>使用 Siri 控制你的家 5 - 自制氛围灯</li>
-<li>使用 Siri 控制你的家 6 - 制作射频发射器</li>
-<li>使用 Siri 控制你的家 7 - 改造灯路，通过射频控制吸顶灯</li>
-<li>......</li>
-</ul>
 
 
 
@@ -309,13 +193,12 @@ sudo node-gyp BUILDTYPE=Release rebuild
         <div class="large-6 columns">
           <p class="text-left" style="padding:15px 0px;">
             
-            <a href="14902698259528.html" title="Previous Post: 使用 Siri 控制你的家 2 - 接入米家的产品">&laquo; 使用 Siri 控制你的家 2 - 接入米家的产品</a> 
           </p>
         </div>
         <div class="large-6 columns">
           <p class="text-right" style="padding:15px 0px;">
             
-            <a href="14899022730979.html" title="Next Post: MQTTT - 好用又好看的MQTT工具">MQTTT - 好用又好看的MQTT工具 &raquo;</a> 
+            <a href="15051827686802.html" title="Next Post: 使用 Siri 控制你的家 补充 - 功能更全的 Homebridge 米家接入插件">使用 Siri 控制你的家 补充 - 功能更全的 Homebridge 米家接入插件 &raquo;</a> 
           </p>
         </div>
       </div>

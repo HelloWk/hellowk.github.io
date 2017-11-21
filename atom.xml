@@ -4,13 +4,76 @@
   <title><![CDATA[WILL KEEP ...]]></title>
   <link href="hellowk.cc/atom.xml" rel="self"/>
   <link href="hellowk.cc/"/>
-  <updated>2017-09-12T11:52:44+09:00</updated>
+  <updated>2017-11-21T18:45:00+09:00</updated>
   <id>hellowk.cc/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[MQTTT - 好用又好看的MQTT工具 1.1.0 版]]></title>
+    <link href="hellowk.cc/15087696019624.html"/>
+    <updated>2017-10-23T23:40:01+09:00</updated>
+    <id>hellowk.cc/15087696019624.html</id>
+    <content type="html"><![CDATA[
+<hr/>
+
+<p>时隔好几个月，软件终于再次更新。</p>
+
+<p>这次有了更美观的页面设计，更加的精致，层次更加清晰，相信使用体验也会上升一个层次。
+ 再者更新了换肤系统，不喜欢绿色风格的人现在还有紫罗兰风格供君选择。
+ 同时也添加了 iPad 的支持， 屏幕大接收消息更爽快。</p>
+
+<p><img src="media/15087696019624/15087712888872.jpg" alt=""/></p>
+
+<span id="more"></span><!-- more -->
+
+<h2 id="toc_0">本次更新内容</h2>
+
+<ul>
+<li>更新基础依赖库</li>
+<li>更改部分描述性词汇
+
+<ul>
+<li>‘autoSend’ 分别更改为 ‘autoSub’ 和 ’autoPub’</li>
+<li>‘Subscribe Message’ 更改为  ‘Subscribed Messages’</li>
+<li>添加发送内容输入框的提示文字</li>
+</ul></li>
+<li>登录页面密码输入框改为暗文输入</li>
+<li>软件名称从 Mqttt 修改为 MQTTT</li>
+<li>更新  Logo</li>
+<li>更新 UI，更精致，层次更清晰</li>
+<li>调整动画时间，更迅速</li>
+<li>适配 iPhone X</li>
+<li>添加 iPad 支持</li>
+<li>添加换肤系统</li>
+<li>优化代码，运行更流畅</li>
+<li>修正部分bug</li>
+</ul>
+
+<p><strong>关于通配符(# and +)问题会在下一个版本支持</strong></p>
+
+<h2 id="toc_1">下次更新内容</h2>
+
+<ul>
+<li>通配符</li>
+<li>保留历史</li>
+</ul>
+
+<h2 id="toc_2">其他说明</h2>
+
+<p>有人反映了通配符的问题，这个问题是我以前没有遇到过的，有人反馈后我才知道通配符问题；查阅相关资料后发现，添加通配符支持需要修改数据结构，工程量比较大，毕竟只有我自己在做此软件，而且自己的时间有限，所以放在下一个版本进行更新，目前只能辛苦大家订阅所有需要的 Topic 了。</p>
+
+<p>关于退到后台后长时间再次进入不会保留订阅历史，这里我说一下我的想法：</p>
+
+<p>长时间在后台， MQTT 的链接会自动断开，此时如果再次进入页面时 MQTT 服务处于未连接状态，如果保留历史删除会误认为目前还处于链接状态，所以目前的处理方式是直接退出登录并进入登录页面；既然有人提到了这个需求，下个版本中我会在链接断开后保留历史，并在从后台再次进入软件的时候给出明显的链接断开提示，由用户自己选择退回到登录页面重新登录，当然退出到登录页面前历史会保留，直到退出到登录页面或杀掉程序为止。</p>
+
+<p>以上。</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[使用 Siri 控制你的家 补充 - 功能更全的 Homebridge 米家接入插件]]></title>
@@ -22,7 +85,7 @@
 
 <p>在 <a href="http://www.hellowk.cc/14902698259528.html">使用 Siri 控制你的家 2 - 接入米家的产品</a> 中米家的东西加入到我们的 Homekit 中，但是 <code>homebridge-aqara</code> 有一个不好的地方就是支持的设备很少，像 Button 操作，魔方操作，网关自带夜灯，光线传感器都不能利用。</p>
 
-<p>现在，有个更牛的插件出现了，插件作者在 homebridge-aqara 的基础上完善了其他功能的接入，下面让我们来看一下如何启用这个插件。</p>
+<p>现在，有个更牛的插件出现了，插件作者在 <code>homebridge-aqara</code> 的基础上完善了其他功能的接入，下面让我们来看一下如何启用这个插件。</p>
 
 <span id="more"></span><!-- more -->
 
@@ -43,6 +106,8 @@
 
 <pre><code class="language-no-highlight">sudo npm install -g npm i homebridge-mi-aqara
 </code></pre>
+
+<p>附插件地址：<a href="https://www.npmjs.com/package/homebridge-mi-aqara">homebridge-mi-aqara</a></p>
 
 <h3 id="toc_3">修改配置文件</h3>
 
@@ -67,7 +132,7 @@
 
 <p>修改为：</p>
 
-<pre><code class="language-json">{
+<p><del>{
     &quot;platform&quot;: &quot;MiAqaraPlatform&quot;,
     &quot;sid&quot;: [
         &quot;aabbccddeeff&quot;
@@ -75,6 +140,17 @@
     &quot;password&quot;: [
         &quot;0123456789abcdef&quot;
     ]
+}</del></p>
+
+<p>2017.11.21 update：</p>
+
+<pre><code class="language-json">{
+    &quot;platforms&quot;: [{
+        &quot;platform&quot;: &quot;MiAqaraPlatform&quot;,
+        &quot;gateways&quot;: {
+            &quot;aabbccddeeff&quot;: &quot;0123456789abcdef&quot;
+        }
+    }]
 }
 </code></pre>
 
